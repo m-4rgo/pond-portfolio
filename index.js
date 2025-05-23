@@ -7,6 +7,52 @@ for (const section of sections) {
     }
 }
 
+// load artworks from JSON file
+function loadArtworks() {
+    fetch('./gallery.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data)
+            displayGallery(data)})
+        .catch(error => console.error('failed to fetch data', error));
+}
+// call loadArtworks to fetch data from json file
+loadArtworks()
+
+// function to generate gallery from json data
+function displayGallery(data) {
+    data.forEach((artwork) => {
+
+        // greate gallery item div
+        const galleryItem = document.createElement("div");
+        galleryItem.classList.add("gallery-item");
+
+        // create image
+        const img = document.createElement("img");
+        img.src = artwork.src;
+        img.alt = artwork.title;
+
+        // create description box
+        const info = document.createElement("p");
+        info.textContent = artwork.description;
+
+        // add image and info to gallery item
+        galleryItem.appendChild(img);
+        // galleryItem.appendChild(info);
+
+        // pull the right gallery from the json file
+        const galleryId = `${artwork.section}-gallery`;
+        // add gallery item to the right gallery
+        document.getElementById(galleryId).appendChild(galleryItem);
+    })
+}
+
+
 // function to add a fade out animation when switching sections
 function fadeOut(element) {
     let opacity = 1;
@@ -76,4 +122,6 @@ navLinks.forEach(link => {
 });
 }
 
+
+// call navToggle to allow navigation links to work.
 navToggle()

@@ -2,7 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Inter', sans-serif;
+    /*font-family: 'Inter', sans-serif;*/
+    font-family: "Roboto", sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
     margin: 0;
     padding: 0;
     background-color: #e3e3e3;
@@ -70,7 +72,7 @@ nav a:hover {
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1.5rem;
 }
 .gallery-item {
@@ -82,6 +84,15 @@ nav a:hover {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+}
+.pixel-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.pixel-gallery img {
+    image-rendering: pixelated;
+    width: 100px;
+    height: auto;
 }
 /* class to hide all sections on page load except home. */
 .hidden {

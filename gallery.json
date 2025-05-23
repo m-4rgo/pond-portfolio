@@ -1,5 +1,62 @@
 [
-  { "src": "bay arabian oekaki.png", "alt": "Bay Arabian" },
-  { "src": "rainbow unicorn.png", "alt": "Rainbow Unicorn" },
-  { "src": "palomino equid.png", "alt": "Palomino Equid" }
+  {
+    "src": "Assets/bay arabian oekaki.png",
+    "title": "Bay Arabian",
+    "description": "artwork info text",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/rainbow unicorn.png",
+    "title": "Rainbow Unicorn",
+    "description": "artwork info text",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/palomino equid.png",
+    "title": "Palomino Equid",
+    "description": "artwork info text",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/grovebred.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/green-bay-pixel.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/dutch warmblood.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/blonde.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/lumen-pixel.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/grymma-pixel.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/mokollur-pixel.png",
+    "title": "Thoroughbred Illustration",
+    "description": "lil paintin",
+    "section": "pixel"
+  }
 ]
