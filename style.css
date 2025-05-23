@@ -34,9 +34,14 @@ nav {
 }
 nav a {
     color: #a5a5a5;
+    cursor: pointer;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    transition: color 0.2s ease-in-out;
+}
+nav a:hover {
+    color: #888888;
 }
 .pageContent {
     /*margin-left: 250px;*/
@@ -50,6 +55,7 @@ nav a {
     color: #595959;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s ease-in-out;
 }
 .section a:hover {
     color: #b6b6b6;
