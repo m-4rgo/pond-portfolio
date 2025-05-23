@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -43,6 +45,7 @@ nav a {
 nav a:hover {
     color: #888888;
 }
+/* container for all the page content sections */
 .pageContent {
     /*margin-left: 250px;*/
 }
@@ -51,6 +54,7 @@ nav a:hover {
     max-width: 1200px;
     margin: auto;
 }
+/* style links inside content sections */
 .section a {
     color: #595959;
     text-decoration: none;
@@ -79,6 +83,11 @@ nav a:hover {
     display: block;
     transition: transform 0.3s ease;
 }
+/* class to hide all sections on page load except home. */
 .hidden {
     display: none;
+}
+/* class to highlight the currently selected navigation menu tab. */
+.active {
+    color: #1b733a;
 }
