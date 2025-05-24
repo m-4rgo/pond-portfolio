@@ -12,6 +12,27 @@ let currentSectionName = "home";
 let currentSection = document.getElementById(currentSectionName);
 let imageViewerState = "none";
 
+// burger menu button toggle
+function burgerToggle() {
+    // get navbar
+    const navbar = document.getElementById("navbar");
+    // add event listener to burger button to open navbar on click
+    document.getElementById("burger-button").addEventListener('click', function () {
+        navbar.classList.toggle("show");
+    });
+
+    // get navbar links
+    const navLinks = document.querySelectorAll("#navbar a");
+    // for each link add event listener that closes navbar when any one is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navbar.classList.remove("show");
+        })
+    })
+}
+// call to function
+burgerToggle();
+
 // load artworks from JSON file
 function loadArtworks() {
     fetch('./gallery.json')

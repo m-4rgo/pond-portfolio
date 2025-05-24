@@ -75,6 +75,30 @@
     "src": "Assets/shannonmini.png",
     "title": "Shannon",
     "description": "Head crop of Shannon",
-    "section": "pixel"
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/fell.png",
+    "title": "Magic Fell Fae",
+    "description": "An idea for a fantasy creature I had",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/battlecard.png",
+    "title": "Battlecard",
+    "description": "lil game idea i had",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/nyx.png",
+    "title": "Nyx's Sanctuary Base",
+    "description": "Base made for a species",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/mathilde.png",
+    "title": "Mathilde",
+    "description": "Head crop of mathilde",
+    "section": "oekaki"
   }
 ]
