@@ -9,6 +9,7 @@ body {
     padding: 0;
     background-color: #e3e3e3;
     color: #888888;
+    cursor: default;
 }
 header {
     background-color: #e3e3e3;
@@ -30,6 +31,7 @@ header {
 header h1 {
     margin: 0;
     color: #878787;
+    cursor: default;
 }
 nav {
     margin-top: 2rem;
@@ -154,6 +156,7 @@ nav a:hover {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    cursor: default;
 }
 .gallery {
     display: grid;
@@ -183,7 +186,7 @@ nav a:hover {
 }
 /* class to hide all sections on page load except home. */
 .hidden {
-    display: none;
+    display: none !important;
 }
 /* class to highlight the currently selected navigation menu tab. */
 .active {
