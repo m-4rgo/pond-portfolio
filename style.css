@@ -84,6 +84,7 @@ nav a:hover {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .pixel-gallery {
     display: grid;
@@ -100,5 +101,35 @@ nav a:hover {
 }
 /* class to highlight the currently selected navigation menu tab. */
 .active {
-    color: #1b733a;
+    color: #888888;
+}
+.active:hover {
+    color: #535353;
+}
+#image-viewer {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: white;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*z-index: 999;*/
+}
+#image-viewer img {
+    max-width: 900px;
+}
+/* class for the close viewer button*/
+#close-viewer {
+    position: absolute;
+    top: 1rem;
+    /*left: 1rem;*/
+    color: #595959;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

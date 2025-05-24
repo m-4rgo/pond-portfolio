@@ -7,6 +7,11 @@ for (const section of sections) {
     }
 }
 
+//  track which section is active on screen
+let currentSectionName = "home";
+let currentSection = document.getElementById(currentSectionName);
+let imageViewerState = "none";
+
 // load artworks from JSON file
 function loadArtworks() {
     fetch('./gallery.json')
@@ -28,7 +33,7 @@ loadArtworks()
 function displayGallery(data) {
     data.forEach((artwork) => {
 
-        // greate gallery item div
+        // create gallery item div
         const galleryItem = document.createElement("div");
         galleryItem.classList.add("gallery-item");
 
@@ -36,6 +41,8 @@ function displayGallery(data) {
         const img = document.createElement("img");
         img.src = artwork.src;
         img.alt = artwork.title;
+        img.dataset.title = artwork.title;
+        img.dataset.description = artwork.description;
 
         // create description box
         const info = document.createElement("p");
@@ -49,6 +56,11 @@ function displayGallery(data) {
         const galleryId = `${artwork.section}-gallery`;
         // add gallery item to the right gallery
         document.getElementById(galleryId).appendChild(galleryItem);
+
+        // add click event listener to all images and call viewArtwork on click, so that images can be viewed fullscreen on click
+        img.addEventListener("click", () => {
+            viewArtwork(img.src, img.dataset.title, img.dataset.description);
+        })
     })
 }
 
@@ -62,6 +74,7 @@ function fadeOut(element) {
         if (opacity <= 0) {
             element.style.opacity = 0;
             element.style.display= "none";
+            element.classList.add("hidden");
         } else {
             element.style.opacity = opacity;
             requestAnimationFrame(animate);
@@ -75,6 +88,7 @@ function fadeIn(element) {
     let opacity = 0;
     element.style.display= "block";
     element.style.opacity = opacity;
+    element.classList.remove("hidden");
 
     function animate() {
         opacity += 0.05;
@@ -104,15 +118,24 @@ navLinks.forEach(link => {
         // add active style to clicked link
         link.classList.add("active");
 
+        // get the target section from the link data
         const sectionName = link.getAttribute('data-target').replace("#", "")
+
+        // redundant code as fadein/fadeout changed hiding technique
         // sections.forEach(section => section.classList.add("hidden"));
+
+        // set target section as the section name
         const targetSection = document.getElementById(sectionName);
+        // if the target section is already visible, return
         if (targetSection.style.display === "block") {
             return;
         }
 
+        // cycle through sections and if section is target section, then fade in, else, fade out.
         sections.forEach(section => {
             if (section.id === sectionName) {
+                currentSectionName = sectionName;
+                currentSection = targetSection;
                 setTimeout(() => fadeIn(section), 300);
             } else {
                 fadeOut(section);
@@ -121,7 +144,37 @@ navLinks.forEach(link => {
     });
 });
 }
-
-
 // call navToggle to allow navigation links to work.
 navToggle()
+
+// function to open artwork page on gallery image click
+function viewArtwork(src, title, description) {
+    // hide the current section on image click
+    fadeOut(currentSection);
+
+    // populate the image viewer with image details
+    document.getElementById("viewer-img").src = src;
+    document.getElementById("viewer-img").alt = title;
+    document.getElementById("viewer-title").textContent = title;
+    document.getElementById("viewer-description").textContent = description;
+
+    // show the image viewer
+    const imageViewer = document.getElementById("image-viewer");
+
+    setTimeout(() => fadeIn(imageViewer), 300);
+}
+
+// function to add functionality to image viewer close button
+function closeImageViewer() {
+// close image-viewer button functionality
+    document.getElementById("close-viewer").addEventListener("click", () => {
+        fadeOut(document.getElementById("image-viewer"));
+        document.getElementById("image-viewer").classList.add("viewer-hidden");
+        //     re-show the current section when close button is clicked
+        const section = document.getElementById(currentSectionName);
+
+        setTimeout(() => fadeIn(section), 300);
+    })
+}
+// call so close button works
+closeImageViewer();

@@ -2,61 +2,79 @@
   {
     "src": "Assets/bay arabian oekaki.png",
     "title": "Bay Arabian",
-    "description": "artwork info text",
+    "description": "Painted in oekaki, took around 6 hours",
     "section": "oekaki"
   },
   {
     "src": "Assets/rainbow unicorn.png",
     "title": "Rainbow Unicorn",
-    "description": "artwork info text",
+    "description": "A sketch done in oekaki, took just under 3 hours",
     "section": "oekaki"
   },
   {
     "src": "Assets/palomino equid.png",
     "title": "Palomino Equid",
-    "description": "artwork info text",
+    "description": "Gift art of a palomino character, inexplicably took me almost 48 hours? I must have left oekaki open",
     "section": "oekaki"
   },
   {
     "src": "Assets/grovebred.png",
     "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "description": "A realistic greyscale base of a thoroughbred, took around 10 hours",
     "section": "oekaki"
   },
   {
     "src": "Assets/green-bay-pixel.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Pixel Commission",
+    "description": "I loved this character's green hair",
     "section": "pixel"
   },
   {
     "src": "Assets/dutch warmblood.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Dutch Warmblood",
+    "description": "A greyscale piece of a dutch warmblood. Gotta sort that swan neck out",
     "section": "paintings"
   },
   {
     "src": "Assets/blonde.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Blonde",
+    "description": "Drawing of a blonde woman with a black overo quarter horse",
     "section": "paintings"
   },
   {
     "src": "Assets/lumen-pixel.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Lumen mini pixel",
+    "description": "A tiny 25px pixel",
     "section": "pixel"
   },
   {
     "src": "Assets/grymma-pixel.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Grymma mini pixel",
+    "description": "A tiny 25px pixel",
     "section": "pixel"
   },
   {
     "src": "Assets/mokollur-pixel.png",
-    "title": "Thoroughbred Illustration",
-    "description": "lil paintin",
+    "title": "Mokollur mini pixel",
+    "description": "A tiny 25px pixel",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/shannon.png",
+    "title": "Shannon",
+    "description": "A drawing of a model with a quarter horse",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/magpies.png",
+    "title": "Pixel Doll",
+    "description": "A pixel doll character with magpies",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/shannonmini.png",
+    "title": "Shannon",
+    "description": "Head crop of Shannon",
     "section": "pixel"
   }
 ]
