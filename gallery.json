@@ -30,13 +30,19 @@
     "section": "pixel"
   },
   {
+    "src": "Assets/tooth.png",
+    "title": "Tooth and Sage",
+    "description": "50px commission",
+    "section": "pixel"
+  },
+  {
     "src": "Assets/dutch warmblood.png",
     "title": "Dutch Warmblood",
     "description": "A greyscale piece of a dutch warmblood. Gotta sort that swan neck out",
     "section": "paintings"
   },
   {
-    "src": "Assets/blonde.png",
+    "src": "Assets/blonde.jpg",
     "title": "Blonde",
     "description": "Drawing of a blonde woman with a black overo quarter horse",
     "section": "paintings"
@@ -54,27 +60,9 @@
     "section": "pixel"
   },
   {
-    "src": "Assets/mokollur-pixel.png",
-    "title": "Mokollur mini pixel",
-    "description": "A tiny 25px pixel",
-    "section": "pixel"
-  },
-  {
-    "src": "Assets/shannon.png",
+    "src": "Assets/shannon.jpg",
     "title": "Shannon",
     "description": "A drawing of a model with a quarter horse",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/magpies.png",
-    "title": "Pixel Doll",
-    "description": "A pixel doll character with magpies",
-    "section": "pixel"
-  },
-  {
-    "src": "Assets/shannonmini.png",
-    "title": "Shannon",
-    "description": "Head crop of Shannon",
     "section": "paintings"
   },
   {
@@ -100,5 +88,155 @@
     "title": "Mathilde",
     "description": "Head crop of mathilde",
     "section": "oekaki"
+  },
+  {
+    "src": "Assets/animatedicon.gif",
+    "title": "Animation",
+    "description": "Animated 50px commission",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/dolphin.jpg",
+    "title": "Dolphin",
+    "description": "ocean on fire",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/L_do_what_want.png",
+    "title": "Skateboard horse",
+    "description": "horse on a skateboard",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/unicorn.jpg",
+    "title": "unicorn",
+    "description": "unicorn :)",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/susidou.jpg",
+    "title": "Susidou",
+    "description": "drawing of a horse",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/toothsage 1.png",
+    "title": "Gentle",
+    "description": "Memorial commission",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/jerome.jpg",
+    "title": "jerome",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/blonde2.jpg",
+    "title": "Hoops",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/hooves.jpg",
+    "title": "Hooves",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/shanpin.jpg",
+    "title": "body",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/cob.jpg",
+    "title": "cob",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/models.jpg",
+    "title": "models",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/bluecloud.jpg",
+    "title": "bluecloud",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/bridge.jpg",
+    "title": "bridge",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/haff.jpg",
+    "title": "haflinger",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/port.jpg",
+    "title": "port",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/mule.jpg",
+    "title": "leg stretch",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/pads.png",
+    "title": "lily pads",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/foal.jpg",
+    "title": "foal",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/smile.jpg",
+    "title": "stickers",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/andalusian.jpg",
+    "title": "andalusian",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/ego.jpg",
+    "title": "andalusian",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/tilde.png",
+    "title": "tilde",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/run.jpg",
+    "title": "run",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/butterfly.jpg",
+    "title": "bugs",
+    "description": "drawing",
+    "section": "paintings"
   }
 ]

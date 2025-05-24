@@ -80,7 +80,7 @@ function displayGallery(data) {
 
         // add click event listener to all images and call viewArtwork on click, so that images can be viewed fullscreen on click
         img.addEventListener("click", () => {
-            viewArtwork(img.src, img.dataset.title, img.dataset.description);
+            viewArtwork(img.src, img.dataset.title, img.dataset.description, artwork.section);
         })
     })
 }
@@ -169,15 +169,26 @@ navLinks.forEach(link => {
 navToggle()
 
 // function to open artwork page on gallery image click
-function viewArtwork(src, title, description) {
+function viewArtwork(src, title, description, section) {
     // hide the current section on image click
     fadeOut(currentSection);
 
+    // get image from the viewer
+    const viewerImg = document.getElementById("viewer-img");
+
     // populate the image viewer with image details
-    document.getElementById("viewer-img").src = src;
-    document.getElementById("viewer-img").alt = title;
+    viewerImg.src = src;
+    viewerImg.alt = title;
     document.getElementById("viewer-title").textContent = title;
     document.getElementById("viewer-description").textContent = description;
+
+    // remove pixel class so it is not applied to all classes
+    viewerImg.classList.remove("pixel");
+
+    // apply pixel class if image is in pixel section
+    if (section === "pixel") {
+        viewerImg.classList.add("pixel");
+    }
 
     // show the image viewer
     const imageViewer = document.getElementById("image-viewer");
