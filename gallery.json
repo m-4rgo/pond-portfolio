@@ -238,5 +238,29 @@
     "title": "bugs",
     "description": "drawing",
     "section": "paintings"
+  },
+  {
+    "src": "Assets/rabid.jpg",
+    "title": "bite me",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/stormdrain.jpg",
+    "title": "storm drain",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/bat.jpg",
+    "title": "bat horse",
+    "description": "drawing",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/friesian.jpg",
+    "title": "friesian",
+    "description": "drawing",
+    "section": "paintings"
   }
 ]
