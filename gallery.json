@@ -96,7 +96,7 @@
     "section": "pixel"
   },
   {
-    "src": "Assets/dolphin.jpg",
+    "src": "Assets/Dolphin.jpg",
     "title": "Dolphin",
     "description": "ocean on fire",
     "section": "paintings"
@@ -114,13 +114,13 @@
     "section": "paintings"
   },
   {
-    "src": "Assets/susidou.jpg",
+    "src": "Assets/Susidou.jpg",
     "title": "Susidou",
     "description": "drawing of a horse",
     "section": "paintings"
   },
   {
-    "src": "Assets/toothsage 1.png",
+    "src": "Assets/Toothsage 1.png",
     "title": "Gentle",
     "description": "Memorial commission",
     "section": "paintings"
@@ -192,7 +192,7 @@
     "section": "paintings"
   },
   {
-    "src": "Assets/pads.png",
+    "src": "Assets/pads.jpg",
     "title": "lily pads",
     "description": "drawing",
     "section": "paintings"
