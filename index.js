@@ -11,6 +11,7 @@ for (const section of sections) {
 let currentSectionName = "home";
 let currentSection = document.getElementById(currentSectionName);
 let imageViewerState = "none";
+let scrollPoint = 0;
 
 // burger menu button toggle
 function burgerToggle() {
@@ -149,6 +150,8 @@ navLinks.forEach(link => {
         const targetSection = document.getElementById(sectionName);
         // if the target section is already visible, return
         if (targetSection.style.display === "block") {
+            // reset scroll to top of page
+            window.scrollTo({top: 0, left: 0, behavior: "smooth"});
             return;
         }
 
@@ -157,9 +160,12 @@ navLinks.forEach(link => {
             if (section.id === sectionName) {
                 currentSectionName = sectionName;
                 currentSection = targetSection;
-                setTimeout(() => fadeIn(section), 300);
+                setTimeout(() => {
+                    fadeIn(section);
+                    window.scrollTo(0, 0);}, 300);
             } else {
                 fadeOut(section);
+
             }
         });
     });
@@ -170,6 +176,8 @@ navToggle()
 
 // function to open artwork page on gallery image click
 function viewArtwork(src, title, description, section) {
+    // collect the scroll point of the page
+    scrollPoint = window.scrollY;
     // hide the current section on image click
     fadeOut(currentSection);
 
@@ -205,7 +213,11 @@ function closeImageViewer() {
         //     re-show the current section when close button is clicked
         const section = document.getElementById(currentSectionName);
 
-        setTimeout(() => fadeIn(section), 300);
+
+        setTimeout(() => {
+            fadeIn(section);
+            window.scrollTo(0, scrollPoint);}, 300);
+
     })
 }
 // call so close button works

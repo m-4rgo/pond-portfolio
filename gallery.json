@@ -1,5 +1,11 @@
 [
   {
+    "src": "Assets/aqh.png",
+    "title": "aqh",
+    "description": "Painted in oekaki, took around 1 hour",
+    "section": "oekaki"
+  },
+  {
     "src": "Assets/bay arabian oekaki.png",
     "title": "Bay Arabian",
     "description": "Painted in oekaki, took around 6 hours",
@@ -258,9 +264,9 @@
     "section": "paintings"
   },
   {
-    "src": "Assets/friesian.jpg",
-    "title": "friesian",
+    "src": "Assets/maragauz.png",
+    "title": "mini horse",
     "description": "drawing",
-    "section": "paintings"
+    "section": "oekaki"
   }
 ]
