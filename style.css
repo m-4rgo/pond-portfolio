@@ -1,5 +1,6 @@
 html {
     scroll-behavior: auto;
+    cursor: crosshair;
 }
 body {
     /*font-family: 'Inter', sans-serif;*/
@@ -30,7 +31,7 @@ header {
 header h1 {
     margin: 0;
     color: #878787;
-    cursor: default;
+    cursor: crosshair;
 }
 nav {
     margin-top: 2rem;
@@ -40,7 +41,7 @@ nav {
 }
 nav a {
     color: #a5a5a5;
-    cursor: pointer;
+    cursor: default;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -55,7 +56,7 @@ nav a:hover {
     font-size: 2rem;
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: cell;
     color: #888;
 }
 /* container for all the page content sections */
@@ -155,7 +156,7 @@ nav a:hover {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    cursor: default;
+    cursor: crosshair;
 }
 .gallery {
     display: grid;
@@ -172,7 +173,7 @@ nav a:hover {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 .pixel-gallery {
     display: grid;
@@ -224,6 +225,31 @@ nav a:hover {
     width: auto;
     height: auto;
 }
+
+#image-viewer img:hover {
+    cursor: cell;
+}
+
+#fullscreen {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e3e340;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+#fullscreen img {
+    width: 150%;
+    max-height: 95%;
+    object-fit: contain;
+    cursor: crosshair;
+    image-rendering: pixelated;
+}
+
 /* class for the close viewer button*/
 #close-viewer {
     position: absolute;
@@ -234,6 +260,6 @@ nav a:hover {
     font-size: 1rem;
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: w-resize;
     z-index: 1;
 }

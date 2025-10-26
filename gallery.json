@@ -6,6 +6,25 @@
     "section": "oekaki"
   },
   {
+    "src": "Assets/redappy.png",
+    "title": "base colour-in",
+    "description": "chestnut appaloosa colour of a greyscale base",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/blueappy.png",
+    "title": "base-colour-in",
+    "description": "blue roan appaloosa colour of a greyscale base",
+    "section": "oekaki"
+  },
+  {
+    "src": "Assets/halfhour.jpeg",
+    "title": "study",
+    "description": "hour and a half photo study",
+    "section": "paintings"
+  },
+
+  {
     "src": "Assets/bay arabian oekaki.png",
     "title": "Bay Arabian",
     "description": "Painted in oekaki, took around 6 hours",
@@ -268,5 +287,35 @@
     "title": "mini horse",
     "description": "drawing",
     "section": "oekaki"
+  },
+  {
+    "src": "Assets/fantasy_unicorn_commission.jpeg",
+    "title": "fantasy horse",
+    "description": "commission sketch",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/fantasia.jpeg",
+    "title": "fantasy unicorn",
+    "description": "old work, commission sketch",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/antiope.jpeg",
+    "title": "character comm",
+    "description": "old work",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/mercy.jpeg",
+    "title": "mercy",
+    "description": "old work",
+    "section": "paintings"
+  },
+  {
+    "src": "Assets/money.jpeg",
+    "title": "money",
+    "description": "old work",
+    "section": "paintings"
   }
 ]
