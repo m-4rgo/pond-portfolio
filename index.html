@@ -1,79 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pond's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Assets/favicon.png" />
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 <header>
-    <img id="logo" src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/Ol8201hSy8-no-background-bD4pJE7WGIZMH7lJqCkWOQKRkWw2PH.png" alt="Artist Portfolio" />
-    <h1>Pond's Art</h1>
-    <nav id="navbar">
-        <a data-target="#home">Home & Info</a>
-        <a data-target="#paintings">Paintings</a>
-        <a data-target="#oekaki">Oekaki</a>
-        <a data-target="#pixel">Pixel</a>
-    </nav>
+<!--  <img id="logo" src="Assets/logo.png" alt="Artist Portfolio" />-->
+  <h1>pond's art</h1>
+  <button id="burger-button" aria-label="toggle nav">&#9776;</button>
+  <nav id="navbar">
+    <a data-target="#home">home & info</a>
+    <a data-target="#requests">requests</a>
+    <a data-target="#paintings">paintings</a>
+    <a data-target="#oekaki">oekaki</a>
+    <a data-target="#pixel">pixel</a>
+    <a data-target="#music">music</a>
+    <a data-target="#code">code</a>
+    <a data-target="#blog">blog</a>
+    <a data-target="#visitor-book">visitor book</a>
+  </nav>
 </header>
 
-<div class="pageContent">
-    <!--  home section-->
-    <section id="home" class="section">
-        <p>Hi! I'm pond. browse my portfolio by using the navigation sidebar. Feel free to DM me on <a href="https://discordapp.com/users/1184893771285004348">discord</a>.
-            <br><br>
-            Most of my commission work is priced at a £10/hr hourly rate. Feel free to get in contact via discord if you have an idea or want to brainstorm.
-            <br>Don't be scared, I am a friendly goose! 🩷🪿
-            <br><br>
-        </p>
-        <h1>Mini CV/Resume</h1>
-        <p>
-            In 2019 I completed my Art Foundation studies with a Distinction.
-            <br>I was accepted into the UK's 2019 top ranking art school this same year, and studied Fine Art for one year before switching to undergraduate Computer Science.
-            <br><br>I hold 5 full A'level qualifications in Art & Design, Photography, Biology, French, and Mathematics. I also hold 2 Advanced Subsidiary qualifications in History and Computer Science.
-            I achieved 10 GCSEs grade A*-A.</p>
+<main id="page-content">
+<!--  home section-->
+<section id="home" class="section">
+  <p>Hi! I'm pond. browse my portfolio by using the navigation sidebar. Feel free to DM me on <a href="https://discordapp.com/users/1184893771285004348">discord</a>.
+    <br> I am <b>p-ond</b>, <b>po_n_d</b> or <b>pondpondpond</b> on most platforms but i'm only active here and on twitch atm!
+  <br><br>
+    <b>I'm no longer taking commissions!</b> I'll be setting up a requests system here on the website as soon as i can, where you can request art on an anonymous pay or donate as you want basis.
+    <br>If you want to support me or my work, I have a ko-fi you can donate through! <3
+<!--  Most of my commission work is priced at a £10/hr hourly rate. Feel free to get in contact via discord if you have an idea or want to brainstorm.-->
+    <br><br>
+  </p>
 
-        <h1>Good to Know</h1>
-        <p>My commissioned work can take a very long time to complete. Depending on the piece, it may take up to several months.
-            I also don't work through my owed list linearly- work that is "ahead" or "behind" in the queue may be completed later or earlier.
-            <br><br>I don't really like taking formal commissions! Making work for others is much less about the money for me than it is about having a good time creating a piece of artwork, collaborating on an idea, or having fun with a concept.
-            I am open to requests! If you have an idea, feel free to share it with me. If I get inspired I may make a version of your idea, but I can't promise that I will due to time and mental load limits. Irrespective, I love talking about creative work with people and I love to hear about others' creativity, so don't be afraid to share!
-            <br><br>If you want to support me or my work, I do have a ko-fi available, but can't link it for chickensmoothie policy reasons :)</p>
-        <h1>Updates</h1>
-        <b>Fri 23 May 2025</b> Commissions are booked up until july, but feel free to reach out anyway :)
-    </section>
+  <h1>To Do List</h1>
+  <p>please please reach out to me if your owed work isn't on this list!</p>
+  <ul>
+  <li>oekaki adopts template for Butter Dragon/ Buer</li>
+  <li>little rats raffle prizes and jousting prizes for nalena, lloma, and others (i haven't forgotten!)</li>
+  </ul>
 
-    <!--  patings gallery section-->
-    <section id="paintings" class="section">
-        <h2>Paintings</h2>
-        <div id="gallery-container" class="gallery"></div>
-    </section>
+  <h1>Contact</h1>
+  <p>The best way to reach me is through <a href="https://discordapp.com/users/1184893771285004348">discord</a>. I will set up a contact form here on the website as soon as i can.</p>
 
-    <!--  oekaki gallery section-->
-    <section id="oekaki" class="section">
-        <h2>Oekaki</h2>
-        <p>Chickenpaint is an online oekaki applet with a maximum canvas size of 600x900px and limtied tools.</p>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://www.chickensmoothie.com/oekaki/image/image.php?id=4322077&size=large&format=auto&rev=1747920352" alt="Artwork 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.chickensmoothie.com/oekaki/image/image.php?id=4318381&size=large&format=png&rev=1746030320" alt="Artwork 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.chickensmoothie.com/oekaki/image/image.php?id=4302218&size=large&format=auto&rev=1746703664" alt="Artwork 3">
-            </div>
-        </div>
-    </section>
+  <br>
+  <h1>Mini CV/Resume</h1>
+  <p>
+    In 2019 I completed my Art Foundation studies with a Distinction.
+    <br>I was accepted into the UK's 2019 top ranking art school this same year, and studied Fine Art for one year before switching to undergraduate Computer Science.
+    <br><br>I hold 5 full A'level qualifications in Art & Design, Photography, Biology, French, and Mathematics. I also hold 2 Advanced Subsidiary qualifications in History and Computer Science.
+    I achieved 10 GCSEs grade A*-A.
+  </p>
+  <br>
 
-    <section id="pixel" class="section">
-        <h2>Pixel</h2>
-    </section>
+  <!--  <br><br></br>Don't be scared to reach out, I am a friendly goose! 🩷🪿</p>-->
 
-    <!--  close page content-->
-</div>
+<!--  <h1>Good to Know</h1>-->
+<!--  <p>update - 26 oct 2025<br>-->
+<!--  </p>-->
+<!--  <p>My commissioned work can take a very long time to complete. Depending on the piece, it may take up to several months.-->
+<!--  I also don't work through my owed list linearly- work that is "ahead" or "behind" in the queue may be completed later or earlier.-->
+<!--  <br><br>I don't really like taking formal commissions! Making work for others is much less about the money for me than it is about having a good time creating a piece of artwork, collaborating on an idea, or having fun with a concept.-->
+<!--    I am open to requests! If you have an idea, feel free to share it with me. If I get inspired I may make a version of your idea, but I can't promise that I will due to time and mental load limits. Irrespective, I love talking about creative work with people and I love to hear about others' creativity, so don't be afraid to share!-->
+<!--  <br><br>If you want to support me or my work, I do have a ko-fi available, but can't link it for chickensmoothie policy reasons :)</p>-->
+</section>
+
+<!--  requests section-->
+  <section id="requests" class="section">
+    <h2>requests</h2>
+    <p>art request system will go here :)
+    order a request the same way you would with a commission, but know that they're not formal commissions and i can't promise to finish everything!</p>
+  </section>
+
+<!--  paintings gallery section-->
+<section id="paintings" class="section">
+  <h2>paintings</h2>
+  <p>horsie paintings</p>
+    <div id="paintings-gallery" class="gallery"></div>
+</section>
+
+<!--  oekaki gallery section-->
+<section id="oekaki" class="section">
+  <h2>oekaki</h2>
+  <p>Chickenpaint is an online oekaki applet with a maximum canvas size of 600x900px and limtied tools.</p>
+  <div id ="oekaki-gallery" class="gallery"></div>
+</section>
+
+<!--  pixel gallery section-->
+  <section id="pixel" class="section">
+    <h2>pixel</h2>
+    <div id="pixel-gallery" class="gallery pixel-gallery"></div>
+  </section>
+
+  <!--  pixel gallery section-->
+  <section id="music" class="section">
+    <h2>music by fellware</h2>
+    <p>i'll fix the layout for this page later, heres a song. theres already a band called pond so im using an alt name for music stuff</p>
+
+    <img src="Assets/music/England_white.png" alt="England - fellware" style="width:200px;height:200px;border-radius:5%;">
+    <div id="music-gallery" class="gallery pixel-gallery">
+      <audio controls>
+        <source src="Assets/music/avert your eyes england demo.m4a" type="audio/mp3">
+      </audio>
+    </div>
+    <p>England - fellware</p>
+  </section>
+
+  <section id="code" class="section">
+    <h2>code</h2>
+    <p>worm in stem worm in stem worm in stem she's a ~*developer*~ ill post some projects asp</p>
+  </section>
+
+<!--  blog posts section-->
+  <section id="blog" class="section">
+    <h2>blog</h2>
+    <p>ponds blog posts will go here, coming soon!</p>
+<!--    socials commented out for chickensmoothie policy-->
+<!--    <h1>Socials</h1>-->
+<!--    <p>here's my socials:-->
+<!--    <ul>-->
+<!--      <li>i don't have instagram! deleted it :)</li>-->
+<!--      <li>twitch /po_n_d</li>-->
+<!--      <li>i have twitter but am not active there /po_n_d</li>-->
+<!--      <li>i have a bluesky but am not currently active! /p-ond</li>-->
+<!--      <li>youtube /p-ond</li>-->
+<!--      <li>discord /po_n_d</li>-->
+<!--      <li>kofi /pondpondpond</li>-->
+<!--      <li>tiktok is inactive atm /fromthepond</li>-->
+<!--      <li>cara is inactive /pond</li>-->
+<!--    </ul>-->
+<!--    </p>-->
+    <h1>Socials</h1>
+    <p>I am not active on most social media!
+      <br>I do not have a facebook or instagram accout. I have accounts on bluesky/twitter/cara/deviantart/artstation and possibly some others I've forgotten, but I am not active there.
+      <br>I'm occasionally streaming on twitch!
+    </p>
+
+    <iframe
+            src="https://player.twitch.tv/?channel=po_n_d&parent=fromthepond.co.uk"
+            height="480"
+            width="720"
+            allowfullscreen>
+    </iframe>
+  </section>
+
+<!--  visitor book section-->
+  <section id="visitor-book" class="section">
+    <h2>visitor book</h2>
+    <p>feel free to leave a comment! you can leave your name or write anonymously-- feature not live yet, coming soon! </p>
+  </section>
+
+<!--  image viewer for artwork pages-->
+  <section id="image-viewer" class="section">
+    <button id="close-viewer">◀︎ back</button>
+    <img id="viewer-img" alt="" src=""/>
+    <h3 id="viewer-title"></h3>
+    <p id="viewer-description"></p>
+  </section>
+
+  <section id="fullscreen" class="section">
+
+  </section>
+<!--  close page content-->
+</main>
 
 <script src="index.js"></script>
 
