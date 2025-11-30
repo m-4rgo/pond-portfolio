@@ -75,7 +75,9 @@
   <section id="requests" class="section">
     <h2>requests</h2>
     <p>art request system will go here :)
-    order a request the same way you would with a commission, but know that they're not formal commissions and i can't promise to finish everything!</p>
+    order a request the same way you would with a commission, but know that they're not formal commissions and i can't promise to finish everything!
+    <br>Pay what you can/as you feel if you like what i made, and you can do this anonymously via my kofi.</p>
+
   </section>
 
 <!--  paintings gallery section-->
@@ -181,6 +183,33 @@
 </main>
 
 <script src="index.js"></script>
+
+<!--ko-fi bottom left corner widget-->
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('pondpondpond', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': '',
+    'floating-chat.donateButton.background-color': 'rgba(106,14,14,0)',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+<!-- Overlay image to cover ko-fi logo -->
+<img src="" class="kofi-cover" alt="">
+<style>
+  .kofi-cover {
+    position: fixed;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    bottom: 20px;   /* adjust until perfectly covering */
+    left: 30px;    /* adjust until perfectly covering */
+    width: 50px;    /* whatever size you want */
+    height: 50px;   /* optional */
+    pointer-events: none; /* allow clicks to pass through */
+    z-index: 2147483647; /* above Ko-fi widget */
+  }
+</style>
 
 </body>
 </html>
