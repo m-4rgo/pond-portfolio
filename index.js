@@ -269,3 +269,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // call this to add event listeners for the image viewer controls
     imageViewerControls();
 })
+

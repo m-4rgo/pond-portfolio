@@ -11,6 +11,15 @@ body {
     background-color: #e3e3e3;
     color: #888888;
 }
+.hidden {
+    display: none;
+}
+/* for hiding non CS friendly content (childlock) */
+.censored {
+    filter: blur(15px);
+    pointer-events: none;
+    user-select: none;
+}
 header {
     background-color: #e3e3e3;
     color: #afafaf;
@@ -135,6 +144,10 @@ nav a:hover {
 
     #page-content {
         padding-top: 2rem;
+    }
+    /* will collapse section columns into single column on mobile */
+    .section-columns {
+        flex-direction: column;
     }
 }
 
@@ -262,4 +275,38 @@ nav a:hover {
     border: none;
     cursor: w-resize;
     z-index: 1;
+}
+
+/*#requests {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+.section-columns {
+    display: flex;
+    gap: 1rem;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* for the art request list tabs */
+.requestlist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.requestpost {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: auto;
+    /*height: 1.5rem;*/
+    background: #d6d6d6;
+    border-radius: 0.5rem;
+    line-height: 0.5rem;
+    padding-left: 0.5rem;
+}
+.requestpost:hover {
+    background: #cacaca;
 }
