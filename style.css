@@ -190,6 +190,7 @@ nav a:hover {
 
     #page-content {
         padding-top: 2rem;
+        overflow-x: hidden; /* disables horizontal scroll on mobile*/
     }
     /* will collapse section columns into single column on mobile */
     .section-columns {
