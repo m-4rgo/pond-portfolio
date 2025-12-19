@@ -1,0 +1,3 @@
+this is the child locked version of the site for linking to chickensmoothie.
+the site url should be www.fromthepond.co.uk/childlock and all the .censored content should be blurred.
+there should be a notice informing users of the child lock and that adults should contact pond to remove the childlock.

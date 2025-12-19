@@ -10,16 +10,51 @@ body {
     padding: 0;
     background-color: #e3e3e3;
     color: #888888;
+    box-sizing: border-box;
 }
+/* .hidden class to hide all sections on page load except home. */
 .hidden {
-    display: none;
+    display: none !important;
 }
-/* for hiding non CS friendly content (childlock) */
+/* .censored for hiding non CS friendly content (childlock) */
 .censored {
-    filter: blur(15px);
+    filter: blur(5px);
+    /*cursor: help;*/
     pointer-events: none;
     user-select: none;
 }
+/* also perhaps have 2 blurred class styles- one for childlock at blur 5 and one for censored at blur 20*/
+/* todo: need to fix this, if you want the help cursor and popup to show you need to wrap the censored element in a div so that that remains clickable for the popup and cursor*/
+.censored:hover {
+    cursor: help;
+}
+/* a class to indicate which items need to be censored for the cs site.*/
+.censor {}
+
+
+/* a dialogue box to explain the childlock censor*/
+.notice {
+    background: rgba(255, 255, 255, 0.48);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    /*width: 50vw;*/
+    /*font-size: 0.8rem;*/
+}
+.notice-point {
+    border-radius: 20rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: bold;
+    /*color: #5c5c5c;*/
+    font-size: 0.8rem;
+    background: #d6d6d6;
+    border: 2px solid rgba(136, 136, 136, 0.54);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    margin-right: 0.5rem;
+}
+
+
+/*//////////////////////// header and navbar ////////////////////////*/
 header {
     background-color: #e3e3e3;
     color: #afafaf;
@@ -68,6 +103,15 @@ nav a:hover {
     cursor: cell;
     color: #888;
 }
+/* class to highlight the currently selected navigation menu tab. */
+.active {
+    color: #888888;
+}
+.active:hover {
+    color: #5c5c5c;
+}
+
+/*//////////////////////// page content ////////////////////////*/
 /* container for all the page content sections */
 #page-content {
     margin-left: 250px;
@@ -76,6 +120,8 @@ nav a:hover {
 #page-content img {
     max-width: 70vw;
 }
+
+/*//////////////////////// page flexibility (mobile and small screens) ////////////////////////*/
 /* settings for screens smaller than 1kpx (bring sidebar to top) */
 @media screen and (max-width: 1000px) {
     body {
@@ -151,6 +197,7 @@ nav a:hover {
     }
 }
 
+/*//////////////////////// page sections ////////////////////////*/
 .section {
     padding: 1rem 2rem;
     max-width: 1200px;
@@ -171,6 +218,8 @@ nav a:hover {
     margin-bottom: 1rem;
     cursor: crosshair;
 }
+
+/*//////////////////////// page gallery formatting ////////////////////////*/
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -201,17 +250,8 @@ nav a:hover {
     image-rendering: pixelated;
     width: max(100px, 200px) !important;
 }
-/* class to hide all sections on page load except home. */
-.hidden {
-    display: none !important;
-}
-/* class to highlight the currently selected navigation menu tab. */
-.active {
-    color: #888888;
-}
-.active:hover {
-    color: #5c5c5c;
-}
+
+/*//////////////////////// image viewer for gallery images ////////////////////////*/
 #image-viewer {
     position: relative;
     display: flex;
@@ -238,11 +278,9 @@ nav a:hover {
     width: auto;
     height: auto;
 }
-
 #image-viewer img:hover {
     cursor: cell;
 }
-
 #fullscreen {
     top: 0;
     position: fixed;
@@ -254,7 +292,6 @@ nav a:hover {
     align-items: center;
     z-index: 99999;
 }
-
 #fullscreen img {
     width: 150%;
     max-height: 95%;
@@ -262,7 +299,6 @@ nav a:hover {
     cursor: crosshair;
     image-rendering: pixelated;
 }
-
 /* class for the close viewer button*/
 #close-viewer {
     position: absolute;
@@ -277,10 +313,7 @@ nav a:hover {
     z-index: 1;
 }
 
-/*#requests {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*}*/
+/*//////////////////////// page section column formatting ////////////////////////*/
 .section-columns {
     display: flex;
     gap: 1rem;
@@ -290,13 +323,14 @@ nav a:hover {
     flex-direction: column;
 }
 
+/*//////////////////////// listing requests and messages ////////////////////////*/
 /* for the art request list tabs */
-.requestlist {
+.request-list {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
 }
-.requestpost {
+.request-post {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -307,6 +341,66 @@ nav a:hover {
     line-height: 0.5rem;
     padding-left: 0.5rem;
 }
-.requestpost:hover {
+.request-post:hover {
     background: #cacaca;
+}
+
+/*//////////////////////// art request form and message form formatting ////////////////////////*/
+form {
+    background: #d6d6d6;
+    /*width: 100%;*/
+    /*max-width: 850px;*/
+    /*margin: 0.5rem;*/
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /*border: 1px solid #878787;*/
+}
+.field {
+    /*background: #b51717;*/
+}
+label {
+    display: block;
+    font-size: 0.9rem;
+    /*margin-bottom: 0.3rem;*/
+    /*color: #333;*/
+}
+form input[type="text"],
+form textarea {
+    /*width: 200px;*/
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    /*padding: 0.6rem 0.8rem;*/
+    /*font-size: 1rem;*/
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: #fff;
+    outline: none;
+    resize: vertical;
+
+    max-width: 100%;
+    /*transition: border-color 0.2s;*/
+}
+form button[type="submit"] {
+    /*width: auto;*/
+    /*display: inline-block;*/
+    align-self: flex-start;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background: #a5a5a5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button[type="submit"]:hover {
+     background: #b1b1b1;
+ }
+form button[type="submit"]:active {
+    background: #888888;
 }

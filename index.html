@@ -24,14 +24,23 @@
     <a data-target="#code">code</a>
     <a data-target="#blog">blog</a>
     <a data-target="#minecraft">minecraft</a>
+    <a data-target="#support">support</a>
     <a data-target="#visitor-book">visitor book</a>
   </nav>
 </header>
 
 <main id="page-content">
 
+<!--  notice to explain-->
+  <div id="childlock-notice" class="notice" hidden>
+    <p>
+      <span class="notice-point">!</span> childlock is active: some content is hidden to comply with cs rules.
+    </p>
+  </div>
+
   <section id="feed" class="section">
     <h2>feed</h2>
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction.</p>
     <p>this will be a feed of all my latest artwork and posts, newest to oldest. feature not live yet!</p>
   </section>
 <!--  home section-->
@@ -80,41 +89,49 @@
 <!--  requests section-->
   <section id="requests" class="section">
     <h2>requests</h2>
-    <p>This page is a WIP. I no longer take commissions because I have a disability which affects my timekeeping and executive function,
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction.</p>
+    <p class="censored">I no longer take commissions because I have a disability which affects my executive function,
       which makes taking and delivering on commissions difficult. Instead,
       I welcome you to drop an art suggestion or request in the submission box below,
-      and I might be able to complete it for you free of charge. I have a donation box below,
+      and I might be able to complete it for you free of charge. I have a donation box on the right below,
       if you're happy with the art you recieved or just like my art and want to support me, please consider dropping a tip!
-      It's free to request art, and all tips/donations are optional</p>
+      It's free to request art, and all tips/donations are optional.</p>
     <div class="section-columns">
     <div class="column">
       <h3>request some art</h3>
-    <p>art request system will go here :)
-    order a request the same way you would with a commission, but know that they're not formal commissions and i can't promise to finish everything!
-    <br>Pay what you can/as you feel if you like what i made, and you can do this anonymously via my kofi.</p>
-      <p>submission box form (WIP):<br>
-      name: (you can leave this empty to remain anonymous)<br>
-      request: describe what you want to see and feel free to link examples and references<br>
-      [x] private checkbox- tick this box to make the request only visible to me (regular viewers of the site wont be able to see it but i will). PLEASE NOTE: that the user and message content of your request will remain private, but all the artwork i make will be posted publicly.</p>
+      <p>Fill out the form below to request or suggest some art. Order a request the same way you would with a commission, but know that they're not formal commissions and i can't promise to finish everything!
+      <br>Pay what you can/as you feel if you like what i made, and you can do this anonymously via my kofi.</p>
+
+      <form id="request-form" action="" method="post" class="censored">
+      <div class="field">
+        <label for="request-name">Name</label>
+        <input type="text" id="request-name" name="name" placeholder="name (leave blank to stay anonymous)">
+      </div>
+      <div class="field">
+        <label for="request-message">Message</label>
+        <textarea id="request-message" name="message" placeholder="write your request here (describe what you want to see and feel free to link examples and references)" rows="5" required></textarea>
+      </div>
+      <button id="request-submit" type="submit">Submit Request</button>
+      </form>
 
       <h3>completed requests</h3>
-      <p>list of completed art requests will go here</p>
-      <div class="requestlist">
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
+      <p>list of completed art requests will go here, make this section collapsible</p>
+      <div class="request-list">
+        <div class="request-post"><p>Name</p><p>Message</p></div>
+        <div class="request-post"><p>Name</p><p>Message</p></div>
+        <div class="request-post"><p>Name</p><p>Message</p></div>
       </div>
       <h3>pending requests</h3>
-      <p>list of art requests will go here</p>
-      <div class="requestlist">
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
-        <div class="requestpost"><p>Name</p><p>Message</p></div>
+      <p>list of art requests will go here, make this section collapsible</p>
+      <div class="request-list">
+        <div class="request-post"><p>Name</p><p>Message</p></div>
+        <div class="request-post"><p>Name</p><p>Message</p></div>
+        <div class="request-post"><p>Name</p><p>Message</p></div>
       </div>
     </div>
     <div class="column">
       <h3>donate</h3>
-    <iframe id='kofiframe' class="censored" src='https://ko-fi.com/pondpondpond/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:auto;max-width:400px;background:#e3e3e3;border-radius:5px;' height='650' title='pondpondpond'></iframe>
+    <iframe id='kofiframe' class="censor" src='https://ko-fi.com/pondpondpond/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:auto;max-width:400px;background:#e3e3e3;border-radius:8px;' height='650' title='pondpondpond'></iframe>
     </div>
     </div>
   </section>
@@ -142,6 +159,7 @@
   <!--  pixel gallery section-->
   <section id="music" class="section">
     <h2>music by fellware</h2>
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction.</p>
     <p>i'll fix the layout for this page later, heres a song. theres already a band called pond so im using an alt name for music stuff</p>
 
     <img src="Assets/music/England_white.png" alt="England - fellware" style="width:200px;height:200px;border-radius:5%;">
@@ -155,12 +173,14 @@
 
   <section id="code" class="section">
     <h2>code</h2>
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction.</p>
     <p>worm in stem worm in stem worm in stem she's a ~*developer*~ ill post some projects asp</p>
   </section>
 
 <!--  blog posts section-->
-  <section id="blog" class="section">
+  <section id="blog" class="section censor">
     <h2>blog</h2>
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction.</p>
     <p>ponds blog posts will go here, coming soon!</p>
 <!--    socials commented out for chickensmoothie policy-->
 <!--    <h1>Socials</h1>-->
@@ -201,10 +221,35 @@
     <img src="Assets/minecraft.png" alt="minecraft server spawn" style="width:900px;height:auto;border-radius:5px;">
   </section>
 
+  <!--  support section-->
+  <section id="support" class="section censor">
+    <h2>support me</h2>
+<!--    <p>you can support me on <a href="https://ko-fi.com/pondpondpond/shop">kofi</a> or <a href="https://www.patreon.com/cw/pondpondpond">patreon</a>.</p>-->
+    <p>you can support me on <a href="https://ko-fi.com/pondpondpond/shop">kofi</a>.</p>
+  </section>
+
 <!--  visitor book section-->
   <section id="visitor-book" class="section">
     <h2>visitor book</h2>
+    <p class="notice"><span class="notice-point">!</span> This section is still under construction, do not leave a comment yet, as it will not be sent.</p>
     <p>feel free to leave a comment! you can leave your name or write anonymously-- feature not live yet, coming soon! </p>
+    <form id="message-form" action="" method="post" class="censored">
+      <div class="field">
+        <label for="request-name">Name</label>
+        <input type="text" id="message-name" name="name" placeholder="name (leave blank to stay anonymous)">
+      </div>
+      <div class="field">
+        <label for="request-message">Message</label>
+        <textarea id="message-message" name="message" placeholder="message" rows="5" required></textarea>
+      </div>
+      <button id="message-submit" type="submit">Submit Message</button>
+    </form>
+    <h3>comments</h3>
+    <div class="request-list">
+      <div class="request-post"><p>Name</p><p>Message</p></div>
+      <div class="request-post"><p>Name</p><p>Message</p></div>
+      <div class="request-post"><p>Name</p><p>Message</p></div>
+    </div>
   </section>
 
 <!--  image viewer for artwork pages-->
@@ -222,33 +267,34 @@
 </main>
 
 <script src="index.js"></script>
+<script src="childlock.js"></script>
 
 <!--ko-fi bottom left corner widget-->
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('pondpondpond', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': '',
-    'floating-chat.donateButton.background-color': 'rgba(106,14,14,0)',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+<!--<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>-->
+<!--<script>-->
+<!--  kofiWidgetOverlay.draw('pondpondpond', {-->
+<!--    'type': 'floating-chat',-->
+<!--    'floating-chat.donateButton.text': '',-->
+<!--    'floating-chat.donateButton.background-color': 'rgba(106,14,14,0)',-->
+<!--    'floating-chat.donateButton.text-color': '#fff'-->
+<!--  });-->
+<!--</script>-->
 <!-- Overlay image to cover ko-fi logo so cs mods cant see it-->
-<img src="" class="kofi-cover" alt="">
-<style>
-  .kofi-cover {
-    position: fixed;
-    background-color: #e3e3e3;
-    border-radius: 50%;
-    image-rendering: pixelated;
-    bottom: 20px;   /* adjust until perfectly covering */
-    left: 30px;    /* adjust until perfectly covering */
-    width: 50px;    /* whatever size you want */
-    height: 50px;   /* optional */
-    pointer-events: none; /* allow clicks to pass through */
-    z-index: 2147483647; /* above Ko-fi widget */
-  }
-</style>
+<!--<img src="" class="kofi-cover" alt="">-->
+<!--<style>-->
+<!--  .kofi-cover {-->
+<!--    position: fixed;-->
+<!--    background-color: #e3e3e3;-->
+<!--    border-radius: 50%;-->
+<!--    image-rendering: pixelated;-->
+<!--    bottom: 20px;   /* adjust until perfectly covering */-->
+<!--    left: 30px;    /* adjust until perfectly covering */-->
+<!--    width: 50px;    /* whatever size you want */-->
+<!--    height: 50px;   /* optional */-->
+<!--    pointer-events: none; /* allow clicks to pass through */-->
+<!--    z-index: 2147483647; /* above Ko-fi widget */-->
+<!--  }-->
+<!--</style>-->
 
 </body>
 </html>
