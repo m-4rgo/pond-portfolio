@@ -1,0 +1,332 @@
+/* Import elegant, airy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #f2f4f6;
+    --text-color: #3a3f4a;
+    --accent-color: #b8c7e0;
+    --soft-white: #ffffff;
+    --pale-blue: #aad4ff;
+    --bold-blue: #669fd8;
+}
+
+/* Reset + base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: linear-gradient(to bottom, #000428, #004e92, #00aaff);*/
+    z-index: -2;
+}
+
+body {
+    /*background: linear-gradient(180deg, #669fd8 0%, #eef2f7 100%);*/
+    background: linear-gradient(180deg, #66b1ff 0%, #d8a766, #66d881, #e65a6f, #A25AE6FF 100%);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    min-height: 100vh;
+    /*height: 100vh;*/
+
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+}
+
+/* =========================
+   FIXED CONTENTS (LEFT)
+   ========================= */
+
+main {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    display: flex;
+}
+
+#navigation {
+    display: flex;
+    /*position: sticky;*/
+    align-self: flex-start;
+    /*top: 5rem;*/
+    flex-direction: column;
+    /*left: 20rem;*/
+    /*width: 280px;*/
+    /*transform: translateX(-30rem);*/
+
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(6px);
+}
+
+/* =========================
+   INTRO SECTION (CENTER-RIGHT)
+   ========================= */
+
+#content {
+    display: flex;
+    /*margin-left: 40vw; !* contents width + breathing room *!*/
+    width: 700px;
+    /*transform: translateX(12rem);*/
+    /*margin-top: 3rem;*/
+    flex-direction: column;
+    padding: 2rem;
+
+    /*padding: 4rem 3rem;*/
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(6px);
+}
+
+#content img {
+    max-width: 100%;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2f3440;
+}
+
+/* Intro paragraph */
+.intro p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a5060;
+}
+
+/* Standard paragraphs */
+p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Decorative divider */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            var(--accent-color),
+            transparent
+    );
+    margin: 2.5rem 0;
+}
+
+/* =========================
+   LINKS — WIND EFFECT
+   ========================= */
+
+a {
+    position: relative;
+    color: #4a5f8a;
+    text-decoration: none;
+    transition:
+            color 0.6s ease,
+            transform 0.8s ease,
+            letter-spacing 0.6s ease;
+}
+
+a:hover {
+    color: #2f3d5c;
+    transform: translateX(6px);
+    letter-spacing: 0.04em;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            rgba(184, 199, 224, 0.8),
+            transparent
+    );
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+a:hover::after {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* =========================
+   LORE CONTENTS STYLING
+   ========================= */
+
+#lore-contents {
+    font-family: 'Playfair Display', serif;
+}
+
+#lore-contents ul {
+    list-style: none;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(184, 199, 224, 0.4);
+}
+
+#lore-contents li {
+    margin: 0.75rem 0;
+    position: relative;
+}
+
+#lore-contents span {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #3b4355;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+#lore-contents li::before {
+    content: '✦';
+    position: absolute;
+    left: -1.8rem;
+    top: 0.2rem;
+    font-size: 0.6rem;
+    color: rgba(184, 199, 224, 0.8);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7a8294;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   RESPONSIVE FALLBACK
+   ========================= */
+
+/*@media (max-width: 900px) {*/
+/*    body {*/
+/*        flex-direction: column;*/
+/*        align-items: stretch;*/
+/*    }*/
+
+/*    #navigation {*/
+/*        position: static;*/
+/*        width: auto;*/
+/*        margin: 2rem;*/
+/*    }*/
+
+/*    #content {*/
+/*        margin: 2rem auto;*/
+/*        max-width: 90%;*/
+/*    }*/
+/*}*/
+
+/* =========================
+   stars animation toggle switch
+   ========================= */
+/* Container for positioning */
+#toggle-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    /*font-family: 'Playfair Display', serif;*/
+}
+/* Tab-shaped container */
+.toggle-tab {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    gap: 10px;
+}
+/* Label next to toggle */
+.toggle-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+/* On state */
+input:checked + .slider {
+    background-color: var(--pale-blue); /* bright blue */
+}
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+

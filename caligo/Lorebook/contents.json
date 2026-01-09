@@ -1,0 +1,26 @@
+{
+  "overview.md": "Overview",
+  "anatomy.md": "Anatomy",
+  "culture": {
+    "society.md": "Society",
+    "hierarchy.md": "Hierarchy",
+    "customs.md": "Customs"
+  },
+  "magic": {
+    "wings.md": "Wings",
+    "flight.md": "Flight",
+    "starlight.md": "Starlight"
+  },
+  "history": {
+    "origins.md": "Origins",
+    "age-of-clouds.md": "The Age of Clouds"
+  }
+}
+
+
+
+
+[
+  { "id": "intro", "title": "Introduction" },
+  { "id": "chapter1", "title": "Chapter 1" }
+]

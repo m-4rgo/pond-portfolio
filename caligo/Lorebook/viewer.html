@@ -1,0 +1,15 @@
+<nav class="breadcrumbs" id="breadcrumbs"></nav>
+<main id="lore-content"></main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file');
+
+  fetch(file)
+          .then(res => res.text())
+          .then(md => {
+            document.getElementById('lore-content').innerHTML =
+                    marked.parse(md);
+          });
+</script>

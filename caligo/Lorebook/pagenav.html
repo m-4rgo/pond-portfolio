@@ -1,0 +1,46 @@
+<!--html-->
+<nav class="chapter-nav">
+  <a id="prev-chapter"></a>
+  <a id="next-chapter"></a>
+</nav>
+
+<!--script-->
+function flattenIndex(obj, base = 'lore') {
+let files = [];
+for (const key in obj) {
+if (typeof obj[key] === 'string') {
+files.push(`${base}/${key}`);
+} else {
+files = files.concat(flattenIndex(obj[key], `${base}/${key}`));
+}
+}
+return files;
+}
+
+fetch('lore/lore-index.json')
+.then(res => res.json())
+.then(index => {
+const flat = flattenIndex(index);
+const current = flat.indexOf(file);
+
+if (flat[current - 1]) {
+const prev = document.getElementById('prev-chapter');
+prev.href = `lore-viewer.html?file=${flat[current - 1]}`;
+prev.textContent = '← Previous Chapter';
+}
+
+if (flat[current + 1]) {
+const next = document.getElementById('next-chapter');
+next.href = `lore-viewer.html?file=${flat[current + 1]}`;
+next.textContent = 'Next Chapter →';
+}
+});
+
+<!--css-->
+.chapter-nav {
+display: flex;
+justify-content: space-between;
+margin-top: 4rem;
+font-size: 0.85rem;
+letter-spacing: 0.12em;
+}

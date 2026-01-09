@@ -1,0 +1,121 @@
+/* Import elegant, airy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #f7f9fb;
+    --text-color: #3a3f4a;
+    --accent-color: #b8c7e0;
+    --soft-white: #ffffff;
+}
+
+/* Reset + base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #f9fbfd 0%, #eef2f7 100%);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content container */
+body > * {
+    max-width: 700px;
+    padding: 4rem 3rem;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+/* Headings */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2f3440;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a5060;
+}
+
+/* Standard paragraphs */
+p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Subtle decorative accent (optional later) */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            var(--accent-color),
+            transparent
+    );
+    margin: 2.5rem 0;
+}
+
+
+
+/* WIND EFFECTS */
+
+a {
+    position: relative;
+    color: #4a5f8a;
+    text-decoration: none;
+    transition:
+            color 0.6s ease,
+            transform 0.8s ease,
+            letter-spacing 0.6s ease;
+}
+
+a:hover {
+    color: #2f3d5c;
+    transform: translateX(6px);
+    letter-spacing: 0.04em;
+}
+
+/*AND */
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            rgba(184, 199, 224, 0.8),
+            transparent
+    );
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+a:hover::after {
+    opacity: 1;
+    transform: translateX(10px);
+}
