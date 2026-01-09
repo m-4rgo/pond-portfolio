@@ -24,12 +24,96 @@
     width: 100%;
     height: 100%;
     /*background: linear-gradient(to bottom, #000428, #004e92, #00aaff);*/
+    background: radial-gradient(circle at 100% 100%, rgba(20,20,20,0) 80%, rgba(0,0,0,1) 100%);
     z-index: -2;
+
+
+    /*animation: stars 6s ease-in-out infinite;*/
 }
 
 body {
-    background: linear-gradient(180deg, #669fd8 0%, #eef2f7 100%);
-    /*background: linear-gradient(180deg, #66b1ff 0%, #d8a766, #66d881, #e65a6f, #A25AE6FF 100%);*/
+    /*background: linear-gradient(180deg, #669fd8 0%, #eef2f7 100%);*/
+    /*background: linear-gradient(25deg, #66b1ff 10%, #d8a766);*/
+    /*background: radial-gradient(#ffe392 -10%, #66b1ff 100%, #d8a766);*/
+    /*the one below here v*/
+    /*background: radial-gradient(ellipse at 100% 0%, #ffe392 -10%, #66b1ff 100%, #d8a766);*/
+    /*background: radial-gradient(ellipse at 100% 0%, #ffefbe, #ffd3f3, #9c9ce8);*/
+    /*background: linear-gradient(*/
+    /*        -30deg,*/
+    /*        #ffb3ba, !* pastel red *!*/
+    /*        #ffdfba, !* pastel orange *!*/
+    /*        #ffffba, !* pastel yellow *!*/
+    /*        #baffc9, !* pastel green *!*/
+    /*        #bae1ff, !* pastel blue *!*/
+    /*        #d0baff, !* pastel indigo *!*/
+    /*        #ffc2f9  !* pastel violet *!*/
+    /*);*/
+    /*background: linear-gradient(*/
+    /*        -30deg,*/
+    /*        #ff7f7f, !* darker pastel red *!*/
+    /*        #ffb97f, !* darker pastel orange *!*/
+    /*        #fff47f, !* darker pastel yellow *!*/
+    /*        #8fffbf, !* darker pastel green *!*/
+    /*        #7fcfff, !* darker pastel blue *!*/
+    /*        #a68fff, !* darker pastel indigo *!*/
+    /*        #ff9fff  !* darker pastel violet *!*/
+    /*);*/
+    /*background: linear-gradient(270deg, #ff7f7f, #7fcfff, #ff9fff);*/
+
+
+    /*nice blue galaxy*/
+    /*background: radial-gradient(*/
+    /*        ellipse at top left,*/
+    /*        #000010,    !* deep black *!*/
+    /*        #001a33 30%,*/
+    /*        #004466 60%,*/
+    /*        #001133 80%,*/
+    /*        #000000 100%*/
+    /*);*/
+
+    /*aurora borealis?*/
+    /*background: radial-gradient(*/
+    /*        ellipse at top left,*/
+    /*        #000010,       !* deep space black *!*/
+    /*        #002244 20%,    !* dark navy *!*/
+    /*        #004466 40%,    !* teal-blue *!*/
+    /*        #00aa77 60%,    !* soft green *!*/
+    /*        #000011 80%,*/
+    /*        #000000 100%*/
+    /*);*/
+
+    /*background:*/
+    /*        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 50%),*/
+    /*        radial-gradient(circle at 80% 50%, rgba(200,200,255,0.15), transparent 50%),*/
+    /*        radial-gradient(circle at 60% 80%, rgba(255,200,100,0.1), transparent 50%),*/
+    /*        radial-gradient(ellipse at center, #000011, #001133 60%, #000000 100%);*/
+
+
+    background:
+            radial-gradient(ellipse at 50% 100%, rgba(255, 26, 189, 0.09), transparent 50%),
+            radial-gradient(ellipse at 100% 80%, rgba(41, 255, 26, 0.18), transparent 50%),
+            radial-gradient(ellipse at 0% 0%, rgba(255, 236, 26, 0.07), transparent 50%),
+            radial-gradient(ellipse at 100% 0%, rgba(21, 1, 5, 0.74), transparent 30%),
+            radial-gradient(circle at 0% 100%, rgba(21, 1, 5, 0.74), transparent 50%),
+            radial-gradient(ellipse at top left, #000010, #001a33 30%, #004466 60%, #001133 80%, #000000 100%)
+;
+
+
+    /*background: radial-gradient(ellipse at top left, #000010, #000000 70%);*/
+
+    /*background: radial-gradient(*/
+    /*        ellipse at top left,*/
+    /*        #000010,   !* almost black *!*/
+    /*        #0a0a23 40%,*/
+    /*        #1a0a3d 70%,*/
+    /*        #000000 100%*/
+    /*);*/
+
+
+
+
+    /*background: radial-gradient(circle at 30% 30%, #f4e1b0, #d2b48c 70%, #a57c55 100%);*/
+
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
@@ -41,7 +125,31 @@ body {
     /*display: flex;*/
     /*flex-direction: row;*/
     /*align-items: center;*/
+
+
+
+    /*for the animated background*/
+    background-size: 150% 150%;
+    animation: gradientShift 60s ease infinite;
+    /*end for animated background*/
 }
+
+/*animates the gradient background*/
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes stars {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
+}
+
 
 /* =========================
    FIXED CONTENTS (LEFT)
@@ -111,6 +219,8 @@ section {
             inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 
     backdrop-filter: blur(6px);
+
+
 }
 
 #content img {
@@ -209,7 +319,7 @@ a:hover::after {
     list-style: none;
     margin-left: 1.5rem;
     padding-left: 1.5rem;
-    border-left: 1px solid rgba(184, 199, 224, 0.4);
+    border-left: 1px dashed rgba(238, 240, 244, 0.51);
 }
 
 #lore-contents li {
@@ -232,7 +342,7 @@ a:hover::after {
     left: -1.8rem;
     top: 0.2rem;
     font-size: 0.6rem;
-    color: rgba(184, 199, 224, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Hide submenus initially */
@@ -259,7 +369,7 @@ a:hover::after {
 /* Optional: add an arrow indicator */
 #lore-contents li.collapsible > span::after {
     content: '✦';
-    color: var(--bold-blue);
+    color: #4a5f8a;
     display: inline-block;
     margin-left: 0.5rem;
     transition: text-shadow 0.3s ease, color 0.3s ease, transform 1s ease;
@@ -284,25 +394,65 @@ a:hover::after {
             0 0 10px #00f2fe,
             0 0 20px #00f2fe,
             0 0 40px #00f2fe;
-    transition: text-shadow 0.3s ease, color 0.3s ease;
+    transition: text-shadow 0.3s ease, color 0.3s ease, background 3s ease;
 }
 
-/* Optional: glow on hover too */
-#lore-contents li.active > a:hover {
-    text-shadow:
-            0 0 10px #4facfe,
-            0 0 20px #00f2fe,
-            0 0 30px #00f2fe,
-            0 0 50px #00f2fe;
+/*!* Optional: glow on hover too *!*/
+/*#lore-contents li.active > a:hover {*/
+/*    text-shadow:*/
+/*            0 0 10px #4facfe,*/
+/*            0 0 20px #00f2fe,*/
+/*            0 0 30px #00f2fe,*/
+/*            0 0 50px #00f2fe;*/
+/*}*/
+
+#lore-contents a {
+    all: unset;
+    position: relative;
+    display: inline-block;
+    /*color: #cfdfff;*/
+    /* Starting shadow */
+    text-shadow: 0 0 0 rgba(255,255,255,0);
+
+    /* Transitions live ONLY here */
+    transition:
+            color 0.6s ease,
+            text-shadow 0.8s ease,
+            box-shadow 0.8s ease,
+            transform 1s ease;
+}
+
+#lore-contents a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+            ellipse,
+            rgba(79, 172, 254, 0.93) 10%,
+            rgba(0, 242, 254, 0.4) 80%
+    );
+    border-radius: 4rem;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* SLOW fade */
+    z-index: -1;
+}
+
+#lore-contents span:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,0.9);
 }
 
 #lore-contents a:hover {
-    text-shadow:
-            0 0 10px #4facfe,
-            0 0 20px #00f2fe,
-            0 0 30px #00f2fe,
-            0 0 50px #00f2fe;
+    color: white;
+    transform: translateX(-.5rem);
+    text-shadow: 0 0 10px rgba(255,255,255,0.9);
+    box-shadow: 0 0 30px rgba(0,242,254,0.9);
+    border-radius: 4rem;
 }
+
+#lore-contents a:hover::before {
+    opacity: 1;
+}
+
 
 
 /* Breadcrumbs */
