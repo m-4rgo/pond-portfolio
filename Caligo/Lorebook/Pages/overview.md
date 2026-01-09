@@ -49,6 +49,6 @@ I'm still workshopping common names for the species.
 
 Remember, all these species 'rules' and lore are just guidelines that I made up! You are more than welcome to use the species motif (the design of the species) for whatever lore or stories you want to.
 
-![conformation](./Archive/Images/conformation.png)
+![conformation](/Caligo/Lorebook/Pages/Archive/Images/conformation.png)
 
 Anatomy Diagram for Penequus gracilis

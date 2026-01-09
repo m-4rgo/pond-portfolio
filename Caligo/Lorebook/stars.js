@@ -11,7 +11,7 @@ window.onload = function() {
         stars = Array.from({length: numStars}, () => ({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            r: Math.random() * 10 + 1, // slightly bigger for star points
+            r: Math.random() * 4 + 1, // slightly bigger for star points
             a: Math.random() * Math.PI * 2,
             d: Math.random() * 0.02 + 0.005
         }));

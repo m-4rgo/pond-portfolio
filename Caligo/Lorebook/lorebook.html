@@ -42,36 +42,40 @@
         Reference catalogue of pterohippus lore
     </p>
 
-    <nav id="lore-contents">
-        <ul>
-            <li>
-                <span>Current Lore</span>
-                <ul>
-                    <li><a href="#overview" data-page="overview">Overview</a></li>
-                </ul>
-            </li>
-            <li>
-                <span>Old Lore (Archived)</span>
-                <ul>
-                    <li><a href="#2012_info" data-page="/Archive/2012_info">2012 Species Info</a></li>
-                    <li><a href="#2013_registry" data-page="/Archive/2013_registry">2013 Registry</a></li>
-                    <li><a href="#2014_faq" data-page="/Archive/2014_faq">2014 FAQ</a></li>
-                    <li><a href="#2014_info" data-page="/Archive/2014_info">2014_info</a></li>
-                    <li><a href="#2015_genetics" data-page="/Archive/2015_genetics">2015_genetics</a></li>
-                    <li><a href="#2015_penin" data-page="/Archive/2015_penin">2015_penin</a></li>
-                    <li><a href="#2015_tuskur" data-page="/Archive/2015_tuskur">2015_tuskur</a></li>
-                    <li><a href="#2017_open_announcement" data-page="/Archive/2017_open_announcement">2017_open_announcement</a></li>
-                    <li><a href="#2018_encyclopedia" data-page="/Archive/2018_encyclopedia">2018_encyclopedia</a></li>
-                    <li><a href="#2018_guidebook" data-page="/Archive/2018_guidebook">2018_guidebook</a></li>
-                    <li><a href="#2018_world" data-page="/Archive/2018_world">2018_world</a></li>
-<!--                    <li><a href="#" data-page="/archive/"></a></li>-->
+        <nav id="lore-contents">
+            <ul>
+                <li>
+                    <a href="#intro" data-page="intro">Intro</a>
+                </li>
 
-                </ul>
-            </li>
-        </ul>
-    </nav>
+                <li class="collapsible">
+                    <span>Current Lore</span>
+                    <ul>
+                        <li><a href="#overview" data-page="overview">Overview</a></li>
+                    </ul>
+                </li>
 
-<!--    <nav id="lore-contents"></nav>-->
+                <li class="collapsible">
+                    <span>Old Lore (Archived)</span>
+                    <ul>
+                        <li><a href="#2012_info" data-page="Archive/2012_info">2012 Species Info</a></li>
+                        <li><a href="#2013_registry" data-page="Archive/2013_registry">2013 Registry</a></li>
+                        <li><a href="#2014_faq" data-page="Archive/2014_faq">2014 FAQ</a></li>
+                        <li><a href="#2014_info" data-page="Archive/2014_info">2014 Info</a></li>
+                        <li><a href="#2015_genetics" data-page="Archive/2015_genetics">2015 Genetics</a></li>
+                        <li><a href="#2015_penin" data-page="Archive/2015_penin">2015 Penin</a></li>
+                        <li><a href="#2015_tuskur" data-page="Archive/2015_tuskur">2015 Tuskur</a></li>
+                        <li><a href="#2017_open_announcement" data-page="Archive/2017_open_announcement">2017 Open Announcement</a></li>
+                        <li><a href="#2018_encyclopedia" data-page="Archive/2018_encyclopedia">2018 Encyclopedia</a></li>
+                        <li><a href="#2018_guidebook" data-page="Archive/2018_guidebook">2018 Guidebook</a></li>
+                        <li><a href="#2018_world" data-page="Archive/2018_world">2018 World</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!--    <nav id="lore-contents"></nav>-->
 
     </section>
 
@@ -88,6 +92,15 @@
 <!--<script src="lorebook.js"></script>-->
 <script src="stars.js" id="stars-script"></script>
 <!--<script src="toggle.js" ></script>-->
+
+<script>
+    document.querySelectorAll('#lore-contents li.collapsible > span').forEach(span => {
+        span.addEventListener('click', () => {
+            const parentLi = span.parentElement;
+            parentLi.classList.toggle('active');
+        });
+    });
+</script>
 
 </body>
 </html>

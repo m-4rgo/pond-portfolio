@@ -28,13 +28,14 @@
 }
 
 body {
-    /*background: linear-gradient(180deg, #669fd8 0%, #eef2f7 100%);*/
-    background: linear-gradient(180deg, #66b1ff 0%, #d8a766, #66d881, #e65a6f, #A25AE6FF 100%);
+    background: linear-gradient(180deg, #669fd8 0%, #eef2f7 100%);
+    /*background: linear-gradient(180deg, #66b1ff 0%, #d8a766, #66d881, #e65a6f, #A25AE6FF 100%);*/
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
     letter-spacing: 0.02em;
-    min-height: 100vh;
+    height: 100vh;
+    background-attachment: fixed;
     /*height: 100vh;*/
 
     /*display: flex;*/
@@ -233,6 +234,76 @@ a:hover::after {
     font-size: 0.6rem;
     color: rgba(184, 199, 224, 0.8);
 }
+
+/* Hide submenus initially */
+/* Collapsible submenu */
+#lore-contents li.collapsible > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+}
+
+/* When active */
+#lore-contents li.collapsible.active > ul {
+    max-height: 1000px; /* big enough for content */
+    opacity: 1;
+}
+
+
+/* Cursor pointer for toggle */
+#lore-contents li.collapsible > span {
+    cursor: pointer;
+}
+
+/* Optional: add an arrow indicator */
+#lore-contents li.collapsible > span::after {
+    content: '✦';
+    color: var(--bold-blue);
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: text-shadow 0.3s ease, color 0.3s ease, transform 1s ease;
+}
+
+/* Rotate arrow when active */
+#lore-contents li.collapsible.active > span::after {
+    transform: translateX(2rem) rotate(360deg);
+    color: white;
+    text-shadow:
+            0 0 15px #4facfe,
+            0 0 10px #00f2fe,
+            0 0 20px #00f2fe,
+            0 0 40px #00f2fe;
+}
+
+/* Glowing effect for active links */
+#lore-contents li.active > a {
+    color: #f2f4f6; /* optional: make text stand out */
+    text-shadow:
+            0 0 5px #4facfe,
+            0 0 10px #00f2fe,
+            0 0 20px #00f2fe,
+            0 0 40px #00f2fe;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: glow on hover too */
+#lore-contents li.active > a:hover {
+    text-shadow:
+            0 0 10px #4facfe,
+            0 0 20px #00f2fe,
+            0 0 30px #00f2fe,
+            0 0 50px #00f2fe;
+}
+
+#lore-contents a:hover {
+    text-shadow:
+            0 0 10px #4facfe,
+            0 0 20px #00f2fe,
+            0 0 30px #00f2fe,
+            0 0 50px #00f2fe;
+}
+
 
 /* Breadcrumbs */
 .breadcrumbs {
