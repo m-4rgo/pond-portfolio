@@ -469,23 +469,22 @@ a:hover::after {
    RESPONSIVE FALLBACK
    ========================= */
 
-/*@media (max-width: 900px) {*/
-/*    body {*/
-/*        flex-direction: column;*/
-/*        align-items: stretch;*/
-/*    }*/
+@media (max-width: 750px) {
+    main {
+        flex-direction: column;
+    }
 
-/*    #navigation {*/
-/*        position: static;*/
-/*        width: auto;*/
-/*        margin: 2rem;*/
-/*    }*/
+    #navigation {
+        position: static;
+        width: 90%;
+        margin: 2rem;
+    }
 
-/*    #content {*/
-/*        margin: 2rem auto;*/
-/*        max-width: 90%;*/
-/*    }*/
-/*}*/
+    #content {
+        margin: 2rem auto;
+        max-width: 90%;
+    }
+}
 
 /* =========================
    stars animation toggle switch
