@@ -2,7 +2,7 @@ const contentEl = document.getElementById("content");
 
 async function loadPage(page) {
     try {
-        const res = await fetch(`./pages/${page}.md`);
+        const res = await fetch(`./Caligo/Lorebook/Pages/${page}.md`);
         if (!res.ok) throw new Error("Page not found");
 
         const md = await res.text();
