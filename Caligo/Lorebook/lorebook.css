@@ -114,6 +114,7 @@ body {
 
     /*background: radial-gradient(circle at 30% 30%, #f4e1b0, #d2b48c 70%, #a57c55 100%);*/
 
+    background-color: var(--pale-blue);
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
@@ -129,8 +130,8 @@ body {
 
 
     /*for the animated background*/
-    background-size: 150% 150%;
-    animation: gradientShift 60s ease infinite;
+    /*background-size: 150% 150%;*/
+    /*animation: gradientShift 60s ease infinite;*/
     /*end for animated background*/
 }
 
@@ -502,7 +503,7 @@ a:hover::after {
     display: flex;
     align-items: center;
     padding: 8px 12px;
-    background-color: var(--bg-color);
+    background-color: rgba(255, 255, 255, 0.65);
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     gap: 10px;
@@ -551,3 +552,10 @@ input:checked + .slider:before {
     transform: translateX(22px);
 }
 
+#tagline {
+    width: 50%;
+    margin: -10rem auto -3rem auto;
+}
+.tagline {
+    fill: red;
+}
