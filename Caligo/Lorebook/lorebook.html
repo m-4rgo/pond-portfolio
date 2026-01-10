@@ -45,10 +45,12 @@
 
 
 <main>
+
     <section id="navigation">
         <h1>Lorebook</h1>
     <p class="intro">
-        Reference catalogue of pterohippus lore
+        Reference catalogue of pterohippus lore.
+        <br>You can use the arrow keys to navigate.
     </p>
 
         <nav id="lore-contents">
@@ -98,6 +100,8 @@
                     </ul>
                 </li>
             </ul>
+
+
         </nav>
 
 
@@ -107,11 +111,19 @@
 
 
 <section id="content">
-<!--    <p>Welcome to the pterohippus lorebook.</p>-->
+
     <p>Loading…</p>
+
 </section>
 
+
+
 </main>
+
+<div id="page-nav">
+    <button id="prev-page" aria-label="Previous page">← Previous</button>
+    <button id="next-page" aria-label="Next page">Next →</button>
+</div>
 
 <!--renders markdown files to html-->
 <script src="book.js"></script>

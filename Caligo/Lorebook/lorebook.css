@@ -6,7 +6,7 @@
     --text-color: #3a3f4a;
     --accent-color: #b8c7e0;
     --soft-white: #ffffff;
-    --pale-blue: #000000;
+    --pale-blue: #0e3c6c;
     --bold-blue: #669fd8;
 }
 
@@ -114,7 +114,7 @@ body {
 
     /*background: radial-gradient(circle at 30% 30%, #f4e1b0, #d2b48c 70%, #a57c55 100%);*/
 
-    background-color: black;
+    /*background-color: black;*/
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
@@ -133,8 +133,8 @@ body {
     /*background-size: 150% 150%;*/
     /*animation: gradientShift 60s ease infinite;*/
     /*end for animated background*/
-}
 
+}
 /*animates the gradient background*/
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
@@ -152,6 +152,8 @@ body {
 }
 
 
+
+
 /* =========================
    FIXED CONTENTS (LEFT)
    ========================= */
@@ -166,6 +168,7 @@ main {
     gap: 2rem;
     margin: 0 auto;
     padding: 2rem;
+
 }
 
 section {
@@ -498,6 +501,10 @@ a:hover::after {
         margin: 2rem auto;
         max-width: 90%;
     }
+
+    #page-nav {
+        transform: translateX(-50%);
+    }
 }
 
 /* =========================
@@ -571,4 +578,64 @@ input:checked + .slider:before {
 }
 .tagline {
     fill: red;
+}
+
+
+
+/* =========================
+   PAGE NAVIGATION BUTTONS
+   ========================= */
+
+#page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+
+    /*transform: translateX(-50%);*/
+}
+
+#page-nav button {
+    /*flex: 1;*/
+    padding: 0.75rem 1.5rem;
+    margin: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+
+    color: #2f3d5c;
+
+    box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.08),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(6px);
+
+    transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease,
+            letter-spacing 0.4s ease;
+}
+
+#page-nav button:hover {
+    transform: translateY(-2px);
+    letter-spacing: 0.15em;
+    box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+#page-nav button:disabled {
+    opacity: 0.4;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
 }

@@ -70,3 +70,67 @@ function loadFromHash() {
 
 window.addEventListener("hashchange", loadFromHash);
 loadFromHash();
+
+/* =========================
+   LINEAR PAGE NAVIGATION
+   ========================= */
+
+// Build ordered page list from the TOC
+const pageLinks = Array.from(
+    document.querySelectorAll("#lore-contents a[data-page]")
+);
+const pages = pageLinks.map(link => link.dataset.page);
+
+const prevBtn = document.getElementById("prev-page");
+const nextBtn = document.getElementById("next-page");
+
+function getCurrentIndex() {
+    const current = location.hash.replace("#", "") || "welcome";
+    return pages.indexOf(current);
+}
+
+function goToPage(index) {
+    if (index < 0 || index >= pages.length) return;
+    const page = pages[index];
+    location.hash = page;
+    loadPage(page);
+    setActive(page);
+    saveMenu(page);
+}
+
+function updateNavButtons() {
+    const index = getCurrentIndex();
+    prevBtn.disabled = index <= 0;
+    nextBtn.disabled = index === -1 || index >= pages.length - 1;
+}
+
+// Button handlers
+prevBtn.addEventListener("click", () => {
+    goToPage(getCurrentIndex() - 1);
+});
+
+nextBtn.addEventListener("click", () => {
+    goToPage(getCurrentIndex() + 1);
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", e => {
+    // Ignore typing in inputs/textareas
+    if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
+
+    const index = getCurrentIndex();
+
+    if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        goToPage(index - 1);
+    }
+
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        goToPage(index + 1);
+    }
+});
+
+// Keep buttons in sync
+window.addEventListener("hashchange", updateNavButtons);
+updateNavButtons();
