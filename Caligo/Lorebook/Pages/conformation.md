@@ -12,8 +12,10 @@ There can be large variation in the size and shape of the ears.
 
 Slightly cow hocked hind legs and short pasterns give the animal enhanced leaping capability.
 
-A stabilising rudder-like tail protrudes from the croup, and the animal has a long leonine tail, with hair coverage that can vary. 
+A stabilising rudder-like bird tail protrudes from the croup, and the animal bears a long leonine tail, with hair coverage that can vary. 
 Dextrous prehensile 'fingers' erupt from the carpal joint, and operate similarly to human thumbs.
+
+Pterohippi can also have a 'fan' of feathers that may grow anywhere on the body- commonly at the end of the tail, at the poll, or on the legs.
 
  _* I frequently draw my pterohippi both with and without these features depending on what i feel like drawing at any given time. It's totally okay to leave off or change these features as you please._ 
 
