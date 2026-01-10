@@ -1,5 +1,4 @@
 # Folklore
-#### _The horse that moves on the upper winds_
 
 There are almost infinite possibilities for folklore and mythology around this species.
 
