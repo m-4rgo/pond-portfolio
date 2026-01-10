@@ -4,6 +4,3 @@ Pterohippi are pseudo-horses. They share a common ancestor with horses, but they
 The last common ancestor that pterohippi have with modern horses is the eohippus. Aerohippus then emerged, evolving small proto-wings that aided flying-insect and bird hunting through rapid flapping for increased off-ground lift while leaping. At this time, aerohippus was still a forest forager like eohippus.
 
 After this, divergence in wing development started to appear, with some populations evolving membranous wings, and some developing feathered wings. It is thought that membranous wings were advantageous in hot climates due to the surface area available for heat dissipation, and feathered wings in cold due to their insulation properties.
-
-The Penequus is the feathered variant, its name deriving from the latin penna (feather) and equus (horse).
-The Pelequus is the membranous variant, its name deriving from the latin pellis (skin) and Equus (horse).
