@@ -639,3 +639,9 @@ input:checked + .slider:before {
     transform: none;
     box-shadow: none;
 }
+
+
+/* class to dim the font colour of the old lore section header */
+#old-lore {
+    opacity: 0.4;
+}
