@@ -6,7 +6,7 @@
     --text-color: #3a3f4a;
     --accent-color: #b8c7e0;
     --soft-white: #ffffff;
-    --pale-blue: #aad4ff;
+    --pale-blue: #000000;
     --bold-blue: #669fd8;
 }
 
@@ -114,7 +114,7 @@ body {
 
     /*background: radial-gradient(circle at 30% 30%, #f4e1b0, #d2b48c 70%, #a57c55 100%);*/
 
-    background-color: var(--pale-blue);
+    background-color: black;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
@@ -271,6 +271,7 @@ hr {
 
 a {
     position: relative;
+    cursor: pointer;
     color: #4a5f8a;
     text-decoration: none;
     transition:
