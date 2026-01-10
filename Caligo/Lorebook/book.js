@@ -23,11 +23,11 @@ document.querySelectorAll("[data-page]").forEach(link => {
 });
 
 // highlights active page
-// function setActive(page) {
-//     document.querySelectorAll("[data-page]").forEach(link => {
-//         link.classList.toggle("active", link.dataset.page === page);
-//     });
-// }
+function setActive(page) {
+    document.querySelectorAll("[data-page]").forEach(link => {
+        link.classList.toggle("active", link.dataset.page === page);
+    });
+}
 // function setActive(page) {
 //     document.querySelectorAll("#lore-contents li").forEach(li => {
 //         const link = li.querySelector("[data-page]");
@@ -62,7 +62,7 @@ function saveMenu(page) {
 
 // Handle back/forward & direct links
 function loadFromHash() {
-    const page = location.hash.replace("#", "") || "intro";
+    const page = location.hash.replace("#", "") || "welcome";
     loadPage(page);
     setActive(page);
     saveMenu(page);

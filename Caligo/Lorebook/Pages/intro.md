@@ -1,14 +1,8 @@
-## Welcome to the pterohippus lorebook
+# Introduction
+Pterohippi are a sci-fi/fantasy species concept and are the modern development of my old species [Equus avis](https://www.chickensmoothie.com/Forum/viewtopic.php?t=1436531). There is some more old species info [here](https://www.deviantart.com/equusavis).
 
-Please use the table of contents to navigate.
+The lore provided here gives a structure for fictional character roleplay, but users are welcome to develop their own headcanons inspired by, or in contrast to the given lore.
 
-Remember, all these species rules and lore are just guidelines that I made up! 
+You can create your own characters and do what you like with them. There are no rules, but you are ultimately bound by the laws of your country of residence.
 
-If you like structure, you can follow this book.
-
-If you want more creativity, you can follow whichever bits you like, old or new, and leave behind anything you don't want.
-
-
-The point of this project is to be a sandbox for creativity and collaboration. The community is welcome to come together to define collective canons, just as much as individuals are welcome to create worlds of their own.
-
-Have fun :)
+The community is still quite small and we do not currently have a discord server, but if you would like to set one up and run it, contact pond and we'll link to it here.

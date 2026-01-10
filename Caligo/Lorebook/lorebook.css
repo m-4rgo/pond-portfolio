@@ -290,8 +290,9 @@ a::after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    width: 100%;
-    height: 1px;
+    width: 50%;
+    height: 5px;
+    border-radius: 50%;
     background: linear-gradient(
             to right,
             transparent,
@@ -388,24 +389,30 @@ a:hover::after {
 }
 
 /* Glowing effect for active links */
-#lore-contents li.active > a {
+/*#lore-contents li.active > a {*/
+/*    color: #f2f4f6; !* optional: make text stand out *!*/
+/*    text-shadow:*/
+/*            0 0 5px #4facfe,*/
+/*            0 0 10px #00f2fe,*/
+/*            0 0 20px #00f2fe,*/
+/*            0 0 40px #00f2fe;*/
+/*    transition: text-shadow 0.3s ease, color 0.3s ease, background 3s ease;*/
+/*}*/
+
+/* Optional: glow on hover too */
+#lore-contents a.active {
     color: #f2f4f6; /* optional: make text stand out */
     text-shadow:
-            0 0 5px #4facfe,
-            0 0 10px #00f2fe,
+            0 0 10px #4facfe,
             0 0 20px #00f2fe,
-            0 0 40px #00f2fe;
-    transition: text-shadow 0.3s ease, color 0.3s ease, background 3s ease;
+            0 0 30px #00f2fe,
+            0 0 50px #00f2fe;
 }
 
-/*!* Optional: glow on hover too *!*/
-/*#lore-contents li.active > a:hover {*/
-/*    text-shadow:*/
-/*            0 0 10px #4facfe,*/
-/*            0 0 20px #00f2fe,*/
-/*            0 0 30px #00f2fe,*/
-/*            0 0 50px #00f2fe;*/
-/*}*/
+#lore-contents a.active:hover {
+    color: #f2f4f6;
+    /*font-weight: initial;*/
+}
 
 #lore-contents a {
     all: unset;
@@ -423,36 +430,42 @@ a:hover::after {
             transform 1s ease;
 }
 
-#lore-contents a::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-            ellipse,
-            rgba(79, 172, 254, 0.93) 10%,
-            rgba(0, 242, 254, 0.4) 80%
-    );
-    border-radius: 4rem;
-    opacity: 0;
-    transition: opacity 0.8s ease; /* SLOW fade */
-    z-index: -1;
-}
+/*#lore-contents a::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    background: radial-gradient(*/
+/*            ellipse,*/
+/*            rgba(79, 172, 254, 0.93) 10%,*/
+/*            rgba(0, 242, 254, 0.4) 80%*/
+/*    );*/
+/*    border-radius: 4rem;*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.8s ease; !* SLOW fade *!*/
+/*    z-index: -1;*/
+/*}*/
 
 #lore-contents span:hover {
     text-shadow: 0 0 10px rgba(255,255,255,0.9);
 }
 
 #lore-contents a:hover {
-    color: white;
-    transform: translateX(-.5rem);
+    all: unset;
+    /*font-weight: bold;*/
     text-shadow: 0 0 10px rgba(255,255,255,0.9);
-    box-shadow: 0 0 30px rgba(0,242,254,0.9);
-    border-radius: 4rem;
 }
 
-#lore-contents a:hover::before {
-    opacity: 1;
-}
+/*#lore-contents a:hover {*/
+/*    color: white;*/
+/*    transform: translateX(-.5rem);*/
+/*    text-shadow: 0 0 10px rgba(255,255,255,0.9);*/
+/*    box-shadow: 0 0 30px rgba(0,242,254,0.9);*/
+/*    border-radius: 4rem;*/
+/*}*/
+
+/*#lore-contents a:hover::before {*/
+/*    opacity: 1;*/
+/*}*/
 
 
 
