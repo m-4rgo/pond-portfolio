@@ -5,4 +5,4 @@ The lore provided here gives a structure for fictional character roleplay, but u
 
 You can create your own characters and do what you like with them. There are no rules, but you are ultimately bound by the laws of your country of residence.
 
-The community is still quite small and we do not currently have a discord server, but if you would like to set one up and run it, contact pond and we'll link to it here.
+The community is still quite small so i've set up a temporary [community discord server](https://discord.gg/atdF8sMMTy), but if you would like to set a more permanent one up and run it, contact pond and we'll link to it here.
