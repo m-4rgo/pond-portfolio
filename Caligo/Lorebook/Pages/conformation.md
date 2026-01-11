@@ -1,4 +1,7 @@
 # Conformation
+![conformation](/Caligo/Lorebook/Pages/Archive/Images/conformation.png)
+`Fig. 3: Anatomy Diagram for Penequus gracilis`  
+
 Penequus gracilis and Pelequus noctis share similar conformational features.
 
 The frame is slender, like akhal teke horses, with a pronounced herring gut, deep chest, and withered crest muscle. The back is shorter than a typical akhal teke.
@@ -19,8 +22,6 @@ Pterohippi can also have a 'fan' of feathers that may grow anywhere on the body-
 
  _* I frequently draw my pterohippi both with and without these features depending on what i feel like drawing at any given time. It's totally okay to leave off or change these features as you please._ 
 
-![conformation](/Caligo/Lorebook/Pages/Archive/Images/conformation.png)
-_Anatomy Diagram for Penequus gracilis_
 
 
 You are more than welcome to head-canon your own pterohippus species if you want unique builds or features!

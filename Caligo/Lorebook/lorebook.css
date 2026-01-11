@@ -229,6 +229,10 @@ section {
 
 #content img {
     max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 2rem;
 }
 
 /* Headings */

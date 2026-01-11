@@ -4,8 +4,7 @@ Please use the table of contents to navigate.
 
 Remember, all these species rules and lore are just guidelines that I made up! 
 
-If you like structure, you can follow this book for your characters' lore.
-
+If you like structure, you can follow this book for your characters' lore.  
 If you want more creativity, you can adopt whichever bits you like, old or new, and change anything you don't.
 
 

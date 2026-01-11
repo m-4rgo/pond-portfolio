@@ -1,4 +1,5 @@
 # Folklore
+![foot](https://www.chickensmoothie.com/oekaki/image/image.php?id=4368499&size=large&format=auto&rev=1766494104)
 
 There are almost infinite possibilities for folklore and mythology around this species.
 

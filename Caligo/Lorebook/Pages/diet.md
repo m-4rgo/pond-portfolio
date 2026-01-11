@@ -1,2 +1,5 @@
 # Diet & Behaviour
-moss, bark, grasses, seeds, grains, lichen, insects, small mammals and birds
+![credit](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f7d08705-f4a5-4324-b078-4f7ff47058b7/d8zludc-5ab84546-6bea-423e-a582-b34b141ad44c.png/v1/fill/w_1600,h_2032,q_80,strp/gully____commission__by_aste_ras_d8zludc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAzMiIsInBhdGgiOiIvZi9mN2QwODcwNS1mNGE1LTQzMjQtYjA3OC00ZjdmZjQ3MDU4YjcvZDh6bHVkYy01YWI4NDU0Ni02YmVhLTQyM2UtYTU4Mi1iMzRiMTQxYWQ0NGMucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.nvpfrdBTcO3Wrm0hjAQV0i1jCcmcm1uycgz-kk4kwTM)
+`Fig. 4: wild pterohippus in a woodland` (by [ASTE-RAS](https://www.deviantart.com/aste-ras/art/Gully-commission-543535104))
+
+moss, bark, grasses, seeds, grains, lichen, insects, small mammals and birds... wip!
