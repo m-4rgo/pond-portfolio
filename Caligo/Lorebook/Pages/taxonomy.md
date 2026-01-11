@@ -15,6 +15,7 @@ Mammalia
 ..........└── †Pterohippinae  
 .............├── Penequus (feathered wings)  
 .............│ └── P. gracilis  
+.............│ └── P. gracilis docilis (domesticated)  
 .............└── Pelequus (membranous wings)  
 ............... └── P. noctis  
 † = extinct
