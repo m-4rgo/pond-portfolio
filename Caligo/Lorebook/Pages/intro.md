@@ -9,3 +9,17 @@ The lore provided here gives a structure for fictional character roleplay, but u
 You can create your own characters and do what you like with them. There are no rules, but you are ultimately bound by the laws of your country of residence.
 
 The community is still quite small so i've set up a temporary [community discord server](https://discord.gg/atdF8sMMTy), but if you would like to set a more permanent one up and run it, contact pond and we'll link to it here.
+
+## Welcome to the pterohippus lorebook
+
+Please use the table of contents to navigate.
+
+Remember, all these species rules and lore are just guidelines that I made up!
+
+If you like structure, you can follow this book for your characters' lore.  
+If you want more creativity, you can adopt whichever bits you like, old or new, and change anything you don't.
+
+
+The point of this project is to be a sandbox for creativity and collaboration around the motif of the pegasus. The community is welcome to come together to define collective canons, just as much as individuals are welcome to create worlds of their own.
+
+Have fun :)
