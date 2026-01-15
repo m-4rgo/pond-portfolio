@@ -1,4 +1,5 @@
 # How to Play
+We have a temporary commuinty [discord](https://discord.gg/atdF8sMMTy) that you can hang out in. If you would like to run a more permanent discord server, please reach out and we'll link it here!
 
 There are various different ways to play this game.
 
