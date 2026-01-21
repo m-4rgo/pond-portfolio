@@ -21,7 +21,7 @@ document.getElementById('saveBtn').addEventListener('click', function() {
 
     html2canvas(scene, {
         backgroundColor: null, // <-- Makes background transparent
-        // scale: 2               // Optional: higher resolution
+        scale: 1               // Optional: higher resolution
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
 
