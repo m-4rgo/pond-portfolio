@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Equids</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+
+<body>
+<div class="wrapper">
+    <header class="page-header">
+        <nav class="page-nav">
+            <ul>
+                <li><h1>imprisonment tool</h1></li>
+<!--                <li><p>login / register</p></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page">
+        <aside class="sidebar">
+            <nav class="user-nav">
+                <ul>
+<!--                    <li>your profile</li>-->
+<!--                    <li>search tool</li>-->
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+
+            <div id="instructions">
+                <h3>How to use</h3>
+                <p>1. Upload your transparent doll from your computer</p>
+                <p>2. Press "save image"</p>
+                <p>3. Your imprisoned pony will automatically download as a .png</p>
+            </div>
+
+            <div id="game">
+                <div id="scene">
+<!--                    <canvas id="stage" width="600" height="400"></canvas>-->
+                    <img id="character" class="doll drag" src="img/body.png">
+                    <img class="item drag" src="img/hat.png">
+                </div>
+
+                <div id="controls">
+
+                    <div class="buttons">
+                        <input type="file" id="fileInput" accept="image/*">
+
+
+                        <button id="saveBtn">Save Image</button>
+                    </div>
+
+<!--                    <div id="layers">-->
+<!--                        <h2>layers</h2>-->
+<!--                        <ul>-->
+<!--                            <li>foreground item</li>-->
+<!--                            <ul>-->
+<!--                                <li>items attached to character</li>-->
+<!--                            </ul>-->
+<!--                            <li>background item</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+
+<!--                    <div id="items">-->
+<!--                        <h2>items</h2>-->
+<!--                        <ul>-->
+<!--                            <li>item1</li>-->
+<!--                            <li>item2</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+
+            <footer class="page-footer">
+<!--                <p>fellware © 2026</p>-->
+            </footer>
+
+        </main>
+    </div>
+</div>
+
+<script src="js/upload.js"></script>
+<script src="js/export.js"></script>
+
+</body>
+
+
+</html>

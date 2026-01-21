@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #cfcfcf;
+    --content: #f4f4f4;
+    --header: #cfcfcf;
+    --sidebar: #cfcfcf;
+    --text: black;
+    --subtle-text: #7a7a7a;
+}
+
+body {
+    height: 100vh;
+}
+
+.wrapper {
+    /* this is the wrapper that holds the entire view */
+}
+
+.page-header {
+    background: var(--header);
+    height: 5rem;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    /*gap: 0.5rem;*/
+}
+.page-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 2rem;
+}
+.page-nav h1 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sidebar {
+    display: flex;
+    height: 100%;
+    /*padding-top: 1rem;*/
+}
+.user-nav {
+    background-color: var(--sidebar);
+    padding: 2rem;
+}
+.user-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    color: var(--subtle-text);
+}
+.user-nav ul li {
+    background-color: var(--content);
+    padding: 0.2rem;
+}
+.user-nav ul li:hover {
+    opacity: 0.7;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 3rem;
+    margin-right: 2rem;
+}
+
+#game * {
+    border-radius: 0.5rem;
+}
+
+#scene {
+    /*border: 1px solid #000;*/
+    width: 300px;
+    height: 300px;
+    box-sizing: initial;
+    overflow: hidden;
+    position: relative;
+}
+#stage {
+    border: 1px solid red;
+    z-index:99;
+    position: relative;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 600px;
+    min-height: 260px;
+}
+#controls h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+}
+
+#layers {
+    border: 1px solid #000;
+    background: var(--content);
+    width: 40%;
+}
+
+#items {
+    border: 1px solid #000;
+    background: var(--content);
+    width: 60%
+}
+
+.page-footer {
+    position: absolute;
+    padding: 0.1rem;
+    bottom: 0;
+    left: 0;
+    color: var(--subtle-text);
+}
+
+.drag {
+    cursor: grab;
+    position: absolute;
+}
+
+@media (max-width: 750px) {
+    body {
+        background: deeppink;
+    }
+}
