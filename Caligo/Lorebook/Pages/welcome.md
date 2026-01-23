@@ -5,4 +5,4 @@ Pterohippi are a sci-fi/fantasy species concept and the modern evolution of an o
 
 This lorebook provides a loose framework for fictional worldbuilding, character creation, and roleplay. Everything here is optional. You are encouraged to take inspiration from these ideas, reinterpret them, contradict them, or discard them entirely in favour of your own headcanons.  
 
-There are no rules! Whether you want to follow the given lore or tread your own path, either way, I hope you find something you like!
+There are no rules! Whether you want to follow the given lore or tread your own path, either way, you're welcome to get involved!
