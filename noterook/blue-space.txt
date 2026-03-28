@@ -1,0 +1,231 @@
+bio goes here
+<div class="stars"></div>
+<style>
+ /* theme by pond */
+ :host::before {
+     content: ' ';
+     position: fixed;
+     top: 0; left: 0;
+     width: 100vw;
+     height: 100vh;
+     z-index: -2;
+     background:
+            radial-gradient(ellipse at 50% 100%, rgba(255, 26, 189, 0.09), transparent 50%),
+            radial-gradient(ellipse at 100% 80%, rgba(41, 255, 26, 0.18), transparent 50%),
+            radial-gradient(ellipse at 0% 0%, rgba(255, 236, 26, 0.07), transparent 50%),
+            radial-gradient(ellipse at 100% 0%, rgba(21, 1, 5, 0.74), transparent 30%),
+            radial-gradient(circle at 0% 100%, rgba(21, 1, 5, 0.74), transparent 50%),
+            radial-gradient(ellipse at top left, #000010, #001a33 30%, #004466 60%, #001133 80%, #000000 100%)
+ ;
+     color: #000 !important;
+ }
+body {
+    color: #000 !important;
+    margin: 0;
+    overflow: hidden;
+}
+.post-body::before, .composer-input-area {
+    background: none !important;
+    background-image: none !important;
+    content: none !important;
+}
+.post-card, .staple-count-popover {
+    color: #000 !important;
+    background: linear-gradient(-120deg, rgba(132, 130, 197, 0.5), rgba(87, 116, 128, 0.3)) !important;
+    border-radius: 16px !important;
+
+    /* depth */
+    box-shadow:
+            0 8px 32px rgba(0, 51, 69, 0.25),
+            inset 0 2px 0 rgba(217, 255, 243, 0.17) !important;
+
+    /* glass edge highlight */
+    border: 1px solid rgba(75, 75, 143, 0.25) !important;
+
+    /* blur + saturation = real glass look */
+    backdrop-filter: blur(0.3rem) saturate(180%);
+    -webkit-backdrop-filter: blur(0.3rem) saturate(180%);
+
+    padding: 1rem;
+}
+a {
+    color: #071040 !important;
+}
+.post-action-btn, .post-timestamp, .chain-addition-time, .chain-addition-label, .post-unverified, .chain-addition-delete  {
+    color: #000 !important;
+}
+.post-author-name {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+a:hover, .post-action-btn:hover {
+    color: rgba(163, 175, 255, 0.75) !important;
+}
+
+.post-body {
+    border-left: none !important;
+    background: rgba(109, 251, 218, 0.11) !important;
+    border-radius: 1rem !important;
+    padding: 1rem !important;
+}
+.post-body, .chain-addition-body, .post-author-name, .chain-addition-author, .chain-addition-author a, .book-header, .book-header--own, .staple-count-badge {
+ }
+.book-username, .post-read-more, .post-tag, .post-action-btn, .post-timestamp, .post-unverified, .post-verified, .chain-stapled-badge, .chain-pinned-badge, .chain-addition-label, .chain-addition-time, .chain-addition-report, .chain-addition-delete {
+}
+.post-tag, .chain-stapled-badge, .chain-pinned-badge, .chain-addition-report, .btn-follow {
+    color: rgb(14, 13, 13) !important;
+    background-color: rgba(52, 169, 182, 0.24) !important;
+}
+.chain-addition-report {
+    padding: 0.2rem !important;
+    margin-right: 1rem !important;
+    border-radius: 1rem !important;
+}
+
+.staple-count-badge {
+    color: rgb(14, 13, 13) !important;
+}
+.post-actions  {
+    border-top: none !important;
+}
+.book-header, .book-header--own, .single-post-back a, .book-bio, .book-username {
+    color: rgba(255, 255, 255, 0.75) !important;
+    border: none !important;
+}
+.book-avatar, .post-author-avatar {
+    border-radius: 0.5rem !important;
+    border: none !important;
+}
+.book-author h2, a {
+}
+.sticker-emoji {
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.26),
+0 0 10px rgba(0, 242, 254, 0.24),
+0 0 20px rgba(0, 242, 254, 0.25),
+0 0 40px rgba(0, 242, 254, 0.25);
+    /*filter: drop-shadow(#79ffef 0px 0px 0px) drop-shadow(#00f2fe 0px 0px 20px) drop-shadow(rgba(255, 255, 255, 0.3) 0px 4px 40px);*/
+}
+.chain-additions {
+    border-left: none !important;
+    background: rgba(109, 251, 218, 0.11) !important;
+    border-radius: 1rem !important;
+}
+.chain-addition + .chain-addition {
+    border-top: none !important;
+}
+.staple-count-popover {
+    background: linear-gradient(135deg, rgba(62, 61, 96, 0.99), rgba(40, 59, 66, 0.9)) !important;
+
+    overflow: auto;          /* keep scrolling */
+    scrollbar-width: none;   /* Firefox */
+}
+
+.staple-count-popover::-webkit-scrollbar {
+    display: none;           /* Chrome, Safari */
+}
+
+.staple-count-popover a:hover {
+    background-color: unset !important;
+}
+.btn-follow {
+
+}
+.chain-addition {
+    margin-right: 1rem !important;
+}
+.chain-addition-muted-toggle, .chain-addition-blocked-wall {
+    color: black !important;
+    border: none !important;
+    background-color: rgba(52, 169, 182, 0.24) !important;
+}
+.chain-addition--muted, .chain-addition--blocked {
+    padding-top: 1rem !important;
+}
+
+.stars {
+    position: fixed;
+    /*inset: 0;*/
+    background:
+            radial-gradient(2px 2px at 20% 30%, #a6ffed, transparent),
+            radial-gradient(1.5px 1.5px at 70% 80%, #d8b5ff, transparent),
+            radial-gradient(1.8px 1.8px at 40% 60%, white, transparent),
+            radial-gradient(1.2px 1.2px at 90% 10%, #ffc8c8, transparent),
+            radial-gradient(1px 5px at 10% 90%, #fff1b9, transparent),
+            radial-gradient(4px 1px at 10% 90%, #fff1b9, transparent);
+    background-repeat: repeat;
+    background-size: 190px 200px;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    /*transform: translate(-50%, -50%);*/
+    transform-origin: center;
+}
+
+/* duplicate layers for density */
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    z-index: -1;
+}
+
+.stars::after {
+    z-index: -1;
+}
+
+.stars {
+    animation: twinkle 16s infinite ease-in-out,
+    rotateStars 600s linear infinite;
+}
+
+.stars::before {
+    animation: twinkleA 16s infinite ease-in-out,
+    rotateStars2 180s linear infinite;
+    opacity: 0.2;
+}
+
+.stars::after {
+    animation: twinkleB 16s infinite ease-in-out,
+    rotateStars3 720s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes twinkle {
+    0%   { opacity: 0.9; }
+    25%  { opacity: 0.3; }
+    50% { opacity: 0.4; }
+    75% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+@keyframes twinkleA {
+     0% { opacity: 0.2; }
+     50% { opacity: 1; }
+     100% { opacity: 0.3; }
+ }
+
+@keyframes twinkleB {
+    0%   { opacity: 0.5; }
+    25%  { opacity: 0.2; }
+    50% { opacity: 0.9; }
+    75% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+@keyframes rotateStars {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes rotateStars2 {
+    from { transform: rotate(90deg); }
+    to   { transform: rotate(450deg); }
+}
+
+@keyframes rotateStars3 {
+    from { transform: rotate(-65deg); }
+    to   { transform: rotate(295deg); }
+}
+</style>
