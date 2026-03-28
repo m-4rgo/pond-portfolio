@@ -2,7 +2,7 @@ bio goes here
 <div class="stars"></div>
 <style>
  /* theme by pond */
- :host::before {
+ :host(#book-shadow-host)::before {
      content: ' ';
      position: fixed;
      top: 0; left: 0;
