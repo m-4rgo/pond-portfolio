@@ -137,7 +137,7 @@ a:hover, .post-action-btn:hover {
 .chain-addition {
     margin-right: 1rem !important;
 }
-.chain-addition-muted-toggle, .chain-addition-blocked-wall {
+.chain-addition-muted-toggle, .chain-addition-blocked-wall, .post-muted-toggle, .post-blocked-wall {
     color: #412651 !important;
     border: none !important;
     background-color: rgba(218, 165, 218, 0.24) !important;
