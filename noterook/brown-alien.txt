@@ -29,7 +29,7 @@ body {
     background-image: none !important;
     content: none !important;
 }
-.post-card, .staple-count-popover {
+.post-card, .staple-count-popover, .sticker-placement-banner {
     color: #9fa58a !important;
     background: linear-gradient(-120deg, rgba(197, 142, 130, 0.5), rgba(128, 108, 87, 0.3)) !important;
     border-radius: 16px !important;
@@ -51,7 +51,7 @@ body {
 a {
     color: #b3da44 !important;
 }
-.post-action-btn, .post-timestamp, .chain-addition-time, .chain-addition-label, .post-unverified, .chain-addition-delete  {
+.post-action-btn, .post-timestamp, .chain-addition-time, .chain-addition-label, .post-unverified, .chain-addition-delete, .sticker-tray-close, .sticker-tray-message   {
     color: #000 !important;
 }
 .post-author-name {
@@ -132,7 +132,7 @@ a:hover, .post-action-btn:hover, .post-read-more {
 .chain-addition {
     margin-right: 1rem !important;
 }
-.chain-addition-muted-toggle, .chain-addition-blocked-wall, .post-muted-toggle, .post-blocked-wall {
+.chain-addition-muted-toggle, .chain-addition-blocked-wall, .post-muted-toggle, .post-blocked-wall, .sticker-tray {
     color: black !important;
     border: none !important;
     background-color: rgba(52, 169, 182, 0.24) !important;
@@ -140,7 +140,19 @@ a:hover, .post-action-btn:hover, .post-read-more {
 .chain-addition--muted, .chain-addition--blocked {
     padding-top: 1rem !important;
 }
-
+.sticker-tray-btn {
+transition: none !important;
+}
+.sticker-tray-btn:hover {
+    border: none !important;
+    background: rgba(109, 251, 218, 0.11) !important;
+    transform: none !important;
+}
+.sticker-placement-banner, .sticker-placement-cancel {
+    border-radius: 1rem !important;
+    bottom: -1.25rem !important;
+    color: #fff !important;
+}
 .stars {
     position: fixed;
     /*inset: 0;*/
