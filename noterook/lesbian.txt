@@ -1,0 +1,17 @@
+<style>
+:host(#book-shadow-host)::before {
+    content: ' ';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background: linear-gradient( #D52D00 14.3%,
+    #EF7627 14.3%, #EF7627 28.6%,
+    #FF9A56 28.6%, #FF9A56 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #D162A4 57.2%, #D162A4 70.5%,
+    #B55690 70.5%, #B55690 84.8%,
+    #A30262 84.8%);
+}
+</style>
