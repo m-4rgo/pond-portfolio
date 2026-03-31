@@ -8,9 +8,9 @@
     z-index: -2;
     background: linear-gradient( #7F7F7F 14.3%,
     #C4C4C4 14.3%, #C4C4C4 28.6%,
-    #FDADC8 28.6%, #FDADC8 42.9%,
+    #9DD7EA 28.6%, #9DD7EA 42.9%,
     #FFFFFF 42.9%, #FFFFFF 57.2%,
-    #FDADC8 57.2%, #FDADC8 70.5%,
+    #9DD7EA 57.2%, #9DD7EA 70.5%,
     #C4C4C4 70.5%, #C4C4C4 84.8%,
     #7F7F7F 84.8%);
 }
