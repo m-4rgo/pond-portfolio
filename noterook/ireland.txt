@@ -6,9 +6,6 @@
     width: 100vw;
     height: 100vh;
     z-index: -2;
-    background: linear-gradient( #FCF434 25%,
-    #FFFFFF 25%, #FFFFFF 50%,
-    #9C59D1 50%, #9C59D1 75%,
-    #2C2C2C 75%);
+    background: linear-gradient(90deg, #009A44 33%, #FFFFFF 33%, #FFFFFF 66%, #FF8200 66%);
 }
 </style>
