@@ -87,7 +87,10 @@
 .btn-follow--unfollow:hover {
     background: unset !important;
 }
+/* block button */
+.btn-sm {}
 
+/* the text that displays when your book is empty */
 .book-empty {
     text-align: unset !important;
     padding: unset !important;
