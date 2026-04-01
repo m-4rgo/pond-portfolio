@@ -8,6 +8,14 @@
     border-bottom: unset !important;
     margin-bottom: unset !important;
     padding-bottom: unset !important;
+    display: unset !important;
+    align-items: unset !important;
+    justify-content: unset !important;
+    flex-wrap: unset !important;
+    gap: unset !important;
+    margin-bottom: unset !important;
+    padding-bottom: unset !important;
+    border-bottom: unset !important;
 }
 
 /* contains icon, book title, username, and bio*/
@@ -88,7 +96,10 @@
     background: unset !important;
 }
 /* block button */
-.btn-sm {}
+.btn-sm {
+    padding: unset !important;
+    font-size: unset !important;
+    }
 
 /* the text that displays when your book is empty */
 .book-empty {
