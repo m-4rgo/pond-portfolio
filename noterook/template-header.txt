@@ -10,12 +10,8 @@
     padding-bottom: unset !important;
     display: unset !important;
     align-items: unset !important;
-    justify-content: unset !important;
     flex-wrap: unset !important;
     gap: unset !important;
-    margin-bottom: unset !important;
-    padding-bottom: unset !important;
-    border-bottom: unset !important;
 }
 
 /* contains icon, book title, username, and bio*/
