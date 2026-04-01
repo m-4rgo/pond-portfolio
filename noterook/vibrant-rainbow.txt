@@ -1,0 +1,20 @@
+<style>
+:host(#book-shadow-host)::before {
+    content: ' ';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background: linear-gradient(
+            -30deg,
+            #ff4343, /* darker pastel red */
+            #ff9846, /* darker pastel orange */
+            #fff044, /* darker pastel yellow */
+            #3cff8f, /* darker pastel green */
+            #3fb5ff, /* darker pastel blue */
+            #724bff, /* darker pastel indigo */
+            #ff4fff /* darker pastel violet */
+    );
+}
+</style>
