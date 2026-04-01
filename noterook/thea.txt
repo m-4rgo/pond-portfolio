@@ -1,0 +1,32 @@
+<img class="banner" src="https://i.ibb.co/rRZJY0V4/image.png">
+bio<br>
+biobio<br>
+biobiobio
+<style>
+     /* css variables */
+ :host {}
+
+/* header block */
+.book-header {
+    justify-content: unset !important;
+    border-bottom: unset !important;
+    margin-bottom: unset !important;
+    padding-bottom: unset !important;
+    display: unset !important;
+    align-items: unset !important;
+    flex-wrap: unset !important;
+    gap: unset !important;
+    border-bottom: unset !important;
+}
+
+.banner {
+    max-width: 100%
+}
+
+/* contains icon, book title, username, and bio*/
+.book-author {
+    display: unset !important;
+    align-items: unset !important;
+    gap: unset !important;
+}
+</style>
