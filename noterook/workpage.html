@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wiggly Gradient Stripes</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .wiggle {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+              #FF6599 0%,
+              #FF0000 12.5%,
+              #FF8E00 25%,
+              #FFFF00 37.5%,
+              #008E00 50%,
+              #00C0C0 62.5%,
+              #400098 75%,
+              #8E008E 87.5%,
+              #8E008E 100%
+      );
+      filter: url(#wiggle);
+    }
+  </style>
+</head>
+<body>
+
+<div class="wiggle"></div>
+
+<!-- Hidden SVG filter definition -->
+<svg width="0" height="0">
+  <filter id="wiggle">
+    <feTurbulence
+            type="turbulence"
+            baseFrequency="0.01 0.05"
+            numOctaves="2"
+            seed="2"
+    />
+    <feDisplacementMap
+            in="SourceGraphic"
+            scale="120"
+    />
+  </filter>
+</svg>
+
+</body>
+</html>

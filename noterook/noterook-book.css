@@ -1,0 +1,1084 @@
+/* === Book === */
+.book-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.book-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.book-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+}
+.book-username {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.book-bio {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+}
+.book-bio:empty {
+    display: none;
+}
+
+/* Shadow DOM host for book content - user bio <style> tags affect this area */
+#book-shadow-host {
+    display: block;
+}
+
+/* Follow button */
+.btn-follow {
+    padding: 0.4rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    align-self: center;
+    min-width: 100px;
+    text-align: center;
+}
+.btn-follow:hover {
+    background: var(--accent-hover, #4a8ac2);
+    border-color: var(--accent-hover, #4a8ac2);
+}
+.btn-follow:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.btn-follow--following {
+    background: transparent;
+    color: var(--accent);
+}
+.btn-follow--following:hover {
+    background: transparent;
+}
+.btn-follow--unfollow {
+    border-color: #c0392b;
+    color: #c0392b;
+    background: transparent;
+}
+.btn-follow--unfollow:hover {
+    background: rgba(192, 57, 43, 0.1);
+}
+
+.book-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+}
+.book-empty h3 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+.book-empty-hint {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 1rem;
+}
+
+/* === Composer === */
+#composer-mount {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.composer {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+}
+.composer-textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 400px;
+    resize: vertical;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-family: var(--font);
+    line-height: 1.6;
+}
+.composer-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.composer-preview {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem;
+    min-height: 100px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.composer-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+.composer-options {
+    width: 100%;
+}
+.composer-checkbox-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.composer-tags-input {
+    flex: 1;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-family: var(--font);
+}
+.composer-tags-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.composer-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.composer-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+}
+.composer-char-count {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 0.4rem;
+    text-align: right;
+}
+.composer-char-warning {
+    color: var(--warning);
+}
+
+/* === Post === */
+.post-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+.post-card:has(.staple-count-popover),
+.post-card:has(.sticker-tray) {
+    z-index: 50;
+}
+/* Remove margin-bottom inside masonry columns (gap handles spacing) */
+.masonry-col .post-card { margin-bottom: 0; }
+
+/* Post card entrance animation (SSE updates / load-more) */
+@keyframes post-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.post-card--entering {
+    animation: post-fade-in 0.3s ease-out both;
+}
+
+/* Smooth position shifts when masonry re-sorts */
+.masonry-col .post-card {
+    transition: transform 0.25s ease;
+}
+/* Staple attribution (shared) */
+.post-staple-attribution {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+}
+.post-staple-attribution a {
+    color: var(--text-dim);
+    font-weight: 500;
+}
+.post-staple-attribution a:hover {
+    color: var(--accent);
+}
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 11;
+}
+.post-author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.post-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+.post-author-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.post-timestamp {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-left: auto;
+}
+.post-body {
+    line-height: 1.7;
+    font-size: 0.95rem;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    /* Contain user-authored position:fixed/sticky so they can't escape
+       the post card.  Creates a new containing block for fixed children. */
+    contain: layout;
+}
+.post-body p {
+    margin: 0.6em 0;
+}
+.post-body p:first-child { margin-top: 0; }
+.post-body p:last-child { margin-bottom: 0; }
+.post-body ul, .post-body ol {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+}
+.post-body li {
+    margin-bottom: 0.25em;
+}
+.post-body img {
+    max-width: 50%;
+    max-height: 50%;
+    height: auto;
+}
+.post-body code {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: 'Fira Code', 'Consolas', monospace;
+}
+.post-body pre {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 0.75em 1em;
+    overflow-x: auto;
+    margin: 0.75em 0;
+}
+.post-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85em;
+}
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 11;
+}
+.post-tag {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--accent-dim);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.post-tag:hover {
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+/* Post collapse / read more */
+.post-body-collapsed {
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+.post-read-more {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0.4rem 0;
+    font-family: var(--font);
+}
+.post-read-more:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+.post-verified {
+    color: var(--success);
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+}
+.post-unverified {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+}
+.post-sig-pending {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+    opacity: 0.5;
+}
+.post-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-light);
+    position: relative;
+    z-index: 11;
+}
+/* === Inline Tag Editor === */
+.inline-tags-form,
+.inline-staple-form {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 20;
+    background: var(--bg-surface);
+}
+.inline-tags-input {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.inline-tags-hint {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 0.35rem;
+}
+.inline-tags-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* === Staple Count === */
+.staple-count-badge {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 0.2rem 0;
+    position: relative;
+}
+.staple-count-badge:hover {
+    color: var(--accent);
+}
+.staple-count-number {
+    font-weight: 600;
+}
+.staple-count-popover {
+    position: absolute;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.4rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    min-width: 140px;
+    max-width: 260px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+}
+.staple-count-popover a {
+    display: block;
+    padding: 0.3rem 0.75rem;
+    color: var(--text);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+.staple-count-popover a:hover {
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+.staple-addition-indicator {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.8em;
+    margin-left: 0.15em;
+}
+
+/* === User Hovercards === */
+.user-hovercard {
+    position: absolute;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    width: 280px;
+    max-width: calc(100vw - 16px);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.15s, transform 0.15s;
+    pointer-events: auto;
+}
+.user-hovercard.hovercard-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hovercard-header {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.hovercard-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.hovercard-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elevated);
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.hovercard-names {
+    min-width: 0;
+}
+.hovercard-display-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hovercard-display-name:hover {
+    color: var(--accent);
+}
+.hovercard-username {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+.hovercard-bio {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    max-height: 100px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+.hovercard-bio p {
+    margin: 0 0 0.3rem;
+}
+.hovercard-bio a {
+    color: var(--accent);
+}
+
+/* === Post Permalink & Single-Post View === */
+.single-post-back {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.single-post-back a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.single-post-back a:hover {
+    text-decoration: underline;
+}
+.post-permalink {
+    text-decoration: none;
+}
+.post-action-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.25rem 0;
+}
+.post-action-btn:hover {
+    color: var(--accent);
+}
+.post-action-delete:hover {
+    color: var(--error);
+}
+.post-action-success {
+    color: var(--success) !important;
+}
+.post-action-report {
+    margin-left: auto;
+    font-size: 0.9rem;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+}
+.post-action-report:hover {
+    opacity: 1;
+    color: var(--error);
+}
+.post-action-social {
+    opacity: 0.4;
+    transition: opacity 0.15s;
+    font-size: 0.8rem;
+}
+.post-action-social:hover {
+    opacity: 1;
+}
+.chain-addition-report {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.15s;
+    color: var(--text-muted);
+    padding: 0;
+}
+.chain-addition-report:hover {
+    opacity: 1;
+    color: var(--error);
+}
+/* Report modal */
+.report-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.report-modal {
+    background: var(--bg-primary, #1a1a2e);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: min(420px, 90vw);
+}
+.report-modal h3 {
+    margin: 0 0 1rem;
+}
+.report-modal label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.75rem 0 0.25rem;
+}
+.report-modal select,
+.report-modal textarea {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+    background: var(--bg-secondary, #16213e);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+}
+.report-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.report-modal .btn-cancel {
+    background: none;
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.report-modal .btn-submit {
+    background: var(--error, #e74c3c);
+    border: none;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.report-modal .btn-submit:disabled {
+    opacity: 0.5;
+}
+.report-status {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.report-status.error { color: var(--error); }
+.report-status.success { color: var(--success); }
+.feed-post-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-light);
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 11;
+}
+.post-action-btn-sm {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.2rem 0;
+}
+.post-action-btn-sm:hover {
+    color: var(--accent);
+}
+/* === Stickers === */
+.sticker-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* height set by JS to full uncollapsed article height */
+    pointer-events: none;
+    z-index: 10;
+    /* Allow stickers to poke out past all edges of the post card.
+       Content stays clipped by the post body's own overflow:hidden. */
+    clip-path: inset(-12px -20px);
+}
+.sticker-slot {
+    position: absolute;
+    pointer-events: auto;
+    cursor: default;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sticker-emoji {
+    font-size: 1.5rem;
+    position: absolute;
+    line-height: 1;
+    filter:
+            drop-shadow(0 0 1px white)
+            drop-shadow(0 0 1px white)
+            drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    transition: transform 0.15s ease;
+    user-select: none;
+}
+.sticker-overflow {
+    position: absolute;
+    bottom: -0.6rem;
+    right: -0.8rem;
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 0.25rem;
+    line-height: 1.3;
+}
+.sticker-slot.sticker-agreeable {
+    cursor: pointer;
+    animation: sticker-pulse 1.2s ease-in-out infinite;
+}
+/* Use var(--rot) so the pulse preserves each slot's jitter rotation.
+   sticker-manager.js sets --rot on each .sticker-slot. */
+@keyframes sticker-pulse {
+    0%, 100% { transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1); }
+    50% { transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1.15); }
+}
+
+/* Sticker tray */
+.sticker-tray {
+    position: relative;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    z-index: 20;
+}
+.sticker-tray-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.1rem 0.3rem;
+}
+.sticker-tray-close:hover {
+    color: var(--text);
+}
+.sticker-tray-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem;
+    max-width: 320px;
+}
+.sticker-tray-btn {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.2rem 0.25rem;
+    line-height: 1;
+    transition: background 0.1s, border-color 0.1s, transform 0.1s;
+}
+.sticker-tray-btn:hover {
+    background: var(--accent-dim);
+    border-color: var(--border);
+    transform: scale(1.2);
+}
+.sticker-tray-message {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.25rem 0;
+}
+
+/* Placement mode - border rails */
+.sticker-rail {
+    position: absolute;
+    z-index: 16;
+    cursor: crosshair;
+    border: 2px dashed var(--accent);
+    background: var(--accent-dim);  /* fallback for older browsers */
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    opacity: 0.5;
+    transition: opacity 0.15s, background 0.15s;
+}
+.sticker-rail:hover {
+    opacity: 1;
+    background: var(--accent-dim);
+    background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+.sticker-rail-top {
+    top: 0; left: 0; right: 0;
+    height: 10%;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+.sticker-rail-bottom {
+    bottom: 0; left: 0; right: 0;
+    height: 10%;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+.sticker-rail-left {
+    top: 10%; left: 0; bottom: 10%;
+    width: 8%;
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+.sticker-rail-right {
+    top: 10%; right: 0; bottom: 10%;
+    width: 8%;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+.sticker-cursor-preview {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0.6;
+    transform: translate(-50%, -50%);
+    transition: none;
+    line-height: 1;
+}
+.sticker-placement-banner {
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg-elevated);
+    padding: 0.3rem 0.5rem;
+    border-radius: 0 0 var(--radius) var(--radius);
+    border: 1px solid var(--border);
+    border-top: none;
+    z-index: 20;
+}
+.sticker-placement-cancel {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    text-decoration: underline;
+}
+
+/* Checkbox label for settings */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--accent);
+}
+
+.inline-addition-form {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-light);
+    position: relative;
+    z-index: 20;
+    background: var(--bg-surface);
+}
+.inline-addition-form textarea {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+/* === Chain / Additions (Tumblr reblog style) === */
+.chain-post .chain-original {
+    /* Original post content */
+}
+.chain-stapled-badge {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    background: var(--accent-dim);
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    margin-left: 0.25rem;
+}
+.chain-pinned-badge {
+    font-size: 0.7rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    margin-left: 0.25rem;
+}
+.post-action-pinned {
+    color: var(--accent);
+    font-weight: 600;
+}
+.chain-author-link {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.chain-author-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+.chain-additions {
+    margin-top: 0.75rem;
+    border-left: 2px solid var(--border);
+    padding-left: 1rem;
+}
+.chain-addition {
+    padding: 0.5rem 0;
+    position: relative;  /* Sticker layer positioning */
+    overflow: visible;
+}
+.chain-addition + .chain-addition {
+    border-top: 1px solid var(--border-light);
+}
+.chain-addition-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+}
+.chain-addition-author {
+    font-weight: 500;
+    color: var(--text);
+}
+.chain-addition-author:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+.chain-addition-label {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+.chain-addition-time {
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    margin-left: auto;
+}
+.chain-addition-body {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    contain: layout;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+.chain-addition-body img {
+    max-width: 50%;
+    max-height: 50%;
+    height: auto;
+}
+.chain-addition-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.3rem;
+}
+.chain-addition-delete {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 0.25rem;
+    line-height: 1;
+}
+.chain-addition-delete:hover {
+    color: var(--error);
+}
+
+/* Addition inline form */
+.chain-addition-form {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    position: relative;
+    z-index: 20;
+}
+.chain-addition-textarea {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    resize: vertical;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-family: var(--font);
+    line-height: 1.5;
+}
+.chain-addition-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+.chain-addition-form-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+}
+.chain-addition-cancel {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* === Block/Mute States === */
+
+/* Block wall - non-interactive placeholder */
+.post-blocked-wall,
+.chain-addition-blocked-wall {
+    padding: 1rem;
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    margin: 0.5rem 0;
+}
+.chain-addition--blocked {
+    padding: 0;
+}
+
+/* Mute fog - collapsed by default, expandable */
+.post-muted-fog {
+    display: none;
+}
+.post-muted-fog--revealed {
+    display: block;
+}
+.post-muted-toggle,
+.chain-addition-muted-toggle {
+    display: block;
+    background: none;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-style: italic;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+}
+.post-muted-toggle:hover,
+.chain-addition-muted-toggle:hover {
+    color: var(--text-muted);
+    border-color: var(--text-dim);
+}
+.chain-addition--muted .chain-addition-muted-content {
+    display: none;
+}
+.chain-addition--muted-revealed .chain-addition-muted-content {
+    display: block;
+}
+.chain-addition--muted-revealed .chain-addition-muted-toggle {
+    margin-bottom: 0.5rem;
+}
