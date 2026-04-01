@@ -65,7 +65,7 @@
     text-align: unset !important;
 }
 .btn-follow:hover {
-    background: unset !important);
+    background: unset !important;
     border-color: unset !important;
 }
 .btn-follow:disabled {
