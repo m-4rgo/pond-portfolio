@@ -1,0 +1,119 @@
+<style>
+    /* css variables */
+:host {}
+
+/* header block */
+.book-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* contains icon, book title, username, and bio*/
+.book-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* header icon */
+.book-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+}
+
+/* book heading */
+.book-author h2 {}
+
+/* @handle */
+.book-username {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* book bio */
+.book-bio {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+}
+.book-bio:empty {
+    display: none;
+}
+#book-bio-mount {}
+/* bio links */
+.book-bio a {}
+.book-bio a:hover {}
+
+/* follow button */
+#btn-follow {}
+.btn-follow {
+    padding: 0.4rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    align-self: center;
+    min-width: 100px;
+    text-align: center;
+}
+.btn-follow:hover {
+    background: var(--accent-hover, #4a8ac2);
+    border-color: var(--accent-hover, #4a8ac2);
+}
+.btn-follow:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.btn-follow--following {
+    background: transparent;
+    color: var(--accent);
+}
+.btn-follow--following:hover {
+    background: transparent;
+}
+.btn-follow--unfollow {
+    border-color: #c0392b;
+    color: #c0392b;
+    background: transparent;
+}
+.btn-follow--unfollow:hover {
+    background: rgba(192, 57, 43, 0.1);
+}
+/* block button */
+.btn-sm {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* the text that displays when your book is empty */
+.book-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+}
+.book-empty h3 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+.book-empty-hint {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 1rem;
+}
+</style>
