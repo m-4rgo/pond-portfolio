@@ -20,7 +20,7 @@ biobiobio
 }
 
 .banner {
-    max-width: 100%
+    max-width: 100%;
 }
 
 /* contains icon, book title, username, and bio*/
