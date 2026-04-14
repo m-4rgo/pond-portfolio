@@ -1,0 +1,14 @@
+<style>
+:host(#book-shadow-host)::before {
+    content: ' ';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background:
+        conic-gradient(transparent 0%, transparent 65%, #E4312b 65%, #E4312b 85%, transparent 85%,transparent 100%),
+        linear-gradient(#000 0% 33.33%, #fff 33.33% 66.66%, #149954 66.66% 100%);
+}
+</style>
+
