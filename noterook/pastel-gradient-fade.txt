@@ -1,0 +1,27 @@
+<style>
+ :host(#book-shadow-host)::before {
+     content: ' ';
+     position: fixed;
+     top: 0; left: 0;
+     width: 100vw;
+     height: 100vh;
+     z-index: -2;
+    background: linear-gradient(
+            -30deg,
+            #ffb3ba, /* pastel red */
+            #ffdfba, /* pastel orange */
+            #ffffba, /* pastel yellow */
+            #baffc9, /* pastel green */
+            #bae1ff, /* pastel blue */
+            #d0baff, /* pastel indigo */
+            #ffc2f9  /* pastel violet */
+    );
+    background-size: 550% 150%;
+    animation: gradientShift 120s ease infinite;
+ }
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
