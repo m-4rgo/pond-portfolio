@@ -1,6 +1,13 @@
 <style>
     /* css variables */
-:host {}
+:host {
+    --border: #2e3148;
+    --text: #e0e2e8;
+    --text-muted: #8a8f9e;
+    --text-dim: #5a5f72;
+    --accent: #6b7094;
+    --accent-hover: #8388a8;
+}
 
 /* header block */
 .book-header {
