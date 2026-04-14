@@ -13,11 +13,11 @@
         conic-gradient(from 0deg at 40% 50%, transparent 0%, transparent 65%, #7BCCE5 65%, #7BCCE5 85%, transparent 85%,transparent 100%),
         conic-gradient(from 0deg at 50% 50%, transparent 0%, transparent 65%, #945516 65%, #945516 85%, transparent 85%,transparent 100%),
         conic-gradient(from 0deg at 60% 50%,transparent 0%, transparent 65%, #000 65%, #000 85%, transparent 85%,transparent 100%),
-        linear-gradient( #E40303 16.7%,
-            #FF8C00 16.7%, #FF8C00 33.4%,
-            #FFED00 33.4%, #FFED00 50.1%,
-            #008026 50.1%, #008026 66.8%,
-            #004CFF 66.8%, #004CFF 83.5%,
-            #732982 83.5%);
+        linear-gradient( #E22016 16.7%,
+            #F28917 16.7%, #F28917 33.4%,
+            #EFE524 33.4%, #EFE524 50.1%,
+            #78B82A 50.1%, #78B82A 66.8%,
+            #2C58A4 66.8%, #2C58A4 83.5%,
+            #6D2380 83.5%);
     }
 </style>
