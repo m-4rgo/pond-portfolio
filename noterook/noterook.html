@@ -7,6 +7,7 @@
 <style>
     body {
         font-family: sans-serif;
+        background-color: #e8e5e2;
     }
     .complete, .build {
         border: 1px solid black;
@@ -38,8 +39,73 @@
         background-color: rgba(211, 211, 211, 0.5);
         border-radius: 6px;
     }
+    /*.box {*/
+    /*    background: #ffffff;*/
+    /*    padding:2px 6px;*/
+    /*    border-radius: 6rem;*/
+    /*    border: 3px solid;*/
+    /*    border-image: linear-gradient(*/
+    /*            45deg,*/
+    /*            red, orange, yellow, green, blue, purple*/
+    /*    ) 1;*/
+    /*}*/
     .box {
-        background: #1b1b1b; padding:2px 6px; border-radius: 6px; border: 3px solid #ffc3fb; cursor: pointer;
+        border: 4px solid transparent;
+        border-radius: 1rem;
+        padding: 6px;
+        background:
+                linear-gradient(#000000, #0e0d0d) padding-box,
+                linear-gradient(45deg, red, orange, yellow, green, blue, purple) border-box;
+     }
+    .blue-space {
+        text-shadow: -1px -1px 0 #64b8dc, 1px -1px 0 #64b8dc, -1px  1px 0 #64b8dc, 1px  1px 0 #64b8dc;
+        /*font-weight: bold;*/
+        color: #1b2e6e;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 6px;
+        background:
+                radial-gradient(ellipse at 50% 100%, rgba(255, 26, 189, 0.09), transparent 50%),
+                radial-gradient(ellipse at 100% 80%, rgba(41, 255, 26, 0.18), transparent 50%),
+                radial-gradient(ellipse at 0% 0%, rgba(255, 236, 26, 0.07), transparent 50%),
+                radial-gradient(ellipse at 100% 0%, rgba(21, 1, 5, 0.74), transparent 30%),
+                radial-gradient(circle at 0% 100%, rgba(21, 1, 5, 0.74), transparent 50%),
+                radial-gradient(ellipse at top left, #000010, #001a33 30%, #004466 60%, #001133 80%, #000000 100%);
+    }
+    .pink-space {
+        text-shadow: -1px -1px 0 #f65497, 1px -1px 0 #ff82b7, -1px  1px 0 #f468a2, 1px  1px 0 #ff5a9e;
+        /*font-weight: bold;*/
+        color: #f3d5e5;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 6px;
+        background: conic-gradient(
+                from 210deg at 50% 50%,
+                #000428 0%,
+                #001833 10%,
+                rgba(255, 113, 151, 0.27) 20%,
+                #01222e 35%,
+                rgba(107, 76, 158, 0.42) 50%,
+                #130f40 60%,
+                #1b140c 70%,
+                rgba(232, 96, 189, 0.3) 80%,
+                #0d0820 90%,
+                #000428 100%
+        );
+    }
+    .brown-alien {
+        text-shadow: -1px -1px 0 #b3da44, 1px -1px 0 #b3da44, -1px  1px 0 #b3da44, 1px  1px 0 #b3da44;
+        /*font-weight: bold;*/
+        color: #3e0735;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 6px;
+        background:
+                linear-gradient(#000000, rgba(203, 255, 243, 0.06)),
+                linear-gradient(
+                        -30deg,
+                        #301818, /* darker pastel red */ #35271b, /* darker pastel orange */ #2e2c17, /* darker pastel yellow */ #233e2f, /* darker pastel green */ #243c4a, /* darker pastel blue */ #2e2849, /* darker pastel indigo */ #472c47 /* darker pastel violet */
+                );
     }
     .pride {
         background: linear-gradient(-30deg, #ff4343,#ff9846,#fff044,#3cff8f,#3fb5ff,#724bff,#ff4fff);
@@ -326,9 +392,9 @@
     <h2>complete themes</h2>
     <p>Paste into bio to use</p>
     <ul>
-        <li><a href="blue-space.txt">Blue Space</a></li>
-        <li><a href="pink-space.txt">Pink Space</a></li>
-        <li><a href="brown-alien.txt">Brown Alien</a></li>
+        <li><a href="blue-space.txt" class="blue-space">Blue Space</a></li>
+        <li><a href="pink-space.txt" class="pink-space">Pink Space</a></li>
+        <li><a href="brown-alien.txt" class="brown-alien">Brown Alien</a></li>
     </ul>
 </div>
 <div class="build">
@@ -357,6 +423,7 @@
             <li><a href="transgender.txt" class="transgender">Trans Rights!</a></li>
             <li><a href="lesbian.txt" class="lesbian">Lesbian Rights!</a></li>
             <li><a href="gay.txt" class="gay">Gay rights!</a></li>
+            <li><a href="8-stripe-gay.txt" class="eight-stripe-gay">gilbert-baker 8-stripe!</a></li>
             <li><a href="asexual.txt" class="asexual">Ace Rights!</a></li>
             <li><a href="bisexual.txt" class="bisexual">Bi Rights!</a></li>
             <li><a href="mlm.txt" class="mlm">MLM rights!</a></li>
@@ -369,7 +436,6 @@
             <li><a href="genderfluid.txt" class="genderfluid">genderfluid rights!</a></li>
             <li><a href="aromantic.txt" class="aromantic">aro rights!</a></li>
             <li><a href="nonbinary.txt" class="nonbinary">enby rights!</a></li>
-            <li><a href="8-stripe-gay.txt" class="eight-stripe-gay">8-stripe gay rights!</a></li>
             <li><a href="lgbt.txt">LGBT rights!</a>(coming soon)</li>
             <span>If you want one that's missing, please ask!</span>
         </ul>
@@ -390,6 +456,10 @@
     <sup>these have had all default styling unset for easier customisation</sup>
     <ul>
         <li><a href="template-header.txt">plain header template</a></li>
+    </ul>
+    <h4>Noterook Defaults</h4>
+    <sup>noterook default css for reference</sup>
+    <ul>
         <li><a href="noterook-default-header.txt">noterook default header code</a></li>
     </ul>
 </div>
