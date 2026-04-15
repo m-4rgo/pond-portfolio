@@ -1,0 +1,22 @@
+
+<div class="stars"></div>
+<style>
+     /* theme by pond */
+ :host(#book-shadow-host)::before {
+     content: ' ';
+     position: fixed;
+     top: 0; left: 0;
+     width: 100vw;
+     height: 100vh;
+     z-index: -2;
+     background:
+             radial-gradient(ellipse at 50% 100%, rgba(255, 26, 189, 0.09), transparent 50%),
+             radial-gradient(ellipse at 100% 80%, rgba(41, 255, 26, 0.18), transparent 50%),
+             radial-gradient(ellipse at 0% 0%, rgba(255, 236, 26, 0.07), transparent 50%),
+             radial-gradient(ellipse at 100% 0%, rgba(21, 1, 5, 0.74), transparent 30%),
+             radial-gradient(circle at 0% 100%, rgba(21, 1, 5, 0.74), transparent 50%),
+             radial-gradient(ellipse at top left, #000010, #001a33 30%, #004466 60%, #001133 80%, #000000 100%)
+ ;
+     color: #000 !important;
+ }
+ </style>
