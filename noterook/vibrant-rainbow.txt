@@ -8,13 +8,13 @@
     z-index: -2;
     background: linear-gradient(
             -30deg,
-            #ff4343, /* darker pastel red */
-            #ff9846, /* darker pastel orange */
-            #fff044, /* darker pastel yellow */
-            #3cff8f, /* darker pastel green */
-            #3fb5ff, /* darker pastel blue */
-            #724bff, /* darker pastel indigo */
-            #ff4fff /* darker pastel violet */
+            #ff4343, /* vibrant red */
+            #ff9846, /* vibrant orange */
+            #fff044, /* vibrant yellow */
+            #3cff8f, /* vibrant green */
+            #3fb5ff, /* vibrant blue */
+            #724bff, /* vibrant indigo */
+            #ff4fff /* vibrant violet */
     );
 }
 /*

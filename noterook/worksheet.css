@@ -1,69 +1,53 @@
 <style>
-/* css variables */
-:host {
-    --glass-text: #191919;
-    --glass-colour-1: rgba(255,255,255,0.5);
-    --glass-colour-2: rgba(255,255,255,0.3);
-    --glass-saturation: 200%;
-    --glass-blur: 5rem;
-}
+    /* css variables */
+:host {}
 
 /* header block */
 .book-header {
-    /*justify-content: unset !important;*/
-    border-bottom: unset !important;
-    /*margin-bottom: unset !important;*/
-    padding-bottom: unset !important;
-    color: var(--glass-text);
-    background: linear-gradient(135deg, var(--glass-colour-1), var(--glass-colour-2));
-    padding: 1rem !important;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow:
-            0 8px 32px rgba(0, 0, 0, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
 }
 
 /* contains icon, book title, username, and bio*/
 .book-author {
-    /*display: unset !important;*/
-    /*align-items: unset !important;*/
-    /*gap: unset !important;*/
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* header icon */
-.book-avatar, .book-avatar img {
-    /*width: unset !important;*/
-    /*height: unset !important;*/
-    /*border-radius: unset !important;*/
-    object-fit: unset !important;
-    /*border: unset !important;*/
-    border-radius: 1rem !important;
-    border: 3px solid rgba(255, 255, 255, 0.25) !important;
-    box-shadow:
-            0 8px 32px rgba(0, 0, 0, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+.book-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
 }
 
 /* book heading */
-.book-author h2 {
-    color: var(--glass-text);
-}
+.book-author h2 {}
 
 /* @handle */
 .book-username {
-    color: unset !important;
-    font-size: unset !important;
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 /* book bio */
 .book-bio {
-    margin-top: unset !important;
-    font-size: unset !important;
-    color: unset !important;
-    line-height: unset !important;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+}
+.book-bio:empty {
+    display: none;
 }
 #book-bio-mount {}
 /* bio links */
@@ -72,48 +56,64 @@
 
 /* follow button */
 #btn-follow {}
-.btn-follow, .btn-sm {
-    /*padding: unset !important;*/
-    font-size: unset !important;
-    font-weight: unset !important;
-    border: unset !important;
-    /*border-radius: unset !important;*/
-    /*background: unset !important;*/
-    background: linear-gradient(135deg, var(--glass-colour-1), var(--glass-colour-2)) !important;
-    color: unset !important;
-    /*cursor: unset !important;*/
-    transition: unset !important;
-    white-space: unset !important;
-    align-self: unset !important;
-    min-width: unset !important;
-    text-align: unset !important;
-    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+.btn-follow {
+    padding: 0.4rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    align-self: center;
+    min-width: 100px;
+    text-align: center;
 }
 .btn-follow:hover {
-    opacity: 0.8;
-    /*background: unset !important;*/
-    /*border-color: unset !important;*/
+    background: var(--accent-hover, #4a8ac2);
+    border-color: var(--accent-hover, #4a8ac2);
 }
 .btn-follow:disabled {
-    opacity: unset !important;
-    /*cursor: unset !important;*/
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 .btn-follow--following {
-    background: unset !important;
-    color: unset !important;
+    background: transparent;
+    color: var(--accent);
 }
 .btn-follow--following:hover {
-    background: unset !important;
+    background: transparent;
 }
 .btn-follow--unfollow {
-    border-color: unset !important;
-    color: unset !important;
-    background: unset !important;
+    border-color: #c0392b;
+    color: #c0392b;
+    background: transparent;
 }
 .btn-follow--unfollow:hover {
-    background: unset !important;
-    opacity: 0.8;
+    background: rgba(192, 57, 43, 0.1);
+}
+/* block button */
+.btn-sm {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
 }
 
+/* the text that displays when your book is empty */
+.book-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+}
+.book-empty h3 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+.book-empty-hint {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 1rem;
+}
 </style>
