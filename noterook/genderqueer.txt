@@ -8,4 +8,12 @@
     z-index: -2;
     background: linear-gradient( #B57EDC 33%, #FFFFFF 33%, #FFFFFF 66%, #4A8123 66%);
 }
+/*
+                       _
+ _ __   ___  _ __   __| |
+| '_ \ / _ \| '_ \ / _` |
+| |_) | (_) | | | | (_| |
+| .__/ \___/|_| |_|\__,_|
+|_| code by p-ond.uk
+*/
 </style>

@@ -8,4 +8,12 @@
     z-index: -2;
     background: radial-gradient(circle, #FFD800 35%, #7902AA 35%, #7902AA 40%, #FFD800 40%);
 }
+/*
+                       _
+ _ __   ___  _ __   __| |
+| '_ \ / _ \| '_ \ / _` |
+| |_) | (_) | | | | (_| |
+| .__/ \___/|_| |_|\__,_|
+|_| code by p-ond.uk
+*/
 </style>

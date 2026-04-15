@@ -10,5 +10,12 @@
         conic-gradient(transparent 0%, transparent 65%, #E4312b 65%, #E4312b 85%, transparent 85%,transparent 100%),
         linear-gradient(#000 0% 33.33%, #fff 33.33% 66.66%, #149954 66.66% 100%);
 }
+/*
+                       _
+ _ __   ___  _ __   __| |
+| '_ \ / _ \| '_ \ / _` |
+| |_) | (_) | | | | (_| |
+| .__/ \___/|_| |_|\__,_|
+|_| code by p-ond.uk
+*/
 </style>
-
