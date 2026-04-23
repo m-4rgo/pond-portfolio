@@ -1,0 +1,539 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+    color: white;
+}
+/* "complete themes" and "build a theme" section boxes */
+.complete, .build {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 10px;
+}
+h3 {
+    text-decoration: underline;
+}
+h4 {
+    text-decoration: underline;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 10px;
+}
+h5 {
+    margin-top: 6px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    margin: 1rem;
+}
+li a {
+    margin: 3px;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 6px;
+    padding: 3px;
+}
+.pride-box {
+    width: fit-content;
+    border: 4px solid transparent;
+    border-radius: 1rem;
+    padding: 6px;
+    background:
+            linear-gradient(#000000, #0e0d0d) padding-box,
+            linear-gradient(45deg, red, orange, yellow, green, blue, purple) border-box;
+}
+.pride {
+    background: linear-gradient(-30deg, #ff4343,#ff9846,#fff044,#3cff8f,#3fb5ff,#724bff,#ff4fff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+.blue-space {
+    text-shadow: -1px -1px 0 #64b8dc, 1px -1px 0 #64b8dc, -1px  1px 0 #64b8dc, 1px  1px 0 #64b8dc;
+    /*font-weight: bold;*/
+    color: #1b2e6e;
+    margin: 3px;
+    border-radius: 6px;
+    background:
+            radial-gradient(ellipse at 50% 100%, rgba(255, 26, 189, 0.09), transparent 50%),
+            radial-gradient(ellipse at 100% 80%, rgba(41, 255, 26, 0.18), transparent 50%),
+            radial-gradient(ellipse at 0% 0%, rgba(255, 236, 26, 0.07), transparent 50%),
+            radial-gradient(ellipse at 100% 0%, rgba(21, 1, 5, 0.74), transparent 30%),
+            radial-gradient(circle at 0% 100%, rgba(21, 1, 5, 0.74), transparent 50%),
+            radial-gradient(ellipse at top left, #000010, #001a33 30%, #004466 60%, #001133 80%, #000000 100%);
+}
+.pink-space {
+    text-shadow: -1px -1px 0 #f65497, 1px -1px 0 #ff82b7, -1px  1px 0 #f468a2, 1px  1px 0 #ff5a9e;
+    /*font-weight: bold;*/
+    color: #f3d5e5;
+    margin: 3px;
+    border-radius: 6px;
+    background: conic-gradient(
+            from 210deg at 50% 50%,
+            #000428 0%,
+            #001833 10%,
+            rgba(255, 113, 151, 0.27) 20%,
+            #01222e 35%,
+            rgba(107, 76, 158, 0.42) 50%,
+            #130f40 60%,
+            #1b140c 70%,
+            rgba(232, 96, 189, 0.3) 80%,
+            #0d0820 90%,
+            #000428 100%
+    );
+}
+.brown-alien {
+    text-shadow: -1px -1px 0 #b3da44, 1px -1px 0 #b3da44, -1px  1px 0 #b3da44, 1px  1px 0 #b3da44;
+    /*font-weight: bold;*/
+    color: #3e0735;
+    margin: 3px;
+    border-radius: 6px;
+    background:
+            linear-gradient(#000000, rgba(203, 255, 243, 0.06)),
+            linear-gradient(
+                    -30deg,
+                    #301818, /* darker pastel red */ #35271b, /* darker pastel orange */ #2e2c17, /* darker pastel yellow */ #233e2f, /* darker pastel green */ #243c4a, /* darker pastel blue */ #2e2849, /* darker pastel indigo */ #472c47 /* darker pastel violet */
+            );
+}
+.deep-space {
+    text-shadow: -1px -1px 0 #9cc9ef, 1px -1px 0 #9cc9ef, -1px  1px 0 #9cc9ef, 1px  1px 0 #9cc9ef;
+    color: #c01ac6;
+    background: conic-gradient(
+            from 210deg at 50% 50%,
+            #000428 0%,
+            #001833 10%,
+            #004e92 20%,
+            #01222e 35%,
+            #3f1d81 50%,
+            #130f40 60%,
+            #1b140c 70%,
+            #7c0a58 80%,
+            #0d0820 90%,
+            #000428 100%);
+}
+.black-space {
+    text-shadow: -1px -1px 0 #bcbaba, 1px -1px 0 #bcbaba, -1px  1px 0 #bcbaba, 1px  1px 0 #bcbaba;
+    color: #000000;
+    background: conic-gradient(
+            from 210deg at 50% 50%,
+            #000000 0%,
+            #01040c 12%,
+            #020a18 22%,
+            #000000 38%,
+            #0a0614 52%,
+            #000000 65%,
+            #0b0507 75%,
+            #000000 88%,
+            #01030a 100%);
+    box-shadow: 0 0 10px #5e5c5c;
+}
+.hurt-space {
+    text-shadow: -1px -1px 0 #6c1b85, 1px -1px 0 #9422b6, -1px  1px 0 #6c1b85, 1px  1px 0 #9422b6;
+    color: #aacae6;
+    background: conic-gradient(
+            from 210deg at 50% 50%,
+            #00010a 0%,
+            #020617 10%,
+            #031a2e 20%,
+            #010b10 35%,
+            #120826 50%,
+            #070611 60%,
+            #0a0705 70%,
+            #1a0620 80%,
+            #050410 90%,
+            #00010a 100%);
+    box-shadow: 0 0 10px #092e4e;
+}
+.ireland {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #009A44 33%, #FFFFFF 33%, #FFFFFF 66%, #FF8200 66%);
+}
+.palestine {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background:
+            conic-gradient(transparent 0%, transparent 65%, #E4312b 65%, #E4312b 85%, transparent 85%,transparent 100%),
+            linear-gradient(#000 0% 33.33%, #fff 33.33% 66.66%, #149954 66.66% 100%);
+}
+.rainbow-wallpaper {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+            -30deg,
+            #ff7f7f, /* darker pastel red */
+            #ffb97f, /* darker pastel orange */
+            #fff47f, /* darker pastel yellow */
+            #8fffbf, /* darker pastel green */
+            #7fcfff, /* darker pastel blue */
+            #a68fff, /* darker pastel indigo */
+            #ff9fff  /* darker pastel violet */
+    );
+}
+.pastel-rainbow-wallpaper {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+            -30deg,
+            #ffb3ba, /* pastel red */
+            #ffdfba, /* pastel orange */
+            #ffffba, /* pastel yellow */
+            #baffc9, /* pastel green */
+            #bae1ff, /* pastel blue */
+            #d0baff, /* pastel indigo */
+            #ffc2f9  /* pastel violet */
+    );
+}
+.vibrant-rainbow-wallpaper {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+            -30deg,
+            #ff4343, /* darker pastel red */
+            #ff9846, /* darker pastel orange */
+            #fff044, /* darker pastel yellow */
+            #3cff8f, /* darker pastel green */
+            #3fb5ff, /* darker pastel blue */
+            #724bff, /* darker pastel indigo */
+            #ff4fff /* darker pastel violet */
+    );
+}
+.dark-rainbow-wallpaper {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+            -30deg,
+            #710c0c, /* darker pastel red */ #884814, /* darker pastel orange */ #777014, /* darker pastel yellow */ #106836, /* darker pastel green */ #0f4160, /* darker pastel blue */ #241267, /* darker pastel indigo */ #630e63 /* darker pastel violet */
+    );
+}
+.intersex {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: radial-gradient(circle, #FFD800 25%, #7902AA 25%, #7902AA 70%, #FFD800 70%);
+}
+.pansexual {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #ff218e 33%, #fcd800 33%, #fcd800 66%, #0194fc 66%);
+}
+.transgender {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #5BCEFA 20%,
+    #F5A9B8 20%, #F5A9B8 40%,
+    #FFFFFF 40%, #FFFFFF 60%,
+    #F5A9B8 60%, #F5A9B8 80%,
+    #5BCEFA 80%);
+}
+.lesbian {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #D52D00 14.3%,
+    #EF7627 14.3%, #EF7627 28.6%,
+    #FF9A56 28.6%, #FF9A56 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #D162A4 57.2%, #D162A4 70.5%,
+    #B55690 70.5%, #B55690 84.8%,
+    #A30262 84.8%);
+}
+.gay {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #E40303 16.7%,
+    #FF8C00 16.7%, #FF8C00 33.4%,
+    #FFED00 33.4%, #FFED00 50.1%,
+    #008026 50.1%, #008026 66.8%,
+    #004CFF 66.8%, #004CFF 83.5%,
+    #732982 83.5%);
+}
+.asexual {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #000000 25%,
+    #A3A3A3 25%, #A3A3A3 50%,
+    #FFFFFF 50%, #FFFFFF 75%,
+    #800080 75%);
+}
+.bisexual {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #D60270 40%,
+    #9B4F96 40%, #9B4F96 60%,
+    #0038A8 60%);
+}
+.mlm {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #078D70 14.3%,
+    #26CEAA 14.3%, #26CEAA 28.6%,
+    #98E8C1 28.6%, #98E8C1 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #7BADE2 57.2%, #7BADE2 70.5%,
+    #5049CC 70.5%, #5049CC 84.8%,
+    #3D1A78 84.8%);
+}
+.demiboy {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #7F7F7F 14.3%,
+    #C4C4C4 14.3%, #C4C4C4 28.6%,
+    #9DD7EA 28.6%, #9DD7EA 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #9DD7EA 57.2%, #9DD7EA 70.5%,
+    #C4C4C4 70.5%, #C4C4C4 84.8%,
+    #7F7F7F 84.8%);
+}
+.demigirl {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #7F7F7F 14.3%,
+    #C4C4C4 14.3%, #C4C4C4 28.6%,
+    #FDADC8 28.6%, #FDADC8 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #FDADC8 57.2%, #FDADC8 70.5%,
+    #C4C4C4 70.5%, #C4C4C4 84.8%,
+    #7F7F7F 84.8%);
+}
+.bigender {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #C479A2 14.3%,
+    #EDA5CD 14.3%, #EDA5CD 28.6%,
+    #D6C7E8 28.6%, #D6C7E8 42.9%,
+    #FFFFFF 42.9%, #FFFFFF 57.2%,
+    #D6C7E8 57.2%, #D6C7E8 70.5%,
+    #9AC7E8 70.5%, #9AC7E8 84.8%,
+    #6D82D1 84.8%);
+}
+.agender {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #000000 14.3%,
+    #BCC4C7 14.3%, #BCC4C7 28.6%,
+    #FFFFFF 28.6%, #FFFFFF 42.9%,
+    #B7F684 42.9%, #B7F684 57.2%,
+    #FFFFFF 57.2%, #FFFFFF 70.5%,
+    #BCC4C7 70.5%, #BCC4C7 84.8%,
+    #000000 84.8%);
+}
+.polysexual {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #F714BA 33%, #01D66A 33%, #01D66A 66%, #1594F6 66%);
+}
+.genderqueer {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #B57EDC 33%, #FFFFFF 33%, #FFFFFF 66%, #4A8123 66%);
+}
+.genderfluid {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #FF76A4 20%,
+    #FFFFFF 20%, #FFFFFF 40%,
+    #C011D7 40%, #C011D7 60%,
+    #000000 60%, #000000 80%,
+    #2F3CBE 80%);
+}
+.aromantic {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #3DA542 20%,
+    #A7D379 20%, #A7D379 40%,
+    #FFFFFF 40%, #FFFFFF 60%,
+    #A9A9A9 60%, #A9A9A9 80%,
+    #000000 80%);
+}
+.nonbinary {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #FCF434 25%,
+    #FFFFFF 25%, #FFFFFF 50%,
+    #9C59D1 50%, #9C59D1 75%,
+    #2C2C2C 75%);
+}
+.eight-stripe-gay {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient( #FF6599 12.5%,
+    #FF0000 12.5%, #FF0000 25%,
+    #FF8E00 25%, #FF8E00 37.5%,
+    #FFFF00 37.5%, #FFFF00 50%,
+    #008E00 50%, #008E00 62.5%,
+    #00C0C0 62.5%, #00C0C0 75%,
+    #400098 75%, #400098 87.5%,
+    #8E008E 87.5%);
+}
+.lgbt {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background:
+            conic-gradient(from 0deg at 10% 50%, transparent 0%, transparent 65%, #FDD817 65%, #FDD817 85%, transparent 85%,transparent 100%),
+            conic-gradient(from 0deg at 20% 50%, transparent 0%, transparent 65%, #fff 65%, #fff 85%, transparent 85%,transparent 100%),
+            conic-gradient(from 0deg at 30% 50%, transparent 0%, transparent 65%, #F4AEC8 65%, #F4AEC8 85%, transparent 85%,transparent 100%),
+            conic-gradient(from 0deg at 40% 50%, transparent 0%, transparent 65%, #7BCCE5 65%, #7BCCE5 85%, transparent 85%,transparent 100%),
+            conic-gradient(from 0deg at 50% 50%, transparent 0%, transparent 65%, #945516 65%, #945516 85%, transparent 85%,transparent 100%),
+            conic-gradient(from 0deg at 60% 50%,transparent 0%, transparent 65%, #000 65%, #000 85%, transparent 85%,transparent 100%),
+            linear-gradient( #E40303 16.7%,
+            #FF8C00 16.7%, #FF8C00 33.4%,
+            #FFED00 33.4%, #FFED00 50.1%,
+            #008026 50.1%, #008026 66.8%,
+            #004CFF 66.8%, #004CFF 83.5%,
+            #732982 83.5%);
+}
+.p-r-g-f {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+            -30deg,
+            #ffb3ba, /* pastel red */
+            #ffdfba, /* pastel orange */
+            #ffffba, /* pastel yellow */
+            #baffc9, /* pastel green */
+            #bae1ff, /* pastel blue */
+            #d0baff, /* pastel indigo */
+            #ffc2f9  /* pastel violet */
+    );
+    background-size: 550% 150%;
+    animation: gradientShift 120s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.starfield {
+    border: 2px dotted silver;
+    border-radius: 1rem;
+    width: fit-content;
+    padding: 10px;
+}
+.glassmorphism {
+    background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3));
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.grid ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*gap: 0.1rem;*/
+    /*flex-direction: row;*/
+}
+.grid a {
+    padding: 0.5rem;
+}

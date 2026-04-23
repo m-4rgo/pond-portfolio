@@ -1,0 +1,32 @@
+
+:host(#book-shadow-host)::before {
+    content: ' ';
+    position: fixed;
+    top: 0; left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -2;
+    background-image: url(https://64.media.tumblr.com/945a4795abb0f646ee3ba5af05428a40/23fbfb650c70a54c-10/s2048x3072/4962283950791f72cddcd86f926e86be7b2bb543.pnj);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.post-card,
+.book-header{
+    background: linear-gradient(180deg, #711212 0rem, #111 10rem) !important;
+    border-bottom: 1px solid #ff3939 !important;
+    border: 1px solid #ff3939 !important;
+}
+.book-header{
+    margin: 0px -3rem;
+    margin-bottom: 2rem;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+.book-toolbar-area .book-header{
+    background: transparent;
+    border: 0px;
+}
+.site-footer{
+    background-color: --bg-surface;
+}

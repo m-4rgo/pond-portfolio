@@ -1,0 +1,244 @@
+<div class="stars"></div>
+<style>
+    :host(#book-shadow-host)::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        background: url('https://64.media.tumblr.com/0a60e6287607ad5736e97ecdd5af3ba0/852ae27c37741ea4-aa/s1280x1920/31a82caa9aa2c030df8bb2ff8e31f7df76ec6e1b.jpg') 90%,
+                conic-gradient(
+            from 210deg at 50% 50%,
+            #000428 0%,
+            #001833 10%,
+            #004e92 20%,
+            #01222e 35%,
+            #3f1d81 50%,
+            #130f40 60%,
+            #1b140c 70%,
+            #7c0a58 80%,
+            #0d0820 90%,
+            #000428 100%);
+        background-blend-mode: soft-light, normal;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        /*mix-blend-mode: soft-light; !* try soft-light, hard-light, multiply, screen, etc *!*/
+        z-index: -2;
+    }
+
+    .stars {
+        position: fixed;
+        background:
+                radial-gradient(2px 2px at 20% 30%, #a6ffed, transparent),
+                radial-gradient(1.5px 1.5px at 70% 80%, #d8b5ff, transparent),
+                radial-gradient(1.8px 1.8px at 40% 60%, white, transparent),
+                radial-gradient(1.2px 1.2px at 90% 10%, #ffc8c8, transparent),
+                radial-gradient(1px 5px at 10% 90%, #fff1b9, transparent),
+                radial-gradient(4px 1px at 10% 90%, #fff1b9, transparent);
+        background-repeat: repeat;
+        background-size: 190px 200px;
+        z-index: -1;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        transform-origin: 50% 50%;
+    }
+    .stars::before,
+    .stars::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        z-index: -1;
+    }
+    .stars::before {
+        animation: twinkleA 16s infinite ease-in-out,
+        rotateStars2 60s linear infinite;
+        opacity: 0.2;
+        transform: rotate(90deg);
+    }
+    .stars::after {
+        animation: twinkleB 16s infinite ease-in-out,
+        rotateStars3 30s linear infinite;
+        opacity: 0.6;
+        transform: rotate(-65deg);
+    }
+    @keyframes twinkleA {
+        0% { opacity: 0.2; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
+    }
+    @keyframes twinkleB {
+        0%   { opacity: 0.5; }
+        25%  { opacity: 0.2; }
+        50% { opacity: 0.9; }
+        75% { opacity: 1; }
+        100% { opacity: 0.6; }
+    }
+    @keyframes rotateStars2 {
+        from { transform: rotate(90deg); }
+        to   { transform: rotate(450deg); }
+    }
+    @keyframes rotateStars3 {
+        from { transform: rotate(-65deg); }
+        to   { transform: rotate(295deg); }
+    }
+    /*
+                           _
+     _ __   ___  _ __   __| |
+    | '_ \ / _ \| '_ \ / _` |
+    | |_) | (_) | | | | (_| |
+    | .__/ \___/|_| |_|\__,_|
+    |_| code by p-ond.uk
+    */
+</style>
+
+
+<style>
+    :host {
+        --bg: #370575;
+        --bg-surface: -20% 5% no-repeat url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Smith_chart3.svg/960px-Smith_chart3.svg.png'), linear-gradient(#5f1b7d, #1a1d2e);
+        --bg-elevated: #482a4a;
+        --text: #e9dde4;
+        --text-muted: #e597e0;
+        --text-dim: #c263bc;
+        --accent: #f40998;
+        --accent-hover: #cd1284;
+        --accent-dim: rgba(244, 9, 152, 0.15);
+        --border: #7107ad;
+        --border-light: #a11efb;
+        --font: 'Atkinson Hyperlegible', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif, "Noto Color Emoji";
+    }
+
+    :host(#book-shadow-host)::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Smith_chart3.svg/960px-Smith_chart3.svg.png'), linear-gradient(195deg, #7902a9, #b63c04, #B30442, #3d1937);
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-attachment: fixed;
+        background-blend-mode: multiply, normal;
+    }
+</style>
+
+
+<div class="stars"></div>
+<style>
+    :host(#book-shadow-host)::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        background: url('https://64.media.tumblr.com/0a60e6287607ad5736e97ecdd5af3ba0/852ae27c37741ea4-aa/s1280x1920/31a82caa9aa2c030df8bb2ff8e31f7df76ec6e1b.jpg') 90%,
+        conic-gradient(
+                from 210deg at 50% 50%,
+                #000428 0%,
+                #001833 10%,
+                #004e92 20%,
+                #01222e 35%,
+                #3f1d81 50%,
+                #130f40 60%,
+                #1b140c 70%,
+                #7c0a58 80%,
+                #0d0820 90%,
+                #000428 100%);
+        background-blend-mode: soft-light, normal;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        /*mix-blend-mode: soft-light; !* try soft-light, hard-light, multiply, screen, etc *!*/
+        z-index: -2;
+    }
+
+    .stars {
+        position: fixed;
+        background:
+                radial-gradient(4px 4px at 20% 30%, #fff8e7, transparent),
+                radial-gradient(3px 3px at 70% 80%, #70b6e8, transparent),
+                radial-gradient(5px 5px at 40% 60%, #f6d999, transparent),
+                radial-gradient(3px 3px at 90% 10%, #e88946, transparent),
+                radial-gradient(2px 10px at 10% 90%, rgba(214,80,80,0.76), transparent),
+                radial-gradient(8px 2px at 10% 90%, rgba(214,80,80,0.76), transparent),
+                radial-gradient(2px 2px at 25% 45%, rgba(141,232,110,0.83), transparent);
+        background-repeat: repeat;
+        background-size: 190px 200px;
+        z-index: -1;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        transform-origin: center;
+    }
+    .stars::before,
+    .stars::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        z-index: -1;
+    }
+    .stars {
+        animation: twinkle 16s infinite ease-in-out;
+    }
+    .stars::before {
+        animation: twinkleA 16s infinite ease-in-out;
+        transform: rotate(35deg);
+        background-position: 40px 80px; /* offset */
+        opacity: 0.2;
+    }
+    .stars::after {
+        animation: twinkleB 16s infinite ease-in-out;
+        transform: rotate(-20deg); /* give it its own rotation */
+        background-position: 100px 20px; /* different offset */
+        opacity: 0.6;
+    }
+    @keyframes twinkle {
+        0%   { opacity: 0.9; }
+        25%  { opacity: 0.3; }
+        50% { opacity: 0.4; }
+        75% { opacity: 0.6; }
+        100% { opacity: 1; }
+    }
+    @keyframes twinkleA {
+        0% { opacity: 0.2; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
+    }
+    @keyframes twinkleB {
+        0%   { opacity: 0.5; }
+        25%  { opacity: 0.2; }
+        50% { opacity: 0.9; }
+        75% { opacity: 1; }
+        100% { opacity: 0.6; }
+    }
+    @keyframes rotateStars {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+    @keyframes rotateStars2 {
+        from { transform: rotate(90deg); }
+        to   { transform: rotate(450deg); }
+    }
+    @keyframes rotateStars3 {
+        from { transform: rotate(-65deg); }
+        to   { transform: rotate(295deg); }
+    }
+    /*
+                           _
+     _ __   ___  _ __   __| |
+    | '_ \ / _ \| '_ \ / _` |
+    | |_) | (_) | | | | (_| |
+    | .__/ \___/|_| |_|\__,_|
+    |_| code by p-ond.uk
+    */
+</style>

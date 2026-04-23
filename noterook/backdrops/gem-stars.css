@@ -1,0 +1,82 @@
+<div class="stars"></div>
+<style>
+.stars {
+    position: fixed;
+    background: radial-gradient(4px 4px at 20% 30%, rgba(214, 80, 80, 0.76), transparent),
+    radial-gradient(3px 3px at 70% 80%, #70b6e8, transparent, transparent),
+    radial-gradient(4px 4px at 40% 60%, #f6d999, transparent),
+    radial-gradient(3px 3px at 90% 10%, #e88946, transparent),
+    radial-gradient(2px 2px at 25% 45%, rgba(141, 232, 110, 0.83), transparent),
+    radial-gradient(2px 10px at 10% 90%, rgb(255, 248, 231), transparent),
+    radial-gradient(8px 2px at 10% 90%, rgb(255, 248, 231), transparent);
+    background-repeat: repeat;
+    background-size: 190px 200px;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    transform-origin: center;
+
+    transform: rotate(-15deg);
+    animation:twinkle 12s infinite ease-in-out;
+}
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    z-index: -1;
+}
+.stars::before {
+    animation: twinkleA 9.5s infinite ease-in-out;
+    animation-delay: -0.4s;
+    transform: rotate(65deg) translateY(20px);
+    background-position: 40px 80px; /* offset */
+}
+.stars::after {
+    animation: twinkleB 13.5s infinite ease-in-out;
+    animation-delay: -0.8s;
+    transform: rotate(-80deg) translateY(-10px); /* give it its own rotation */
+    background-position: 100px 20px; /* different offset */
+}
+@keyframes twinkle {
+    0%   { opacity: 0.85; }
+    17%  { opacity: 0.55; }
+    29%  { opacity: 0.75; }
+    46%  { opacity: 0.4; }
+    63%  { opacity: 0.7; }
+    81%  { opacity: 0.5; }
+    100% { opacity: 0.85; }
+}
+@keyframes twinkleA {
+    0%   { opacity: 0.25; }
+    12%  { opacity: 0.5; }
+    28%  { opacity: 0.35; }
+    41%  { opacity: 0.8; }
+    52%  { opacity: 0.6; }
+    68%  { opacity: 0.9; }
+    84%  { opacity: 0.45; }
+    100% { opacity: 0.25; }
+}
+@keyframes twinkleB {
+    0%   { opacity: 0.6; }
+    14%  { opacity: 0.95; }
+    22%  { opacity: 0.3; }
+    37%  { opacity: 0.8; }
+    49%  { opacity: 0.5; }
+    61%  { opacity: 1; }
+    73%  { opacity: 0.4; }
+    88%  { opacity: 0.85; }
+    100% { opacity: 0.6; }
+}
+/* gem stars
+                       _
+ _ __   ___  _ __   __| |
+| '_ \ / _ \| '_ \ / _` |
+| |_) | (_) | | | | (_| |
+| .__/ \___/|_| |_|\__,_|
+|_| code by p-ond.uk
+*/
+</style>
