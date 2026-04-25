@@ -1,0 +1,130 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>Lorebook contents page.</p>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS7EN325K0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KS7EN325K0');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caligo Lore</title>
+    <link rel="stylesheet" href="lorebook.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+
+<!--<div id="toggle-container">-->
+<!--    <div class="toggle-tab">Dark Mode</span>-->
+<!--        <label class="switch">-->
+<!--            <input type="checkbox" id="toggle-stars" checked>-->
+<!--            <span class="slider"></span>-->
+<!--        </label>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+<main>
+
+    <section id="navigation">
+        <h1>The Mountain's Moon</h1>
+    <p class="intro">
+        Welcome to The Mountain's Moon.
+        <br>You can use the arrow keys to navigate.
+    </p>
+
+        <nav id="lore-contents">
+            <ul>
+                <li>
+                    <a href="#welcome" data-page="welcome">Welcome</a>
+                </li>
+
+                <li class="collapsible">
+                    <span>Mountains of The World</span>
+                    <ul>
+<!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+<!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                        <li><a href="#Sagarmatha" data-page="sagarmatha">Sagarmatha</a></li>
+                    </ul>
+                </li>
+
+<!--                <li class="collapsible">-->
+<!--                    <span>World</span>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#caligo" data-page="caligo">Caligo</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+
+<!--                <li>-->
+<!--                    <a href="#how_to_play" data-page="how_to_play">How to Play</a>-->
+<!--                </li>-->
+            </ul>
+
+
+        </nav>
+
+
+        <!--    <nav id="lore-contents"></nav>-->
+
+    </section>
+
+
+<section id="content">
+
+    <p>Loading…</p>
+
+</section>
+
+
+
+</main>
+
+<div id="page-nav">
+    <button id="prev-page" aria-label="Previous page">← Previous</button>
+    <button id="next-page" aria-label="Next page">Next →</button>
+</div>
+
+
+<canvas id="mountains"></canvas>
+<canvas id="stars"></canvas>
+
+<script src="mountains.js"></script>
+<script src="stars.js"></script>
+
+<!--renders markdown files to html-->
+<script src="book.js"></script>
+<!--<script src="lorebook.js"></script>-->
+<!--<script src="rainbowstars.js"></script>-->
+<!--<script src="toggle.js" ></script>-->
+
+<script>
+    document.querySelectorAll('#lore-contents li.collapsible > span').forEach(span => {
+        span.addEventListener('click', () => {
+            const parentLi = span.parentElement;
+            parentLi.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>

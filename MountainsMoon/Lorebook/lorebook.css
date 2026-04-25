@@ -1,0 +1,590 @@
+/* Import elegant, airy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter&family=Fraunces&family=Reenie+Beanie:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #f2f4f6;
+    --text-color: #3a3f4a;
+    --accent-color: #b8c7e0;
+    --soft-white: #ffffff;
+    --pale-blue: #b3cfed;
+    --bold-blue: #669fd8;
+
+
+    --high-sky: #33607c;      /* bright sunset orange-pink at top */
+    --low-sky: #ff9f6c;       /* pale peach near horizon */
+
+    --moon: #fff0cc;          /* pale yellow, like early moonlight */
+    --mountains: #472e24;     /* greenish shadows of mountains */
+
+    --footer: #fe9e7b;         /* Gentle light footer */
+    --header: #fe9e7b;         /* Sunrise orange accent */
+
+    --form-button: #fc9077;    /* Soft pink-purple button */
+    --form-button-hover: #C1548B; /* Slightly deeper hover */
+
+    --glass-text: #C1548B;     /* Dark text for contrast */
+    --hanging-text: #ff516b;   /* Muted gray-blue text */
+
+    --link: #FF6F91;           /* Morning pink links */
+    --link-hover: #FF3E6C;     /* Vibrant hover */
+}
+
+/* Reset + base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mountains {
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: linear-gradient(to bottom, #000428, #004e92, #00aaff);*/
+    /*background: radial-gradient(circle at 100% 100%, rgba(20,20,20,0) 80%, rgba(0,0,0,1) 100%);*/
+    z-index: -2;
+
+
+    /*animation: stars 6s ease-in-out infinite;*/
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    height: 100vh;
+    /*background-attachment: fixed;*/
+    background: linear-gradient(var(--high-sky), var(--low-sky));
+}
+/*animates the gradient background*/
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes stars {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
+}
+
+/* =========================
+   FIXED CONTENTS (LEFT)
+   ========================= */
+
+main {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+}
+
+section {
+    display: flex;
+}
+
+#navigation {
+    display: flex;
+    /*position: sticky;*/
+    align-self: flex-start;
+    /*top: 5rem;*/
+    flex-direction: column;
+    /*left: 20rem;*/
+    /*width: 280px;*/
+    /*transform: translateX(-30rem);*/
+
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(5rem) saturate(280%);
+}
+
+/* =========================
+   INTRO SECTION (CENTER-RIGHT)
+   ========================= */
+
+#content {
+    display: flex;
+    /*margin-left: 40vw; !* contents width + breathing room *!*/
+    width: 700px;
+    /*transform: translateX(12rem);*/
+    /*margin-top: 3rem;*/
+    flex-direction: column;
+    padding: 2rem;
+
+    /*padding: 4rem 3rem;*/
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.05),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    /*backdrop-filter: blur(6px);*/
+    backdrop-filter: blur(5rem) saturate(280%);
+
+
+}
+
+#content img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Reenie Beanie', serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2f3440;
+}
+h6 {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* Intro paragraph */
+.intro p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a5060;
+}
+
+/* Standard paragraphs */
+p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Decorative divider */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            transparent,
+            var(--accent-color),
+            transparent
+    );
+    margin: 2.5rem 0;
+}
+
+/* =========================
+   LINKS — WIND EFFECT
+   ========================= */
+
+a {
+    position: relative;
+    cursor: pointer;
+    color: #4a5f8a;
+    text-decoration: none;
+    transition:
+            color 0.6s ease,
+            transform 0.8s ease,
+            letter-spacing 0.6s ease;
+}
+
+a:hover {
+    color: #2f3d5c;
+    transform: translateX(6px);
+    letter-spacing: 0.04em;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 50%;
+    height: 5px;
+    border-radius: 50%;
+    /*background: linear-gradient(*/
+    /*        to right,*/
+    /*        transparent,*/
+    /*        rgba(184, 199, 224, 0.8),*/
+    /*        transparent*/
+    /*);*/
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+a:hover::after {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+li {
+    margin: unset;
+}
+
+/* =========================
+   LORE CONTENTS STYLING
+   ========================= */
+
+#lore-contents {
+    font-family: 'Fraunces', serif;
+}
+
+#lore-contents ul {
+    list-style: none;
+    margin-left: .25rem;
+    padding-left: 1.5rem;
+    /*border-left: 1px dashed rgba(238, 240, 244, 0.51);*/
+}
+
+#lore-contents li {
+    /*margin: 0.75rem 0;*/
+    margin-left: -0.75rem;
+    position: relative;
+}
+
+#lore-contents span {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #3b4355;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+#lore-contents li::before {
+    /*content: '🗻';*/
+    /*position: absolute;*/
+    /*left: -1.8rem;*/
+    /*top: 0.2rem;*/
+    /*font-size: 0.6rem;*/
+    /*color: rgba(255, 255, 255, 0.8);*/
+}
+
+/* Hide submenus initially */
+/* Collapsible submenu */
+#lore-contents li.collapsible > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+}
+
+/* When active */
+#lore-contents li.collapsible.active > ul {
+    max-height: 1000px; /* big enough for content */
+    opacity: 1;
+}
+
+
+/* Cursor pointer for toggle */
+#lore-contents li.collapsible > span {
+    cursor: pointer;
+}
+
+/* Optional: add an arrow indicator */
+#lore-contents li.collapsible > span::after {
+    content: '☀︎︎';
+    color: var(--text-color);
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: text-shadow 0.3s ease, color 0.3s ease, transform 1s ease-in-out;
+}
+
+/* Rotate arrow when active */
+#lore-contents li.collapsible.active > span::after {
+    transform: translateX(1rem) rotate(180deg);
+    color: white;
+    text-shadow:
+            0 0 15px #fee14f,
+            0 0 10px #fedc00,
+            0 0 20px #fecb00,
+            0 0 40px #feae00;
+}
+
+/* Glowing effect for active links */
+/*#lore-contents li.active > a {*/
+/*    color: #f2f4f6; !* optional: make text stand out *!*/
+/*    text-shadow:*/
+/*            0 0 5px #4facfe,*/
+/*            0 0 10px #00f2fe,*/
+/*            0 0 20px #00f2fe,*/
+/*            0 0 40px #00f2fe;*/
+/*    transition: text-shadow 0.3s ease, color 0.3s ease, background 3s ease;*/
+/*}*/
+
+/* Optional: glow on hover too */
+#lore-contents a.active {
+    color: #f2f4f6; /* optional: make text stand out */
+    text-shadow:
+            0 0 10px #feef4f,
+            0 0 20px #fee900,
+            0 0 30px #fe9800,
+            0 0 50px #feb600;
+}
+
+#lore-contents a.active:hover {
+    color: #f2f4f6;
+    /*font-weight: initial;*/
+}
+
+#lore-contents a {
+    all: unset;
+    position: relative;
+    display: inline-block;
+    /*color: #cfdfff;*/
+    /* Starting shadow */
+    text-shadow: 0 0 0 rgba(255,255,255,0);
+
+    /* Transitions live ONLY here */
+    transition:
+            color 0.6s ease,
+            text-shadow 0.8s ease,
+            box-shadow 0.8s ease,
+            transform 1s ease;
+}
+
+/*#lore-contents a::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    background: radial-gradient(*/
+/*            ellipse,*/
+/*            rgba(79, 172, 254, 0.93) 10%,*/
+/*            rgba(0, 242, 254, 0.4) 80%*/
+/*    );*/
+/*    border-radius: 4rem;*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.8s ease; !* SLOW fade *!*/
+/*    z-index: -1;*/
+/*}*/
+
+#lore-contents span:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,0.9);
+}
+
+#lore-contents a:hover {
+    all: unset;
+    /*font-weight: bold;*/
+    text-shadow: 0 0 10px rgba(255,255,255,0.9);
+}
+
+/*#lore-contents a:hover {*/
+/*    color: white;*/
+/*    transform: translateX(-.5rem);*/
+/*    text-shadow: 0 0 10px rgba(255,255,255,0.9);*/
+/*    box-shadow: 0 0 30px rgba(0,242,254,0.9);*/
+/*    border-radius: 4rem;*/
+/*}*/
+
+/*#lore-contents a:hover::before {*/
+/*    opacity: 1;*/
+/*}*/
+
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7a8294;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   RESPONSIVE FALLBACK
+   ========================= */
+
+@media (max-width: 750px) {
+    main {
+        flex-direction: column;
+    }
+
+    #navigation {
+        position: static;
+        width: 90%;
+        margin: 2rem;
+    }
+
+    #content {
+        margin: 2rem auto;
+        max-width: 90%;
+    }
+
+    #page-nav {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================
+   stars animation toggle switch
+   ========================= */
+/* Container for positioning */
+#toggle-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    /*font-family: 'Playfair Display', serif;*/
+}
+/* Tab-shaped container */
+.toggle-tab {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    gap: 10px;
+}
+/* Label next to toggle */
+.toggle-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+/* On state */
+input:checked + .slider {
+    background-color: var(--pale-blue); /* bright blue */
+}
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+#tagline {
+    width: 50%;
+    margin: -10rem auto -3rem auto;
+}
+.tagline {
+    fill: red;
+}
+
+
+
+/* =========================
+   PAGE NAVIGATION BUTTONS
+   ========================= */
+
+#page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+
+    /*transform: translateX(-50%);*/
+}
+
+#page-nav button {
+    /*flex: 1;*/
+    padding: 0.75rem 1.5rem;
+    margin: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    color: #2f3d5c;
+
+    box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.08),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(5rem) saturate(280%);
+
+    transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease,
+            letter-spacing 0.4s ease;
+}
+
+#page-nav button:hover {
+    transform: translateY(-2px);
+    letter-spacing: 0.15em;
+    box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+#page-nav button:disabled {
+    opacity: 0.4;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* class to dim the font colour of the old lore section header */
+#old-lore {
+    opacity: 0.4;
+}
