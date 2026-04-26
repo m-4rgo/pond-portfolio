@@ -1,0 +1,141 @@
+<div class="stars"></div>
+<style>
+.stars {
+    position: fixed;
+    /*background:*/
+    /*        radial-gradient(4px 4px at 20% 30%, rgba(214,80,80,0.76), transparent),*/
+    /*        radial-gradient(3px 3px at 70% 80%, #70b6e8, transparent, transparent),*/
+    /*        radial-gradient(4px 4px at 40% 60%, #f6d999, transparent),*/
+    /*        radial-gradient(3px 3px at 90% 10%, #e88946, transparent),*/
+    /*        radial-gradient(2px 2px at 25% 45%, rgba(141,232,110,0.83), transparent),*/
+    /*        radial-gradient(2px 10px at 10% 90%, rgb(255, 248, 231), transparent),*/
+    /*        radial-gradient(8px 2px at 10% 90%, rgb(255, 248, 231), transparent);*/
+    /*background-repeat: repeat;*/
+    /*background-size: 190px 200px;*/
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    transform-origin: center;
+
+
+    background:
+            radial-gradient(2px 2px at 20% 30%, #a6ffed, transparent),
+            radial-gradient(1.5px 1.5px at 70% 80%, #d8b5ff, transparent),
+            radial-gradient(1.8px 1.8px at 40% 60%, white, transparent),
+            radial-gradient(1.2px 1.2px at 90% 10%, #ffc8c8, transparent),
+            radial-gradient(1px 5px at 10% 90%, #fff1b9, transparent),
+            radial-gradient(4px 1px at 10% 90%, #fff1b9, transparent);
+    background-repeat: repeat;
+    background-size: 190px 200px;
+}
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    z-index: -1;
+}
+.stars {
+    /*animation: twinkle 1s infinite ;*/
+    animation:
+            twinkle 12s infinite ease-in-out;
+    opacity: 1;
+    transform: rotate(-5deg);
+}
+.stars::before {
+    /*animation: twinkleA 1s infinite ;*/
+    animation:
+            twinkleA 9.5s infinite ease-in-out;
+    animation-delay: -0.4s;
+    transform: rotate(135deg) scale(-1);
+    background-position: 40px 80px; /* offset */
+    opacity: 1;
+
+    background:
+        /* small dense stars */
+            radial-gradient(1.5px 1.5px at 12% 18%, purple, transparent),
+            radial-gradient(1px 1px at 78% 34%, pink, transparent),
+            radial-gradient(1.2px 1.2px at 56% 72%, orange, transparent),
+            radial-gradient(1px 1px at 33% 88%, #e0f7ff, transparent),
+
+                /* medium stars */
+            radial-gradient(2.5px 2.5px at 22% 64%, red, transparent),
+            radial-gradient(3px 3px at 81% 52%, yellow, transparent),
+            radial-gradient(2px 2px at 47% 26%, green, transparent),
+
+                /* occasional brighter stars */
+            radial-gradient(3.5px 3.5px at 65% 15%, cornflowerblue, transparent),
+            radial-gradient(3px 3px at 15% 75%, lightblue, transparent),
+
+                /* stretched “twinkle” stars */
+            radial-gradient(6px 1.5px at 40% 40%, rgba(255,255,255,0.8), transparent),
+            radial-gradient(1.5px 6px at 40% 40%, rgba(200,220,255,0.7), transparent),
+            radial-gradient(2px 10px at 10% 90%, rgba(255, 248, 231, 0.54), transparent),
+            radial-gradient(8px 2px at 10% 90%, rgba(255, 248, 231, 0.47), transparent);
+    background-size: 240px 260px;
+
+}
+.stars::after {
+    /*animation: twinkleB 1s infinite ;*/
+    animation:
+            twinkleB 13.5s infinite ease-in-out;
+    animation-delay: -0.8s;
+    transform: rotate(-20deg); /* give it its own rotation */
+    background-position: 100px 20px; /* different offset */
+    opacity: 1;
+
+
+    background:
+            radial-gradient(2px 2px at 20% 30%, rgba(214,80,80,0.6), transparent),
+            radial-gradient(1.5px 1.5px at 70% 80%, #70b6e8, transparent),
+            radial-gradient(2px 2px at 40% 60%, #f6d999, transparent),
+            radial-gradient(1.5px 1.5px at 90% 10%, #e88946, transparent);
+
+    background-size: 120px 130px; /* denser = more stars */
+}
+@keyframes twinkle {
+    0%   { opacity: 0.85; }
+    17%  { opacity: 0.55; }
+    29%  { opacity: 0.75; }
+    46%  { opacity: 0.4; }
+    63%  { opacity: 0.7; }
+    81%  { opacity: 0.5; }
+    100% { opacity: 0.85; }
+}
+@keyframes twinkleA {
+    0%   { opacity: 0.25; }
+    12%  { opacity: 0.5; }
+    28%  { opacity: 0.35; }
+    41%  { opacity: 0.8; }
+    52%  { opacity: 0.6; }
+    68%  { opacity: 0.9; }  /* brief highlight */
+    84%  { opacity: 0.45; }
+    100% { opacity: 0.25; }
+}
+@keyframes twinkleB {
+    0%   { opacity: 0.6; }
+    14%  { opacity: 0.95; }
+    22%  { opacity: 0.3; }  /* quick dip */
+    37%  { opacity: 0.8; }
+    49%  { opacity: 0.5; }
+    61%  { opacity: 1; }    /* sharp sparkle */
+    73%  { opacity: 0.4; }
+    88%  { opacity: 0.85; }
+    100% { opacity: 0.6; }
+}
+@keyframes rotateStars {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+/* crystal stars
+                       _
+ _ __   ___  _ __   __| |
+| '_ \ / _ \| '_ \ / _` |
+| |_) | (_) | | | | (_| |
+| .__/ \___/|_| |_|\__,_|
+|_| code by p-ond.uk
+*/
+</style>
