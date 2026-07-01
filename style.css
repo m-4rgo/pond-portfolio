@@ -233,6 +233,7 @@ nav a:hover {
     #gallery-interchange {
         margin-top: 2rem;
         max-width: 100vw;
+        height: 100vh;
     }
     #image-viewer button {
         /*top: 4rem;*/
@@ -240,7 +241,6 @@ nav a:hover {
         padding: 0.5rem 1rem;
         background: #e3e3e3;
         position: fixed;
-        height: 100vh;
     }
 }
 
