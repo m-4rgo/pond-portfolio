@@ -1,8 +1,98 @@
 [
   {
+    "src": "Assets/microunicorn.png",
+    "title": "micro unicorn",
+    "description": "mini sprite",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/gamerun.gif",
+    "title": "game sprite",
+    "description": "animated game asset",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/junebug.png",
+    "title": "junebug",
+    "description": "pixel experiment using limited animal crossing wild world art minigame palettes",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/onclouds.png",
+    "title": "on clouds",
+    "description": "pegasus",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/leopardskin.png",
+    "title": "you only love me for my leopardskin hat",
+    "description": "portrait",
+    "section": "painting"
+  },
+  {
+    "src": "Assets/overexposure.png",
+    "title": "batwings",
+    "description": "fantasy pegasus illustration",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/pads.jpg",
     "title": "lily pads",
     "description": "drawing",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/pterohippus.png",
+    "title": "pterohippus",
+    "description": "pegasus illustration",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/lilratsminis.png",
+    "title": "game asset",
+    "description": "game asset",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/rat_race_1.png",
+    "title": "gold trophy",
+    "description": "game asset",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/sweetberry.png",
+    "title": "berry may",
+    "description": "pixel experiment using limited animal crossing wild world art minigame palettes",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/lilratsfavicon.png",
+    "title": "favicon",
+    "description": "16px favicon",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/minipegasus.png",
+    "title": "pixel",
+    "description": "pixel experiment using limited animal crossing wild world art minigame palettes",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/silver.png",
+    "title": "pixel",
+    "description": "pixel experiment using limited animal crossing wild world art minigame palettes",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/sungun.png",
+    "title": "pixel",
+    "description": "pixel experiment using limited animal crossing wild world art minigame palettes",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/doll.png",
+    "title": "cartoon doll",
+    "description": "page doll in a cartoon style",
     "section": "illustration"
   },
   {
@@ -48,6 +138,18 @@
     "section": "illustration"
   },
   {
+    "src": "Assets/arcticdrafts.png",
+    "title": "arctic drafts",
+    "description": "dress-up game asset illustration",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/grove.png",
+    "title": "grove",
+    "description": "game asset",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/green-bay-pixel.png",
     "title": "Pixel Commission",
     "description": "I loved this character's green hair",
@@ -69,6 +171,12 @@
     "src": "Assets/lumen-pixel.png",
     "title": "Lumen mini pixel",
     "description": "A tiny 25px pixel",
+    "section": "pixel"
+  },
+  {
+    "src": "Assets/onlymagpies.png",
+    "title": "magpie sprite",
+    "description": "magpie sprite",
     "section": "pixel"
   },
   {
@@ -96,9 +204,27 @@
     "section": "illustration"
   },
   {
+    "src": "Assets/horseslip.png",
+    "title": "slip",
+    "description": "oop",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/ego.jpg",
-    "title": "andalusian",
+    "title": "poster",
     "description": "drawing",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/snakesnlads.png",
+    "title": "game asset",
+    "description": "game illustration",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/wmedressup.png",
+    "title": "dressup game asset",
+    "description": "game illustration",
     "section": "illustration"
   },
   {
@@ -114,9 +240,21 @@
     "section": "illustration"
   },
   {
+    "src": "Assets/cartoonrathorse.png",
+    "title": "game asset",
+    "description": "part finished sketch of a dress up game character",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/dressuprat.png",
+    "title": "game asset",
+    "description": "dressup game character and item assets",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/nyx.png",
     "title": "Nyx's Sanctuary Base",
-    "description": "Base made for a species",
+    "description": "game asset illustration",
     "section": "illustration"
   },
   {
@@ -213,6 +351,18 @@
     "src": "Assets/mule.jpg",
     "title": "leg stretch",
     "description": "drawing",
+    "section": "painting"
+  },
+  {
+    "src": "Assets/eden.jpg",
+    "title": "eden",
+    "description": "horsies",
+    "section": "painting"
+  },
+  {
+    "src": "Assets/monarch.jpg",
+    "title": "butterfly",
+    "description": "butterfly",
     "section": "painting"
   },
   {

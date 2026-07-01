@@ -176,6 +176,9 @@ nav a:hover {
         margin-top: 1.5rem;
         width: 100%;
     }
+    #page-content img {
+        max-width: 100%;
+    }
 }
 /* settings for mobile screens (add burger menu)*/
 @media screen and (max-width: 700px) {
@@ -212,8 +215,12 @@ nav a:hover {
     }
 
     #page-content {
-        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+        width: 100%;
         overflow-x: hidden; /* disables horizontal scroll on mobile*/
+    }
+    #page-content img {
+        max-width: 100%;
     }
     /* will collapse section columns into single column on mobile */
     .section-columns {
