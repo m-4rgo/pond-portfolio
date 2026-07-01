@@ -220,11 +220,14 @@ nav a:hover {
         overflow-x: hidden; /* disables horizontal scroll on mobile*/
     }
     #page-content img {
-        max-width: 100%;
+        max-width: 100vw;
     }
     /* will collapse section columns into single column on mobile */
     .section-columns {
         flex-direction: column;
+    }
+    #image-viewer {
+        top: 1.5rem;
     }
 }
 
@@ -316,6 +319,9 @@ nav a:hover {
 }
 #image-viewer img:hover {
     cursor: cell;
+}
+#image-viewer button {
+    top: 2rem;
 }
 #fullscreen {
     top: 0;
