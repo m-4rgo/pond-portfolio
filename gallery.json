@@ -1,52 +1,51 @@
 [
   {
+    "src": "Assets/pads.jpg",
+    "title": "lily pads",
+    "description": "drawing",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/L_do_what_want.png",
+    "title": "Skateboard horse",
+    "description": "horse on a skateboard",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/webring/pond.gif",
+    "title": "Pixel Stamp Animation",
+    "description": "nyoom",
+    "section": "pixel"
+  },
+  {
     "src": "Assets/aqh.png",
     "title": "aqh",
     "description": "Painted in oekaki, took around 1 hour",
-    "section": "oekaki"
+    "section": "painting"
+  },
+  {
+    "src": "Assets/blonde.jpg",
+    "title": "Blonde",
+    "description": "Drawing of a blonde woman with a black overo quarter horse",
+    "section": "painting"
   },
   {
     "src": "Assets/redappy.png",
     "title": "base colour-in",
     "description": "chestnut appaloosa colour of a greyscale base",
-    "section": "oekaki"
-  },
-  {
-    "src": "Assets/blueappy.png",
-    "title": "base-colour-in",
-    "description": "blue roan appaloosa colour of a greyscale base",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/halfhour.jpeg",
     "title": "study",
     "description": "hour and a half photo study",
-    "section": "paintings"
-  },
-
-  {
-    "src": "Assets/bay arabian oekaki.png",
-    "title": "Bay Arabian",
-    "description": "Painted in oekaki, took around 6 hours",
-    "section": "oekaki"
-  },
-  {
-    "src": "Assets/rainbow unicorn.png",
-    "title": "Rainbow Unicorn",
-    "description": "A sketch done in oekaki, took just under 3 hours",
-    "section": "oekaki"
-  },
-  {
-    "src": "Assets/palomino equid.png",
-    "title": "Palomino Equid",
-    "description": "Gift art of a palomino character, inexplicably took me almost 48 hours? I must have left oekaki open",
-    "section": "oekaki"
+    "section": "painting"
   },
   {
     "src": "Assets/grovebred.png",
     "title": "Thoroughbred Illustration",
     "description": "A realistic greyscale base of a thoroughbred, took around 10 hours",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/green-bay-pixel.png",
@@ -64,13 +63,7 @@
     "src": "Assets/dutch warmblood.png",
     "title": "Dutch Warmblood",
     "description": "A greyscale piece of a dutch warmblood. Gotta sort that swan neck out",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/blonde.jpg",
-    "title": "Blonde",
-    "description": "Drawing of a blonde woman with a black overo quarter horse",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/lumen-pixel.png",
@@ -88,31 +81,49 @@
     "src": "Assets/shannon.jpg",
     "title": "Shannon",
     "description": "A drawing of a model with a quarter horse",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/fell.png",
     "title": "Magic Fell Fae",
     "description": "An idea for a fantasy creature I had",
-    "section": "oekaki"
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/blueappy.png",
+    "title": "base-colour-in",
+    "description": "blue roan appaloosa colour of a greyscale base",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/ego.jpg",
+    "title": "andalusian",
+    "description": "drawing",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/bridge.jpg",
+    "title": "bridge",
+    "description": "drawing",
+    "section": "illustration"
   },
   {
     "src": "Assets/battlecard.png",
     "title": "Battlecard",
     "description": "lil game idea i had",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/nyx.png",
     "title": "Nyx's Sanctuary Base",
     "description": "Base made for a species",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/mathilde.png",
     "title": "Mathilde",
     "description": "Head crop of mathilde",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/animatedicon.gif",
@@ -124,198 +135,192 @@
     "src": "Assets/Dolphin.jpg",
     "title": "Dolphin",
     "description": "ocean on fire",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/L_do_what_want.png",
-    "title": "Skateboard horse",
-    "description": "horse on a skateboard",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/unicorn.jpg",
     "title": "unicorn",
     "description": "unicorn :)",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/Susidou.jpg",
     "title": "Susidou",
     "description": "drawing of a horse",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/Toothsage 1.png",
     "title": "Gentle",
     "description": "Memorial commission",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/jerome.jpg",
     "title": "jerome",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/blonde2.jpg",
     "title": "Hoops",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/hooves.jpg",
     "title": "Hooves",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/shanpin.jpg",
     "title": "body",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/cob.jpg",
     "title": "cob",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/models.jpg",
     "title": "models",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/bluecloud.jpg",
     "title": "bluecloud",
     "description": "drawing",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/bridge.jpg",
-    "title": "bridge",
-    "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/haff.jpg",
     "title": "haflinger",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/port.jpg",
     "title": "port",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/mule.jpg",
     "title": "leg stretch",
     "description": "drawing",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/pads.jpg",
-    "title": "lily pads",
-    "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/foal.jpg",
     "title": "foal",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/smile.jpg",
     "title": "stickers",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/andalusian.jpg",
     "title": "andalusian",
     "description": "drawing",
-    "section": "paintings"
-  },
-  {
-    "src": "Assets/ego.jpg",
-    "title": "andalusian",
-    "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/tilde.png",
     "title": "tilde",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/run.jpg",
     "title": "run",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/butterfly.jpg",
     "title": "bugs",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/rabid.jpg",
     "title": "bite me",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/stormdrain.jpg",
     "title": "storm drain",
     "description": "drawing",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/bat.jpg",
     "title": "bat horse",
     "description": "drawing",
-    "section": "paintings"
+    "section": "illustration"
   },
   {
     "src": "Assets/maragauz.png",
     "title": "mini horse",
     "description": "drawing",
-    "section": "oekaki"
+    "section": "illustration"
   },
   {
     "src": "Assets/fantasy_unicorn_commission.jpeg",
     "title": "fantasy horse",
     "description": "commission sketch",
-    "section": "paintings"
+    "section": "painting"
   },
   {
     "src": "Assets/fantasia.jpeg",
     "title": "fantasy unicorn",
     "description": "old work",
-    "section": "paintings"
+    "section": "illustration"
   },
   {
     "src": "Assets/antiope.jpeg",
     "title": "character comm",
     "description": "old work",
-    "section": "paintings"
+    "section": "illustration"
   },
   {
     "src": "Assets/mercy.jpeg",
     "title": "mercy",
     "description": "old work",
-    "section": "paintings"
+    "section": "illustration"
   },
   {
     "src": "Assets/money.jpeg",
     "title": "money",
     "description": "old work",
-    "section": "paintings"
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/bay arabian oekaki.png",
+    "title": "Bay Arabian",
+    "description": "Painted in oekaki, took around 6 hours",
+    "section": "painting"
+  },
+  {
+    "src": "Assets/rainbow unicorn.png",
+    "title": "Rainbow Unicorn",
+    "description": "A sketch done in oekaki, took just under 3 hours",
+    "section": "painting"
+  },
+  {
+    "src": "Assets/palomino equid.png",
+    "title": "Palomino Equid",
+    "description": "Gift art of a palomino character, inexplicably took me almost 48 hours? I must have left oekaki open",
+    "section": "painting"
   }
 ]

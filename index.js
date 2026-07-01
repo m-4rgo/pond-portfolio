@@ -83,6 +83,11 @@ function displayGallery(data) {
     })
 }
 
+// todo: function that displays all images irrespective of category
+function displayAll() {
+
+}
+
 
 // function to add a fade out animation when switching sections
 function fadeOut(element) {
@@ -166,6 +171,100 @@ function navToggle() {
             });
         });
     });
+}
+
+// function that makes clicking page title show home page
+    function homeNav() {
+        const homeLinks = document.querySelectorAll(".home-link");
+        // cycle through nav a elements
+        homeLinks.forEach(link => {
+            // add "on click" event listener for when each link is clicked
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // remove the active class style for all links
+                homeLinks.forEach(l => l.classList.remove("active"));
+
+                // add active style to clicked link
+                link.classList.add("active");
+
+                // get the target section from the link data
+                const sectionName = link.getAttribute('data-target').replace("#", "");
+
+                // redundant code as fadein/fadeout changed hiding technique
+                // sections.forEach(section => section.classList.add("hidden"));
+
+                // set target section as the section name
+                const targetSection = document.getElementById(sectionName);
+                // if the target section is already visible, return
+                if (targetSection.style.display === "block") {
+                    // reset scroll to top of page
+                    window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+                    return;
+                }
+
+                // cycle through sections and if section is target section, then fade in, else, fade out.
+                sections.forEach(section => {
+                    if (section.id === sectionName) {
+                        currentSectionName = sectionName;
+                        currentSection = targetSection;
+                        setTimeout(() => {
+                            fadeIn(section);
+                            window.scrollTo(0, 0);}, 300);
+                    } else {
+                        fadeOut(section);
+
+                    }
+                });
+            });
+        });
+    }
+
+    // todo: finish this gallery nav tab for art page
+function tabNav() {
+
+    const tabLinks = document.querySelectorAll("#tabnav a");
+
+    tabLinks.forEach(link => {
+
+        link.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            // Active button styling
+            tabLinks.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+
+            // Get category name (all, paintings, illustration, pixel)
+            const category = link.dataset.target.replace("#", "");
+
+            // Switch gallery
+            toggleGallery(category);
+
+        });
+
+    });
+
+    // Show All by default
+    toggleGallery("painting");
+}
+function toggleGallery(category) {
+
+    const galleries = document.querySelectorAll("#gallery-interchange .gallery");
+
+    // const currentGallery = document.querySelectorAll(".gallery .active");
+    // Hide every gallery
+    galleries.forEach(gallery => {
+        gallery.classList.add("hidden");
+        // fadeOut(galleries);
+    });
+
+    // Show the selected gallery
+    const targetGallery = document.getElementById(`${category}-gallery`);
+    // fadeIn(targetGallery);
+    if (targetGallery) {
+        targetGallery.classList.remove("hidden");
+    }
 }
 
 // function to open artwork page (image viewer) on gallery image click
@@ -264,6 +363,10 @@ document.addEventListener("DOMContentLoaded", () => {
     loadArtworks()
     // call navToggle to allow navigation links to work.
     navToggle()
+    // call so home nav button works
+    homeNav()
+    // call so art gallery page nav buttons work
+    tabNav()
     // call so close button works
     closeImageViewer();
     // call this to add event listeners for the image viewer controls

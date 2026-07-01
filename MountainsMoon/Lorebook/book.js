@@ -51,6 +51,9 @@ function saveMenu(page) {
             // Only expand if user hasn't manually closed it
             if (menuState[id] !== false) {
                 parent.classList.add("active");
+                // requestAnimationFrame(() => {
+                //   parent.classList.add('active');
+                // });
             }
         }
         parent = parent.parentElement;

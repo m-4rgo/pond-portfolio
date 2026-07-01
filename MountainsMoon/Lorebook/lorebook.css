@@ -1,5 +1,7 @@
 /* Import elegant, airy fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter&family=Fraunces&family=Reenie+Beanie:wght@300;400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Special+Elite&family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter&family=Gochi+Hand&family=Fraunces&family=Reenie+Beanie:wght@300;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Inter&family=Cardo:ital,wght@0,400;0,700;1,400&family=Castoro+Titling&family=Dongle&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gloock&family=Gochi+Hand&family=Reenie+Beanie&family=Special+Elite&family=Yuji+Syuku&display=swap');
+
 
 :root {
     --bg-color: #f2f4f6;
@@ -9,22 +11,22 @@
     --pale-blue: #b3cfed;
     --bold-blue: #669fd8;
 
+    /* fonts */
+    --heading: 'Reenie Beanie';
+    --subheading: "Cardo";
+    /*--subheading: "Special Elite", system-ui;*/
+    --contents: "Fraunces";
+    --text: 'Inter', sans-serif;
+    /*--text: 'Fraunces', sans-serif;*/
+    --page-nav: "Yuji Syuku";
 
+    /* background */
     --high-sky: #33607c;      /* bright sunset orange-pink at top */
     --low-sky: #ff9f6c;       /* pale peach near horizon */
-
     --moon: #fff0cc;          /* pale yellow, like early moonlight */
     --mountains: #472e24;     /* greenish shadows of mountains */
 
-    --footer: #fe9e7b;         /* Gentle light footer */
-    --header: #fe9e7b;         /* Sunrise orange accent */
-
-    --form-button: #fc9077;    /* Soft pink-purple button */
-    --form-button-hover: #C1548B; /* Slightly deeper hover */
-
-    --glass-text: #C1548B;     /* Dark text for contrast */
-    --hanging-text: #ff516b;   /* Muted gray-blue text */
-
+    /* hyperlinks */
     --link: #FF6F91;           /* Morning pink links */
     --link-hover: #FF3E6C;     /* Vibrant hover */
 }
@@ -35,13 +37,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    background: linear-gradient(var(--high-sky), var(--low-sky)) fixed;
+    height: 100%;
+}
 #mountains {
     position: fixed;
     pointer-events: none;
     z-index: -1;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 #stars {
@@ -59,29 +65,14 @@
 }
 
 body {
+    min-height: 100vh;
     color: var(--text-color);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--text), serif;
     line-height: 1.7;
     letter-spacing: 0.02em;
     height: 100vh;
-    /*background-attachment: fixed;*/
-    background: linear-gradient(var(--high-sky), var(--low-sky));
-}
-/*animates the gradient background*/
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
-@keyframes stars {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(3deg);
-    }
-}
 
 /* =========================
    FIXED CONTENTS (LEFT)
@@ -101,17 +92,19 @@ main {
 }
 
 section {
-    display: flex;
+    /*display: flex;*/
 }
 
 #navigation {
     display: flex;
-    /*position: sticky;*/
+    position: sticky;
+    /*position: fixed;*/
     align-self: flex-start;
-    /*top: 5rem;*/
+    top: 2rem;
     flex-direction: column;
     /*left: 20rem;*/
     /*width: 280px;*/
+    max-width: 20%;
     /*transform: translateX(-30rem);*/
 
     /*position: fixed;*/
@@ -128,6 +121,9 @@ section {
             inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 
     backdrop-filter: blur(5rem) saturate(280%);
+}
+#burger {
+    display: none;
 }
 
 /* =========================
@@ -167,16 +163,16 @@ section {
 
 /* Headings */
 h1 {
-    font-family: 'Reenie Beanie', serif;
+    font-family: var(--heading), serif;
     font-weight: 500;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1.5rem;
     color: #2f3440;
 }
-h6 {
-    text-transform: uppercase;
-    text-decoration: underline;
+h2, h3, h4, h5, h6 {
+    font-family: var(--subheading), serif;
+    text-transform: capitalize;
 }
 
 /* Intro paragraph */
@@ -260,29 +256,50 @@ li {
    ========================= */
 
 #lore-contents {
-    font-family: 'Fraunces', serif;
+    font-family: var(--contents), serif;
+    /*font-size: 1.1rem;*/
+    /*text-transform: uppercase;*/
+    text-transform: capitalize;
 }
 
 #lore-contents ul {
     list-style: none;
-    margin-left: .25rem;
-    padding-left: 1.5rem;
-    /*border-left: 1px dashed rgba(238, 240, 244, 0.51);*/
+    /*margin-left: .25rem;*/
+    /*padding-left: 1.2rem;*/
+    /*border-left: 10px solid rgba(238, 240, 244, 0.51);*/
+    /*margin-bottom: 0.5rem;*/
+    padding-left: 1rem;
+    border-left: 3px solid rgba(238, 240, 244, 0.51);
 }
 
 #lore-contents li {
-    /*margin: 0.75rem 0;*/
-    margin-left: -0.75rem;
+    /*margin-left: .25rem;*/
+    /*margin: 0.2rem 0 0 0.5rem;*/
+    /*margin-left: -0.75rem;*/
     position: relative;
+}
+.collapsible span {
+    /*border: 3px solid rgba(238, 240, 244, 0.51);*/
+    /*border-radius: 2rem;*/
+    /*padding: 0.5rem;*/
+}
+
+#lore-contents ul li {
+    /*padding-left: .75rem;*/
+    /*margin-left: 1rem;*/
 }
 
 #lore-contents span {
     text-transform: capitalize;
+    /*text-transform: uppercase;*/
+    /*font-weight: bold;*/
+    /*font-weight: 600;*/
     font-size: 1.1rem;
-    color: #3b4355;
+    color: var(--text-color);
     letter-spacing: 0.08em;
     display: inline-block;
-    margin-bottom: 0.4rem;
+    text-align: left;
+    /*margin-bottom: 0.4rem;*/
 }
 
 #lore-contents li::before {
@@ -299,13 +316,14 @@ li {
 #lore-contents li.collapsible > ul {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, opacity 0.35s ease;
+    transition: max-height 0.3s ease-in-out, opacity 0.5s ease;
     opacity: 0;
 }
 
 /* When active */
 #lore-contents li.collapsible.active > ul {
     max-height: 1000px; /* big enough for content */
+    transition: max-height 2s ease, opacity 1s ease;
     opacity: 1;
 }
 
@@ -315,25 +333,30 @@ li {
     cursor: pointer;
 }
 
+/* sun arrow pounter stert -------*/
 /* Optional: add an arrow indicator */
-#lore-contents li.collapsible > span::after {
-    content: '☀︎︎';
-    color: var(--text-color);
-    display: inline-block;
-    margin-left: 0.5rem;
-    transition: text-shadow 0.3s ease, color 0.3s ease, transform 1s ease-in-out;
-}
+/*#lore-contents li.collapsible > span::before {*/
+/*    content: '☻';*/
+/*    margin-left: .5rem;*/
+/*    color: var(--text-color);*/
+/*    display: inline-block;*/
+/*    !*margin-left: 0.5rem;*!*/
+/*    transition: text-shadow 0.3s ease, color 0.3s ease, transform 1s ease-in-out;*/
+/*    !*transition: text-shadow 0.3s ease, color 0.3s ease;*!*/
+/*    !*transform: translateX(-0.5rem);*!*/
+/*}*/
 
-/* Rotate arrow when active */
-#lore-contents li.collapsible.active > span::after {
-    transform: translateX(1rem) rotate(180deg);
-    color: white;
-    text-shadow:
-            0 0 15px #fee14f,
-            0 0 10px #fedc00,
-            0 0 20px #fecb00,
-            0 0 40px #feae00;
-}
+/*!* Rotate arrow when active *!*/
+/*#lore-contents li.collapsible.active > span::before {*/
+/*    !*transform: translateX(-0.2rem) rotate(90deg);*!*/
+/*    color: white;*/
+/*    text-shadow:*/
+/*            0 0 15px #fee14f,*/
+/*            0 0 10px #fedc00,*/
+/*            0 0 20px #fecb00,*/
+/*            0 0 40px #feae00;*/
+/*}*/
+/* sun arrow pounter end -----------*/
 
 /* Glowing effect for active links */
 /*#lore-contents li.active > a {*/
@@ -429,19 +452,103 @@ li {
    RESPONSIVE FALLBACK
    ========================= */
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     main {
         flex-direction: column;
+
+        /*gap: 0;*/
+        margin: 0;
+        padding: 0;
     }
 
+    #mountains {
+        /*width: 200vw;*/
+        display: none;
+    }
+
+    /*#navigation {*/
+    /*    !*position: static;*!*/
+    /*    position: fixed;*/
+    /*    !*width: 90%;*!*/
+    /*    width: 100vw;*/
+    /*    !*margin: 2rem auto;*!*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*    overflow: hidden;*/
+    /*    height: 2rem;*/
+    /*}*/
+
     #navigation {
-        position: static;
-        width: 90%;
-        margin: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 1rem 1.5rem;
+        border-radius: 0;
+        z-index: 1000;
+        max-height: 3rem;
+    }
+    #navigation h1 {
+        margin-top: 1.5rem;
+    }
+    #burger {
+        all: unset;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .burger {
+        /*display: block;*/
+        /*width: 50%;*/
+        /*margin: 0.5rem auto;*/
+        /*padding: 1rem 2rem;*/
+    }
+
+
+    #navigation ul {
+        position: fixed;
+        top: 60px; /* height of bar */
+        left: 0;
+        right: 0;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        padding: 0 1.5rem;
+
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(2rem);
+    }
+/*todo: fix the burger menu navigation*/
+    #navigation.open #lore-contents {
+        all: unset;
+        max-width: 50%;
+        color: white;
+        background: linear-gradient(var(--high-sky), var(--low-sky)) fixed;
+        overflow: scroll;
+    }
+
+    #navigation.open ul {
+        max-height: 500px;
+        opacity: 1;
+        padding: 1rem 1.5rem;
+    }
+    .intro {
+        display: none;
     }
 
     #content {
-        margin: 2rem auto;
+        margin: 4rem auto;
         max-width: 90%;
     }
 
@@ -545,7 +652,7 @@ input:checked + .slider:before {
     /*flex: 1;*/
     padding: 0.75rem 1.5rem;
     margin: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--page-nav), serif;
     font-size: 0.95rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;

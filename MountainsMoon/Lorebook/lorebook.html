@@ -25,7 +25,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caligo Lore</title>
+    <title>Mountain Moon</title>
     <link rel="stylesheet" href="lorebook.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -54,19 +54,54 @@
     </p>
 
         <nav id="lore-contents">
+            <h2>contents</h2>
+            <div class="burger">
             <ul>
                 <li>
-                    <a href="#welcome" data-page="welcome">Welcome</a>
+                    <a href="#welcome" data-page="welcome">foreword</a>
                 </li>
 
                 <li class="collapsible">
-                    <span>Mountains of The World</span>
+                    <span>Fact</span>
                     <ul>
-<!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
-<!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
-                        <li><a href="#Sagarmatha" data-page="sagarmatha">Sagarmatha</a></li>
+                        <!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+                        <!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                        <li><a href="map" data-page="map">Earth</a></li>
+                        <li class="collapsible">
+                            <span>Mountain Cultures</span>
+                            <ul>
+                                <!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+                                <!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                                <li><a href="#Sagarmatha" data-page="sagarmatha">Sagarmatha</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
+                <li class="collapsible">
+                    <span>Fiction</span>
+                    <ul>
+                        <!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+                        <!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                        <li><a href="#Sagarmatha" data-page="sagarmatha">Page</a></li>
+                        <li class="collapsible">
+                            <span>Stories</span>
+                            <ul>
+                                <!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+                                <!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                                <li><a href="#Sagarmatha" data-page="sagarmatha">Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="collapsible">
+                            <span>Characters</span>
+                            <ul>
+                                <!--                        <li><a href="#intro" data-page="intro">Intro</a></li>-->
+                                <!--                        <li><a href="#overview" data-page="overview">Overview</a></li>-->
+                                <li><a href="#Sagarmatha" data-page="sagarmatha">Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
 
 <!--                <li class="collapsible">-->
 <!--                    <span>World</span>-->
@@ -80,11 +115,13 @@
 <!--                </li>-->
             </ul>
 
-
+            </div>
         </nav>
 
 
         <!--    <nav id="lore-contents"></nav>-->
+
+        <button id="burger">☰</button>
 
     </section>
 
@@ -124,6 +161,15 @@
             parentLi.classList.toggle('active');
         });
     });
+</script>
+<script>
+<!--    show/hide for mobile burger menu-->
+    const nav = document.getElementById('navigation');
+const burger = document.getElementById('burger');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+});
 </script>
 
 </body>

@@ -110,6 +110,21 @@ nav a:hover {
 .active:hover {
     color: #5c5c5c;
 }
+#tabnav {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    flex-direction: row;
+    background: #e3e3e3;
+    padding: 1rem;
+    margin-top: 0;
+    width: 100%;
+}
+#tabnav a {
+    background-color: rgba(255, 255, 255, 0.48);
+    padding: 0.6rem;
+}
+
 
 /*//////////////////////// page content ////////////////////////*/
 /* container for all the page content sections */
@@ -152,6 +167,10 @@ nav a:hover {
         margin-top: 0;
     }
 
+    #tabnav {
+        top: 2rem;
+    }
+
     #page-content {
         margin-left: 0;
         margin-top: 1.5rem;
@@ -184,12 +203,16 @@ nav a:hover {
         flex-wrap: wrap;
     }
 
+    #tabnav {
+        top: 2.5rem;
+    }
+
     header {
         flex-wrap: wrap;
     }
 
     #page-content {
-        padding-top: 2rem;
+        padding-top: 0.5rem;
         overflow-x: hidden; /* disables horizontal scroll on mobile*/
     }
     /* will collapse section columns into single column on mobile */
@@ -225,6 +248,8 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1.5rem;
+    margin-top: 3.5rem;
+    /*align-items: center;*/
 }
 .gallery-item {
     position: relative;
@@ -240,12 +265,15 @@ nav a:hover {
 }
 .pixel-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 150px));
+    align-items: center;
 }
 .pixel-gallery img {
     image-rendering: pixelated;
-    width: 100px;
-    height: auto;
+    /*width: 100px;*/
+    /*width: auto;*/
+    /*scale: 0.7;*/
+    /*height: 200px;*/
 }
 .pixel {
     image-rendering: pixelated;
