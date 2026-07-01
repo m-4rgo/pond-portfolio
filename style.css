@@ -1,7 +1,13 @@
 html {
+    box-sizing: border-box;
     scroll-behavior: auto;
     cursor: crosshair;
 }
+*,
+ *::before,
+ *::after {
+     box-sizing: inherit;
+ }
 body {
     /*font-family: 'Inter', sans-serif;*/
     font-family: "Roboto", sans-serif;
@@ -226,7 +232,7 @@ nav a:hover {
         padding: 0;
     }
     #page-content img {
-        /*max-width: 100%;*/
+        max-width: 100%;
         margin: 0 auto;
         /*max-width: min(900px, 80vw);*/
         /*max-width: 80vw;*/
