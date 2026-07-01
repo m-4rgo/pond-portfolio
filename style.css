@@ -228,7 +228,7 @@ nav a:hover {
     #page-content img {
         /*max-width: 100%;*/
         margin: 0 auto;
-        max-width: min(900px, 80vw);
+        /*max-width: min(900px, 80vw);*/
         /*max-width: 80vw;*/
     }
     /* will collapse section columns into single column on mobile */
@@ -239,10 +239,13 @@ nav a:hover {
         top: 1.5rem;
     }
     #gallery-interchange {
-        margin-top: 2rem;
-        max-width: 100vw;
+        margin-top: 3rem;
+        max-width: 100%;
         /*height: 100vh;*/
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     #gallery-interchange img {
         /*margin: 0 auto;*/
@@ -255,6 +258,9 @@ nav a:hover {
         position: fixed;
     }
     .gallery {
+        grid-template-columns: unset;
+    }
+    .pixel-gallery {
         grid-template-columns: unset;
     }
 }
