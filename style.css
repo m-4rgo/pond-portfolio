@@ -489,3 +489,11 @@ form button[type="submit"]:hover {
 form button[type="submit"]:active {
     background: #888888;
 }
+
+/*.twitch-player {*/
+/*    width: 100%;*/
+/*    max-width: 720px;*/
+/*    aspect-ratio: 3 / 2;   !* 720×480 *!*/
+/*    height: auto;*/
+/*    border: none;*/
+/*}*/
