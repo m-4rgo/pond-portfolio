@@ -188,6 +188,10 @@ nav a:hover {
         z-index: 1001;
     }
 
+    nav {
+        display: none;
+    }
+
     #navbar {
         display: none;
         flex-direction: column;
@@ -239,10 +243,9 @@ nav a:hover {
         /*max-width: 100vw;*/
         /*height: 100vh;*/
         padding: 0;
-        margin: 0 auto;
     }
     #gallery-interchange img {
-        margin: 0 auto;
+        /*margin: 0 auto;*/
     }
     #image-viewer button {
         /*top: 4rem;*/
