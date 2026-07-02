@@ -1,5 +1,23 @@
 [
   {
+    "src": "Assets/cubisthorse.jpg",
+    "title": "horse",
+    "description": "horse illustration",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/birds.jpg",
+    "title": "birds",
+    "description": "bird illustrations",
+    "section": "illustration"
+  },
+  {
+    "src": "Assets/grovebredsassets.png",
+    "title": "dress up game assets",
+    "description": "accessories and doll for a horse dress up game",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/microunicorn.png",
     "title": "micro unicorn",
     "description": "mini sprite",
