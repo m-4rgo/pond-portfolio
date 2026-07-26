@@ -1,5 +1,11 @@
 [
   {
+    "src": "Assets/chestnuthorse.jpg",
+    "title": "horse",
+    "description": "horse illustration",
+    "section": "illustration"
+  },
+  {
     "src": "Assets/cubisthorse.jpg",
     "title": "horse",
     "description": "horse illustration",
