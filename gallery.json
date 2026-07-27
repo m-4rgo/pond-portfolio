@@ -24,12 +24,6 @@
     "section": "illustration"
   },
   {
-    "src": "Assets/microunicorn.png",
-    "title": "micro unicorn",
-    "description": "mini sprite",
-    "section": "pixel"
-  },
-  {
     "src": "Assets/gamerun.gif",
     "title": "game sprite",
     "description": "animated game asset",
