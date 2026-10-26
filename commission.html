@@ -2,10 +2,585 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>equine art by kitty</title>
 </head>
+
+<style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #000;
+    color: #fff;
+  }
+
+  .section {
+    margin: 2rem;
+  }
+
+  .section h1 {
+    background-color: #fff;
+    color: #000;
+    width: fit-content;
+    padding: 5px;
+  }
+
+  footer {
+    height: 50vh;
+  }
+
+  .pricetag {
+    /*background-color: #fff;*/
+    color: #8c8c8c;
+    width: fit-content;
+    /*font-weight: bold;*/
+    /* font size below!*/
+    /*font-size: 0.8rem;*/
+    /*padding: 1px;*/
+    /*margin: 5px;*/
+    border-radius: 5px;
+  }
+
+   /* this is where the  gpt code starts*/
+  h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 2vw, 1.75rem);
+  }
+
+  p {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+  }
+
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /*background: white;*/
+  }
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    background: #222;
+  }
+
+  .carousel,
+  .slide,
+  .overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    transform: scale(1.2) translateY(4%);
+  }
+
+  .slide.active {
+    opacity: 1;
+    animation: zoom 6s linear both;
+  }
+
+  .slide:nth-child(1) {
+    background-image: url(
+    "Assets/hooves.jpg"
+    );
+  }
+
+  .slide:nth-child(2) {
+    background-image: url(
+    "Assets/Susidou.jpg"
+    );
+  }
+
+  .slide:nth-child(3) {
+    background-image: url(
+    "Assets/cob.jpg"
+    );
+  }
+
+  .overlay {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+    padding: 24px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    /*text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);*/
+    background-color: #0a0614;
+  }
+
+  .hero-content h1,
+  .hero-heading {
+    align-self: flex-start;
+    text-align: left;
+    background-color: #0a0614;
+    padding: 5px;
+  }
+
+  .hero-content p {
+    max-width: 650px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.7;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-button a {
+    /*display: inline-block;*/
+    padding: 14px 32px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    font-weight: bold;
+    /*border: 1px solid #fff;*/
+    /*transition: background 0.3s, color 0.3s;*/
+  }
+
+  .hero-button a:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .contact-button a {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 14px 32px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    font-weight: bold;
+    /*border: 1px solid #fff;*/
+    /*transition: background 0.3s, color 0.3s;*/
+  }
+
+  .contact-button a:hover {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  @keyframes zoom {
+    from { transform: scale(1.2) translateY(-4%); }
+    to   { transform: scale(1.2) translateY(4%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slide.active {
+      animation: none;
+    }
+
+    .slide {
+      transition: opacity 0.2s linear;
+    }
+  }
+
+
+/*   media section styles */
+  .media {
+    /*padding: 60px 6%;*/
+  }
+
+  .media h2 {
+    margin-bottom: 24px;
+  }
+
+  .media-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .media-tabs button {
+    padding: 10px 18px;
+    border: 1px solid #222;
+    background: transparent;
+    color: #222;
+    cursor: pointer;
+    text-transform: lowercase;
+  }
+
+  .media-tabs button.active,
+  .media-tabs button:hover {
+    background: #222;
+    color: #fff;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+/*  columns for services and contact*/
+  .services-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 100vw;
+    margin: 0 0;
+    padding: 20px 2%;
+    align-items: start;
+  }
+
+  .services,
+  .contact {
+    min-width: 0;
+  }
+
+  /* Stack the sections on smaller screens */
+  @media (max-width: 768px) {
+    .services-contact {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>
+
 <body>
-<h1>kitty simmons equine artwork</h1>
-<h2>examples</h2>
+
+<main>
+<!--  <header>-->
+<!--    <h1>kitty simmons</h1>-->
+<!--    <h2>equine portraiture</h2>-->
+<!--  </header>-->
+
+<!--  <div class="hero">-->
+<!--    in conversation with the horse-->
+<!--  </div>-->
+
+
+<!--gpt code-->
+  <section class="hero">
+    <div class="carousel" aria-hidden="true">
+      <div class="slide active"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-heading">
+        <h2>kitty simmons</h2>
+        <h3>equine portraiture <br>
+          and fine art</h3>
+      </div>
+      <h1>in conversation with the horse</h1>
+      <div class="hero-button">
+        <a href="#services">order now</a>
+      </div>
+    </div>
+  </section>
+
+
+<div class="content">
+  <section class="bio section">
+    <h2>bio</h2>
+    <p>
+    Hi, I'm kitty, and I have been working with the equine form for over 25 years.<br>
+    I produce portraits in conversation with the horse; working in response to each animal and letting their character guide the work.
+<br><br>
+      I offer a range of services from loose observational drawing and traditional equine portraits, to experimental fine art in response to a brief.
+    </p>
+  </section>
+
+  <div class="services-contact">
+    <section id="services" class="services section">
+      <h1>services & pricing</h1>
+      <br>
+      <h3>live drawing <span class="pricetag"><a>from £75</a></span></h3>
+      <p>I visit your horse and produce observational drawings live from the stable or field.</p>
+      <p class="pricetag">
+        This service typically produces expressive, gestural images or pages of
+        loose sketches. I work in response to the subject and choose medium and style on this basis.
+        Optionally, I can observe schooling sessions for art of your horse in work.
+        This service is priced at £25/hour with a minimum 3 hour session.
+      </p>
+
+      <br>
+      <h3>photo interpretation <span class="pricetag"><a>custom quote</a></span></h3>
+      <p>I turn a special photo into a custom portrait.</p>
+      <p class="pricetag">I reference a favourite or meaningful photo and interpret it into a custom
+      portrait. This service is charged hourly.
+        The time required depends on the scale, detail and finish you're looking for,
+        so please get in touch for a quote.</p>
+      <br>
+      <h3>original portrait <span class="pricetag"><a>custom quote</a></span></h3>
+      <p>I reference one or several photos of your horse to create a new original piece.</p>
+      <p class="pricetag">Rather than recreate a single image,
+        I develop a new composition while referencing photographs of your horse for likeness.
+        The time required will depend on the scope and complexity of the piece,
+        so please get in touch for a quote.</p>
+      <br>
+      <h3>free rein <span class="pricetag"><a>from £90/day</a></span></h3>
+      <p>provide me with a brief or direction, and allow me to freely interpret it.</p>
+      <p class="pricetag">
+        For work exploring broader ideas and themes, I take an outline or brief and interpret it
+        to produce a singular response piece, or small body of work.
+        This type of work is often more abstract, experimental, and self directed.
+        I am always happy to tailor the commission to suit your individual budget and needs.
+      </p>
+    </section>
+
+
+    <section id="contact" class="contact section">
+      <h2>contact & order</h2>
+      <h3>process</h3>
+      <p>email me to discuss your commission.
+        I will provide a quote and begin work on receipt of a 50% deposit.
+        After work is complete, I will provide a low resolution sample of the final result.
+        The finished piece will be delivered on receipt of the full balance.
+        <br><br>
+        click the button below to start.
+
+      </p>
+      <br>
+      <div class="contact-button">
+        <a href="mailto:kitty.simmons@hotmail.com?subject=Commission%20Enquiry">
+          contact me
+        </a>
+      </div>
+
+      <br>
+      <h2>delivery & terms</h2>
+      <br>
+      <p>digital pieces are delivered as a full resolution digital image file. <br>
+        live drawing work is delivered at the end of the live session. <br>
+        physical work is delivered free of charge by tracked post for remote orders, or in person locally.
+        </p>
+      <p class="pricetag">
+        all work is delivered unframed. revisions are not included in price.<br>
+        cancellations on visits within 24 hours of the agreed appointment forfeit deposit. cancellations on other
+      work at any time forfeit deposit. reproduction rights are not included with commissioned work. artist retains copyright.
+        commissioned work is for personal display only and may not be used for commercial purposes without
+        prior written agreement. please enquire for commercial rates. I reserve the right to share the completed artwork and process across portfolios and on social
+      media. please let me know in advance if your commission is a surprise gift with a specific reveal date.</p>
+    </section>
+  </div>
+
+<!--  <section class="media section">-->
+<!--    <h2>media</h2>-->
+<!--  digital-->
+<!--  pencil-->
+<!--  acrylic-->
+<!--  oil-->
+<!--  watercolour-->
+<!--  charcoal-->
+<!--  </section>-->
+
+
+  <section class="media section">
+    <h2>gallery</h2>
+
+    <div class="media-tabs">
+      <button class="active" data-gallery="digital">digital</button>
+      <button class="active" data-gallery="physical">physical</button>
+<!--      <button data-gallery="pencil">pencil</button>-->
+<!--      <button data-gallery="acrylic">acrylic</button>-->
+<!--      <button data-gallery="oil">oil</button>-->
+<!--      <button data-gallery="watercolour">watercolour</button>-->
+<!--      <button data-gallery="charcoal">charcoal</button>-->
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+
+  <section class="testimonials section">
+    <h2>testimonials</h2>
+  </section>
+
+  <!--  <section class="pricing section">-->
+<!--    <h1>pricing</h1>-->
+<!--    digital-->
+<!--  </section>-->
+
+</div>
+
+</main>
+
+<footer>
+
+</footer>
 </body>
 </html>
+
+
+<script>
+<!--  hero section script-->
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    // Restart the zoom animation on the next slide.
+    void slides[currentSlide].offsetWidth;
+    slides[currentSlide].classList.add("active");
+  }
+
+  // Automatically change image every 6 seconds.
+  setInterval(showNextSlide, 6000);
+
+  //   // media section script
+  //   const media = [
+  //   "digital", "pencil", "acrylic",
+  //   "oil", "watercolour", "charcoal"
+  //   ];
+  //
+  //   const gallery = document.getElementById("gallery");
+  //   const tabs = document.querySelectorAll(".media-tabs button");
+  //
+  //   function showGallery(type) {
+  //   gallery.innerHTML = Array.from({ length: 8 }, (_, i) => `
+  //   <img
+  //     src="images/${type}-${i + 1}.jpg"
+  //     alt="${type} artwork ${i + 1}"
+  //     loading="lazy"
+  //   >
+  // `).join("");
+  //
+  //   tabs.forEach(tab => {
+  //   const active = tab.dataset.gallery === type;
+  //   tab.classList.toggle("active", active);
+  //   tab.setAttribute("aria-selected", active);
+  // });
+  // }
+  //
+  //   tabs.forEach(tab => {
+  //   tab.setAttribute("role", "tab");
+  //   tab.addEventListener("click", () => {
+  //   showGallery(tab.dataset.gallery);
+  // });
+  // });
+  //
+  //   showGallery(media[0]);
+
+//     timer for media galleries section
+
+const media = [
+  "digital", "physical"
+];
+// const media = [
+//   "digital", "pencil", "acrylic",
+//   "oil", "watercolour", "charcoal"
+// ];
+
+const gallery = document.getElementById("gallery");
+const tabs = document.querySelectorAll(".media-tabs button");
+
+let currentIndex = 0;
+let timer;
+
+function showGallery(type) {
+  currentIndex = media.indexOf(type);
+
+  gallery.innerHTML = Array.from({ length: 8 }, (_, i) => `
+    <img
+      src="images/${type}-${i + 1}.jpg"
+      alt="${type} artwork ${i + 1}"
+      loading="lazy"
+    >
+  `).join("");
+
+  tabs.forEach(tab => {
+    const active = tab.dataset.gallery === type;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-selected", active);
+  });
+}
+
+let delay = 6000;
+
+function startTimer() {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    currentIndex = (currentIndex + 1) % media.length;
+    showGallery(media[currentIndex]);
+    startTimer();
+  }, delay);
+}
+
+
+tabs.forEach(tab => {
+  tab.setAttribute("role", "tab");
+  tab.addEventListener("click", () => {
+    delay = 30000; // Use 30 seconds after a tab is clicked
+    showGallery(tab.dataset.gallery);
+    startTimer();
+  });
+});
+
+// Initial gallery and autoplay
+showGallery(media[0]);
+startTimer();
+
+</script>
