@@ -617,6 +617,40 @@ tabs.forEach(tab => {
   });
 });
 
+// mobile swipe coontrols
+// Swipe to switch galleries on mobile
+let touchStartX = 0;
+let touchStartY = 0;
+
+gallery.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+  touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+gallery.addEventListener("touchend", (e) => {
+  const touchEndX = e.changedTouches[0].screenX;
+  const touchEndY = e.changedTouches[0].screenY;
+
+  const diffX = touchEndX - touchStartX;
+  const diffY = touchEndY - touchStartY;
+
+  // Ignore vertical scrolling and short movements
+  if (Math.abs(diffX) < 50 || Math.abs(diffX) < Math.abs(diffY)) {
+    return;
+  }
+
+  if (diffX < 0) {
+    // Swipe left: next gallery
+    currentIndex = (currentIndex + 1) % media.length;
+  } else {
+    // Swipe right: previous gallery
+    currentIndex = (currentIndex - 1 + media.length) % media.length;
+  }
+
+  showGallery(media[currentIndex]);
+  startTimer();
+}, { passive: true });
+
 // Initial gallery and autoplay
 showGallery(media[0]);
 startTimer();
