@@ -6,10 +6,26 @@
 </head>
 
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #services, #gallery, #contact {
+    scroll-margin-top: 80px;
+  }
+
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #000;
     color: #fff;
+  }
+
+  .more-button {
+    text-decoration: none;
+  }
+  .more-button h1:hover {
+    color: #fff;
+    background: #000;
   }
 
   .section {
@@ -24,7 +40,7 @@
   }
 
   footer {
-    height: 50vh;
+    height: 20vh;
   }
 
   .pricetag {
@@ -386,11 +402,18 @@
         This type of work is often more abstract, experimental, and self directed.
         I am always happy to tailor the commission to suit your individual budget and needs.
       </p>
+      <br>
+      <div class="contact-button">
+        <a href="#gallery">
+          view gallery
+        </a>
+      </div>
     </section>
 
 
     <section id="contact" class="contact section">
-      <h2>contact & order</h2>
+      <h1>contact & order</h1>
+      <br>
       <h3>process</h3>
       <p>email me to discuss your commission.
         I will provide a quote and begin work on receipt of a 50% deposit.
@@ -449,12 +472,26 @@
     </div>
 
     <div class="gallery" id="gallery"></div>
+    <br>
+    <div class="contact-button">
+      <a href="#contact">order now</a>
+    </div>
   </section>
 
 
-  <section class="testimonials section">
-    <h2>testimonials</h2>
+  <section class="more section">
+    <h2>more</h2>
+
+    <div class="content">
+      <a class="more-button" href="https://www.inprnt.com/gallery/kitty.horse/"><h1>prints</h1></a>
+      <a class="more-button" href="https://ko-fi.com/kittyhorse/shop"><h1>originals</h1></a>
+    </div>
+
   </section>
+
+<!--  <section class="testimonials section">-->
+<!--    <h2>testimonials</h2>-->
+<!--  </section>-->
 
   <!--  <section class="pricing section">-->
 <!--    <h1>pricing</h1>-->
