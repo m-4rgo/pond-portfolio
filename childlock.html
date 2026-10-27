@@ -4,6 +4,63 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: #080812;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: -50%;
+        z-index: -1;
+        pointer-events: none;
+
+        background:
+                radial-gradient(
+                        ellipse at 25% 35%,
+                        rgba(112, 54, 255, 0.55),
+                        transparent 45%
+                ),
+                radial-gradient(
+                        ellipse at 75% 30%,
+                        rgba(0, 180, 255, 0.35),
+                        transparent 45%
+                ),
+                radial-gradient(
+                        ellipse at 65% 75%,
+                        rgba(255, 40, 120, 0.28),
+                        transparent 40%
+                ),
+                radial-gradient(
+                        ellipse at 30% 80%,
+                        rgba(35, 65, 200, 0.3),
+                        transparent 45%
+                );
+
+        filter: blur(60px);
+        animation: aurora 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes aurora {
+        0% {
+            transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1);
+        }
+
+        50% {
+            transform: translate3d(3%, 4%, 0) rotate(8deg) scale(1.08);
+        }
+
+        100% {
+            transform: translate3d(-2%, 2%, 0) rotate(-6deg) scale(1.03);
+        }
+    }
+</style>
 <body>
 </body>
 </html>
