@@ -1,10 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; box-sizing: border-box; }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: white;
+            background: center / cover no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0006;
+        }
+
+        .hero div {
+            position: relative;
+            padding: 24px;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+    </style>
 </head>
 <body>
+
+<section class="hero">
+    <div>
+        <h1>Hero Text Here</h1>
+        <p>Your introduction goes here.</p>
+    </div>
+</section>
+
+<script>
+    const hero = document.querySelector(".hero");
+    const photos = [
+        "photo-1518837695005-2083093ee35b",
+        "photo-1470770841072-f978cf4d019e",
+        "photo-1500530855697-b586d89ba3ee"
+    ];
+    let i = 0;
+
+    function changePhoto() {
+        hero.style.backgroundImage =
+            `url(https://images.unsplash.com/${photos[i]}?auto=format&fit=crop&w=2000&q=80)`;
+        i = (i + 1) % photos.length;
+    }
+
+    changePhoto();
+    setInterval(changePhoto, 5000);
+</script>
 
 </body>
 </html>
