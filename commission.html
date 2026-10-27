@@ -7,6 +7,10 @@
 </head>
 
 <style>
+  * {
+    cursor: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -22,6 +26,7 @@
     color: #fff;
     letter-spacing: -0.06em;
   }
+
 
   p {
     letter-spacing: -0.04em;
@@ -323,11 +328,44 @@
       gap: 20px;
     }
   }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+
+
+    transform: translate(-50%, -50%);
+    transition:
+            width 0.25s ease,
+            height 0.25s ease,
+            background 0.25s ease;
+  }
+
+  .cursor-dot.hovering {
+    width: 20px;
+    height: 20px;
+    mix-blend-mode: difference;
+
+
+    /*    box-shadow:*/
+    /*            0 0 8px rgba(255, 255, 255, 0.8),*/
+    /*            0 0 20px rgba(167, 139, 250, 1),*/
+    /*            0 0 45px rgba(139, 92, 246, 0.7);*/
+    /*}*/
+  }
 </style>
 
 <body>
 
 <main>
+  <div class="cursor-dot"></div>
 <!--  <header>-->
 <!--    <h1>kitty simmons</h1>-->
 <!--    <h2>equine portraiture</h2>-->
@@ -518,6 +556,23 @@
 
 
 <script>
+  // cursor dot
+  const cursor = document.querySelector(".cursor-dot");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+
+  document.querySelectorAll("a, button").forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("hovering");
+    });
+
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hovering");
+    });
+  });
 <!--  hero section script-->
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
