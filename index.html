@@ -158,4 +158,21 @@ galleryLink.addEventListener("click", (e) => {
         window.location.href = galleryLink.href;
     }, 700);
 });
+
+// so the black screen is dropped when returning to page via back button
+window.addEventListener("pageshow", () => {
+    transition.classList.remove("is-active");
+    transition.style.transition = "none";
+
+    // Reset the overlay position
+    transition.style.transform = "translateY(100%)";
+
+    // Restore transitions after the reset
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            transition.style.transition =
+                "transform 0.7s cubic-bezier(0.76, 0, 0.24, 1)";
+        });
+    });
+});
 </script>
