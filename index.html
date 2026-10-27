@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kitty.horse</title>
+</head>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0;
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient( rgba(255, 146, 4, 0.5), rgba(55, 255, 0, 0.5));
+        color: #171717;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 68px 0 0 48px;
+    }
+
+    /* Three.js canvas sits behind the HTML. */
+    #background {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    main {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+    }
+
+    .hero {
+        /*min-height: 20px;*/
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        margin: 0 0 24px;
+        letter-spacing: -0.06em;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        font-weight: normal;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 12px 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+
+    a:hover {
+        opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 28px 22px;
+        }
+    }
+
+    /* black screen on page change */
+    .page-transition {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        z-index: 9999;
+        transform: translateY(100%);
+        pointer-events: none;
+    }
+
+    .page-transition.is-active {
+        transform: translateY(0);
+        pointer-events: all;
+        transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    /* Fade in the destination page */
+    body {
+        opacity: 0;
+        animation: pageFadeIn 0.8s ease forwards;
+        animation-delay: 0.7s;
+    }
+
+    @keyframes pageFadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    
+</style>
+<body>
+
+<section class="hero">
+    <h1>kitty.horse</h1>
+    <ul>
+        <li><a href="/commission" class="gallery-link">commissions</a></li>
+        <li><a href="/"><s>originals</s></a> <span class="coming-soon>"><i>coming soon</i></span></li>
+        <li><a href="https://www.inprnt.com/gallery/kitty.horse/">prints</a></li>
+        <li><a href="/gallery" class="gallery-link">gallery</a></li>
+    </ul>
+</section>
+
+<!-- black screen on page change-->
+<div class="page-transition"></div>
+
+
+</body>
+</html>
+
+<script>
+<!-- black screen on page change-->
+const galleryLink = document.querySelector(".gallery-link");
+const transition = document.querySelector(".page-transition");
+
+galleryLink.addEventListener("click", (e) => {
+    if (
+        e.metaKey ||
+        e.ctrlKey ||
+        e.shiftKey ||
+        e.altKey ||
+        e.button !== 0
+    ) return;
+
+    e.preventDefault();
+
+    transition.style.transition =
+        "transform 0.7s cubic-bezier(0.76, 0, 0.24, 1)";
+
+    transition.classList.add("is-active");
+
+    setTimeout(() => {
+        window.location.href = galleryLink.href;
+    }, 700);
+});
+</script>

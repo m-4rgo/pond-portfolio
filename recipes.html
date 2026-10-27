@@ -3,62 +3,317 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kitty.horse</title>
+
     <style>
-        * { margin: 0; box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient( rgba(255, 4, 4, 0.5), rgba(0, 49, 255, 0.5));
+            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 48px;
+        }
+
+        /* Three.js canvas sits behind the HTML. */
+        #background {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
 
         .hero {
-            height: 100vh;
-            position: relative;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            color: white;
-            background: center / cover no-repeat;
+            min-height: 20px;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: #0006;
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin: 0 0 24px;
+            letter-spacing: -0.06em;
         }
 
-        .hero div {
-            position: relative;
-            padding: 24px;
+        h2 {
+            font-size: 1.1rem;
+            font-weight: normal;
         }
 
-        h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 28px 22px;
+            }
+        }
     </style>
 </head>
+
 <body>
+<canvas id="background" aria-hidden="true"></canvas>
 
-<section class="hero">
-    <div>
-        <h1>Hero Text Here</h1>
-        <p>Your introduction goes here.</p>
-    </div>
-</section>
+<main>
+    <section class="hero"></section>
 
-<script>
-    const hero = document.querySelector(".hero");
-    const photos = [
-        "photo-1518837695005-2083093ee35b",
-        "photo-1470770841072-f978cf4d019e",
-        "photo-1500530855697-b586d89ba3ee"
-    ];
-    let i = 0;
+    <h1>kitty.horse</h1>
 
-    function changePhoto() {
-        hero.style.backgroundImage =
-            `url(https://images.unsplash.com/${photos[i]}?auto=format&fit=crop&w=2000&q=80)`;
-        i = (i + 1) % photos.length;
+    <h2>links:</h2>
+
+    <ul>
+        <li><a href="https://www.instagram.com/kitty.horse/">originals</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">prints</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">commissions</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">Instagram</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">TikTok</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">YouTube</a></li>
+        <li><a href="https://www.instagram.com/kitty.horse/">kitty's stuff (portfolio)</a></li>
+    </ul>
+</main>
+
+<script type="module">
+    import * as THREE from
+            'https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js';
+
+    import { EffectComposer } from
+            'https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/postprocessing/EffectComposer.js';
+
+    import { RenderPass } from
+            'https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/postprocessing/RenderPass.js';
+
+    import { ShaderPass } from
+            'https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/postprocessing/ShaderPass.js';
+
+
+    // --------------------------------------------------
+    // Renderer
+    // --------------------------------------------------
+
+    const canvas = document.querySelector('#background');
+
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: false,
+        alpha: false
+    });
+
+    renderer.setPixelRatio(
+        Math.min(window.devicePixelRatio, 2)
+    );
+
+    renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+
+
+    // --------------------------------------------------
+    // Fullscreen gradient scene
+    // --------------------------------------------------
+
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.OrthographicCamera(
+        -1, 1, 1, -1, 0, 1
+    );
+
+    const gradientMaterial = new THREE.ShaderMaterial({
+        vertexShader: `
+        varying vec2 vUv;
+
+        void main() {
+          vUv = uv;
+          gl_Position = vec4(position.xy, 0.0, 1.0);
+        }
+      `,
+
+        fragmentShader: `
+        varying vec2 vUv;
+
+        void main() {
+          // Approximate the original CSS gradient blended over white,
+          // expressed in linear RGB for the grain pass.
+          vec3 red = vec3(1.0, 0.22, 0.22);
+          vec3 blue = vec3(0.216, 0.305, 1.0);
+
+          float t = clamp(
+            (vUv.x + vUv.y) * 0.5,
+            0.0,
+            1.0
+          );
+
+          gl_FragColor = vec4(mix(red, blue, t), 1.0);
+        }
+      `
+    });
+
+    const gradientPlane = new THREE.Mesh(
+        new THREE.PlaneGeometry(2, 2),
+        gradientMaterial
+    );
+
+    scene.add(gradientPlane);
+
+
+    // --------------------------------------------------
+    // Animated film grain post-processing shader
+    // --------------------------------------------------
+
+    const GRAIN = 0.92; // Original CodePen value: 0.055
+
+    const GrainShader = {
+        uniforms: {
+            tDiffuse: { value: null },
+            uTime: { value: 0 },
+            uScale: { value: 1 },
+            uAmount: { value: GRAIN }
+        },
+
+        vertexShader: `
+        varying vec2 vUv;
+
+        void main() {
+          vUv = uv;
+
+          gl_Position =
+            projectionMatrix *
+            modelViewMatrix *
+            vec4(position, 1.0);
+        }
+      `,
+
+        fragmentShader: `
+        uniform sampler2D tDiffuse;
+        uniform float uTime;
+        uniform float uScale;
+        uniform float uAmount;
+
+        varying vec2 vUv;
+
+        float hash(vec2 p) {
+          vec3 q = fract(vec3(p.xyx) * 0.1031);
+          q += dot(q, q.yzx + 33.33);
+
+          return fract((q.x + q.y) * q.z);
+        }
+
+        void main() {
+          vec3 col = texture2D(tDiffuse, vUv).rgb;
+
+          // Convert to approximate sRGB for perceptual grain.
+          vec3 cs = pow(
+            max(col, 0.0),
+            vec3(1.0 / 2.2)
+          );
+
+          // Pixel-sized grain cells.
+          vec2 cell = floor(
+            gl_FragCoord.xy / max(uScale, 1.0)
+          );
+
+          // Animate the grain at 24 frames per second.
+          float frame = floor(uTime * 24.0);
+
+          // Combine two hashes for a softer film-like distribution.
+          float g =
+            hash(cell + frame * 17.0) +
+            hash(cell * 1.7 + frame * 31.0) -
+            1.0;
+
+          // Reduce grain in brighter areas.
+          float lum = dot(
+            cs,
+            vec3(0.299, 0.587, 0.114)
+          );
+
+          cs += g * uAmount *
+            mix(
+              1.0,
+              0.45,
+              smoothstep(0.55, 1.0, lum)
+            );
+
+          gl_FragColor = vec4(cs, 1.0);
+        }
+      `
+    };
+
+
+    // --------------------------------------------------
+    // Post-processing pipeline
+    // --------------------------------------------------
+
+    const composer = new EffectComposer(renderer);
+
+    composer.addPass(
+        new RenderPass(scene, camera)
+    );
+
+    const grainPass = new ShaderPass(GrainShader);
+
+    composer.addPass(grainPass);
+
+
+    // --------------------------------------------------
+    // Animation
+    // --------------------------------------------------
+
+    const clock = new THREE.Clock();
+
+    function animate() {
+        grainPass.uniforms.uTime.value = clock.getElapsedTime();
+
+        composer.render();
     }
 
-    changePhoto();
-    setInterval(changePhoto, 5000);
-</script>
+    renderer.setAnimationLoop(animate);
 
+
+    // --------------------------------------------------
+    // Resize handling
+    // --------------------------------------------------
+
+    window.addEventListener('resize', () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        renderer.setSize(width, height);
+        composer.setSize(width, height);
+    });
+</script>
 </body>
 </html>
